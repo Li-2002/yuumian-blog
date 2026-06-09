@@ -16,7 +16,7 @@ menu:
     闲言碎语: /essay/ || anzhiyu-icon-lightbulb
 
   关于:
-    关于我: /about/ || anzhiyu-icon-paper-plane
+    关于本人: /about/ || anzhiyu-icon-paper-plane
 
 
     # 如何修改默认歌单  将menu中音乐馆的路径修改为以下格式即可/music/?id=1708664797&server=tencent，支持id和server参数。 看https://github.com/metowolf/MetingJS

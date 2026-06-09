@@ -96,15 +96,46 @@ hexo clean && hexo generate && hexo deploy
 
 ## 部署到CloudFlare
 ![](https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/CloudFlare%E9%A1%B5%E9%9D%A2.png)
-在 Workers 和 Pages 中选择创建一个新的项目，然后选择Github图标的connect github
-之后就是授权了，我这边是，授权所有项目，然后重新点开connect With github，就可以选择你的项目了。直接下一步即可，等到控制栏输出✨ Success! Build completed. 说明我们已经部署成功了
+在 Workers 和 Pages 中选择创建一个新的项目，选择下面的一行蓝色小字Looking to deploy Pages? Get started，然后选择Github图标的connect github
+之后就是授权了，我这边是，授权所有项目，然后重新点开connect With github，就可以选择你的项目了。
+###  配置构建设置
+| 配置项 | 填写内容 |
+|--------|---------|
+| **Project name** | 你的项目名（如 `yuumian-blog`） |
+| **Production branch** | `source` ← **我这边是source** |
+| **Framework preset** | `None` |
+| **Build command** | `npm install && npx hexo generate` |
+| **Build output directory** | `public` **如果你是整个源码部署上去 那就应该是填这个public** |
+
+### 置 Node.js 版本
+在同一页面往下拉，找到 **Environment variables**，添加：
+
+| Variable name | Value |
+|---------------|-------|
+| `NODE_VERSION` | `20` |
+
+然后点击 **Save and Deploy**。
+直接下一步即可，等到控制栏输出✨ Success! Build completed. 
 下面倒数第三栏会有一个链接，这个链接就是全球可以访问的你的项目的链接！恭喜你部署成功！
 ![](https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/%E9%80%89%E6%8B%A9%E9%A1%B9%E7%9B%AE.png)
 ![](https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/CloudFlare%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%E6%8E%A7%E5%88%B6%E6%A0%8F.png)
 ![](https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/CloudFlare%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F.png)
 如果你跟我一样有自己的域名的话，那你可以在worker&pages页面，点进去你的项目，在点到上面的Domains，可以Add Domain添加自己的域名解析
-![](https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.png)
+![](https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/
+%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.png)
 
+## 以后更新博客
+以后写文章只需要推送源码，Cloudflare 会自动构建发布：
+
+# 新建文章
+hexo new post "文章标题" 之后开始编辑就可以，编辑完成之后使用下面的命令进行推送（因为我是source分支，所以我推送到source 如果你是别的分支xxx 最后一行命令应该是git push origin main:xxx）
+```
+git add .
+git commit -m "add new post"
+git push origin main:source
+
+```
+### 完成！Cloudflare 会自动构建并发布
 
  ##  最后
   愿君安康，平安喜乐~
