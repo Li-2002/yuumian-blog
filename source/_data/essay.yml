@@ -1,0 +1,25 @@
+- title: 即刻短文
+  subTitle: 雨眠的日常生活。
+  tips: 这是我的一些闲言碎语
+  buttonText: 关于我
+  buttonLink: /about/
+  limit: 30
+  home_essay: true
+  top_background: https://yuumii.top/sys/bakcgournd.png
+  essay_list:
+    - content: 安知鱼主题指南
+      date: 2026/06/01
+      video:
+        - https://player.bilibili.com/player.html?aid=226886152&bvid=BV1Ch41137tR&cid=1081639816&p=1&autoplay=0
+    - content: 我的博客终于上线了。
+      date: 2026/06/01
+      image:
+        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
+      address: 佛山
+      from: 雨眠
+      link: /posts/e140.html
+    - content: 歌曲推荐
+      date: 2022/09/25
+      aplayer:
+        server: tencent
+        id: 001FGQba3i10mw

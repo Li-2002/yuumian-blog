@@ -1,0 +1,109 @@
+- class_name: 关于页
+  subtitle: 生活明朗，万物可爱✨
+  avatarImg: https://yuumii.top/sys/avatar.ico
+  avatarSkills:
+    left:
+      - 🤖️ 想法很大技术很小
+      - 🔍 这也想做那也想做
+      - 👀 这也不会那也不会
+      - 🎮 游戏资深玩家
+    right:
+      - 🎶 乐器爱好
+      - 🏃 减肥中 
+      - 🧱 00后 
+      - 📚 一起学习 
+  name: 雨眠
+  description: 是一名 牛马工程师
+  aboutsiteTips:
+    tips: 追求
+    title1: 源于
+    title2: 热爱而去 感受
+    word:
+      - 学习
+      - 生活
+      - 程序
+      - 体验
+  helloAbout: 雨眠碎碎念~
+  skillsTips:
+    tips: 技能
+    title: 开启创造力
+  careers:
+    tips: 生涯
+    title: 无限学习
+    list:
+      - desc: 电子信息工程
+        color: "#FFA500"
+      - desc: 广东 佛山
+        color: "#FFA500"
+      # - desc: 佛山
+        # color: "#357ef5"
+    img: https://yuumii.top/about/about-photo1.jpg
+  statistic:
+    link: /archives
+    text: 文章隧道
+    cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
+  map:
+    title: 我现在住在
+    StrengthenTitle: 中国，佛山市
+    background: https://yuumii.top/sys/position.png
+    backgroundDark: https://yuumii.top/sys/position.png
+  selfInfo:
+    selfInfoTips1: 生于
+    selfInfoContentYear: 2002
+    selfInfoTips2: 
+    selfInfoContent2: 电子信息工程
+    selfInfoTips3: 现在职业
+    selfInfoContent3: 牛马👨‍🎓
+  personalities:
+    author_name: 执政官
+    personality_type: INFJ-A
+    photo_url: https://yuumii.top/about/INFJ-A.png
+    personality_img: https://yuumii.top/about/INFJ-A.png
+    name_url: https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC
+  maxim:
+    maxim_tips: 座右铭
+    maxim_top: 愿君安康，
+    maxim_bottom: 共同进步。
+  buff:
+    buff_tips: 特长
+    buff_top: 想法很多技术很少
+    buff_bottom: 追求完美
+  game:
+    game_tips: 爱好游戏
+    game_title: 燕云
+    game_uid: "UID: "
+    game_bg: https://yuumii.top/about/about6-yanyun.jpg
+  comic:
+    comic_tips: 爱好
+    comic_title: 游戏
+    comic_list:
+      - name: 燕云
+        href: 
+        cover: https://yuumii.top/about/about6-yanyun.jpg
+      - name: 永劫
+        href: https://www.bilibili.com/video/BV1XZ4y1E7ns/?spm_id_from=333.337.search-card.all.click
+        cover: https://yuumii.top/about/about1-fahuan.png
+      - name: 法环
+        href: https://www.bilibili.com/video/BV1uwPoeCENY/?spm_id_from=333.337.search-card.all.click&vd_source=3b828d52972a351f6cf528c2588280d7
+        cover: https://yuumii.top/about/about3-fahuan.jpg
+      - name: 瓦
+        href: https://www.bilibili.com/video/BV1UssrzCEez/?spm_id_from=333.337.search-card.all.click&vd_source=3b828d52972a351f6cf528c2588280d7
+        cover: https://yuumii.top/about/about4-fahuan.jpg
+      - name: 只狼
+        href: https://www.bilibili.com/video/BV14qAyeTEKb/?spm_id_from=333.337.search-card.all.click&vd_source=3b828d52972a351f6cf528c2588280d7
+        cover: https://yuumii.top/about/about5-fahuan.jpg
+  like:
+    like_tips: 关注偏好
+    like_title: 数码科技
+    like_bg: https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg
+    like_bottom: 手机、电脑软硬件
+  music:
+    music_tips: 这也听那也听
+    music_title: 流行、民谣
+    music_bg: https://yuumii.top/about/about-music.png
+    music_link: /music
+  reward_list:
+    - name: 
+      amount: 8.8
+      datatime: 2023-03-28
+    

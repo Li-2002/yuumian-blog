@@ -1,0 +1,26 @@
+- class_name: 好物
+  description: 实物装备推荐
+  tip: 跟 安知鱼 一起享受科技带来的乐趣
+  top_background: https://bu.dusays.com/2023/07/05/64a4c38842b7a.webp
+  good_things:
+    - title: 生产力
+      description: 提升自己生产效率的硬件设备
+      equipment_list:
+        - name: Redmi K40
+          specification: 幻境蓝 / 12GB+256GB
+          description: 有点狠的真旗舰，搭载骁龙870旗舰处理器，6.67英寸120Hz E4 AMOLED直屏获DisplayMate A+评级，4520mAh大电池+33W满血快充，4800万像素三摄，7.8mm轻薄机身，支持杜比全景声与WiFi 6，性价比标杆之作。
+          image: https://yuumii.top/sys/K40.jpg
+          link: https://www.mi.com/redmik40
+        - name: Redmi K90
+          specification: 天蓝色 / 16GB+1TB
+          description: 2025年K系列旗舰，搭载骁龙8至尊版处理器，6.59英寸1.5K 120Hz LTPO护眼直屏，7100mAh超大电池+100W有线秒充，5000万像素OIS主摄+2.5倍人像长焦，BOSE联合调音三扬声器，支持IP68防尘防水。
+          image: https://yuumii.top/sys/K90.png
+          link: https://www.mi.com/shop/buy/detail?product_id=23969&cfrom=search
+    - title: 出行
+      description: 用来出行的实物及设备
+      equipment_list:
+        - name: 小米手环10
+          specification: 粉色 / 标准版
+          description: 2025年最新款智能手环，采用1.72英寸极窄四等边AMOLED屏，屏占比高达73%，峰值亮度1500nits，21天超长续航，支持150+运动模式和高精度健康监测，全面适配苹果与安卓双生态。
+          image: https://yuumii.top/sys/Mi10Pro.jpg
+          link: https://www.mi.com/shop/buy/detail?product_id=24629
