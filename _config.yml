@@ -179,7 +179,7 @@ cinema: # 追剧设置
     key: value
   coverMirror:
 game: # 游戏设置，仅支持source: bgmv0
-  enable: true
+  enable: false
   path:
   source: bgmv0
   vmid:
