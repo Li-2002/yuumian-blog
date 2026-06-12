@@ -1,0 +1,157 @@
+//- ============================================================
+//- Hexo Anzhiyu 主题 - 朋友圈/动态页面模板
+//- 路径：/moments/
+//- 数据：source/_data/moments.yml
+//- 评论：Twikoo（每条动态独立评论区）
+//- ============================================================
+extends includes/layout.pug
+
+block content
+  link(rel="stylesheet" href=url_for("/css/moments.css"))
+
+  if site.data.moments
+    each i in site.data.moments
+      #moments-page.moments-page
+        //- ========== 顶部 Banner ==========
+        .moments-banner(style = i.top_background ? `background: url(${i.top_background}) center / cover no-repeat;` : "")
+          .banner-overlay
+          .banner-content
+            .banner-tips= i.tips
+            h1.banner-title= i.subTitle
+            if i.buttonText
+              a.banner-link(href=url_for(i.buttonLink))
+                i.anzhiyufont.anzhiyu-icon-arrow-circle-right
+                span= i.buttonText
+
+        //- ========== 动态时间线 ==========
+        .moments-timeline
+          each item, idx in i.moments_list
+            - var suffix = ((idx * 137 + 59) % 900 + 100)
+            - var momentPath = '/moments/' + item.date.replace(/\//g, '-') + '-' + suffix
+            .moment-item(id='moment-' + idx)
+              .moment-card
+                //- 头部：头像 + 昵称
+                .moment-header
+                  img.moment-header-avatar(src=theme.avatar_img || "/img/avatar.png" alt="avatar" loading="lazy")
+                  .moment-header-info
+                    .moment-author= config.author || "我"
+                    if item.date
+                      time.moment-header-time(datetime=item.date)= item.date
+
+                //- 正文
+                if item.content
+                  .moment-text= item.content
+
+                //- 图片画廊
+                if item.image && item.image.length
+                  - var imgCount = item.image.length
+                  - var galleryClass = imgCount === 1 ? 'gallery-1' : imgCount === 2 ? 'gallery-2' : imgCount === 3 ? 'gallery-3' : 'gallery-grid'
+                  - var imgUrls = item.image.map(function(x){return url_for(x)}).join(',')
+                  .moment-gallery(class=galleryClass)
+                    each img, idx2 in item.image
+                      - var resolved = url_for(img)
+                      .gallery-item
+                        img.gallery-img(
+                          src=resolved
+                          alt="image"
+                          loading="lazy"
+                          onclick=`MomentsApp.openLightbox('${imgUrls}', ${idx2})`
+                        )
+
+                //- 视频嵌入
+                if item.video && item.video.length
+                  each vid in item.video
+                    .moment-video
+                      if vid.includes('player.bilibili.com')
+                        iframe(
+                          src=vid
+                          scrolling="no"
+                          border="0"
+                          frameborder="no"
+                          framespacing="0"
+                          allowfullscreen="true"
+                        )
+                      else if vid.includes('youtube.com') || vid.includes('youtu.be')
+                        iframe(src=vid allowfullscreen)
+                      else
+                        video(src=url_for(vid) controls)
+
+                //- APlayer 音乐
+                if item.aplayer
+                  .moment-music
+                    meting-js(
+                      id=item.aplayer.id
+                      server=item.aplayer.server
+                      type="song"
+                      mutex="true"
+                      preload="none"
+                      theme="var(--anzhiyu-main)"
+                      data-lrctype="0"
+                      order="list"
+                    )
+
+                //- 底部信息栏
+                .moment-meta
+                  .moment-meta-left
+                    time.moment-time(datetime=item.date)
+                      i.anzhiyufont.anzhiyu-icon-clock
+                      span= item.date
+                    if item.address
+                      span.moment-location
+                        i.anzhiyufont.anzhiyu-icon-location-dot
+                        span= item.address
+                    if item.from
+                      span.moment-device
+                        i.anzhiyufont.anzhiyu-icon-gear
+                        span= item.from
+                    if item.link
+                      a.moment-link(href=url_for(item.link) title="查看详情")
+                        i.anzhiyufont.anzhiyu-icon-link
+                        span 链接
+
+                  .moment-meta-right
+                    button.moment-action.like-btn(
+                      data-id=item.date
+                      onclick=`MomentsApp.toggleLike(this, '${item.date}')`
+                    )
+                      i.anzhiyufont.anzhiyu-icon-heartbeat
+                      span.like-count 0
+                    button.moment-action.comment-btn(
+                      data-id=item.date
+                      data-path=momentPath
+                      onclick=`MomentsApp.openComment('${idx}', '${momentPath}')`
+                    )
+                      i.anzhiyufont.anzhiyu-icon-comments
+                      span 评论
+                    button.moment-action.share-btn(
+                      onclick=`MomentsApp.shareMoment('${item.content ? item.content.slice(0,30) : ''}')`
+                    )
+                      i.anzhiyufont.anzhiyu-icon-paper-plane
+
+                //- 独立的 Twikoo 评论区
+                .moment-comments-twikoo(
+                  id='moment-comments-' + idx
+                  style="display:none;"
+                  data-inited="false"
+                  data-path=momentPath
+                )
+
+  //- ========== Lightbox ==========
+  .moments-lightbox#momentsLightbox(style="display:none;")
+    .lightbox-overlay(onclick="MomentsApp.closeLightbox()")
+    .lightbox-content
+      img.lightbox-img#lightboxImg(src="" alt="")
+      button.lightbox-prev(onclick="MomentsApp.lightboxNav(-1)")
+        i.anzhiyufont.anzhiyu-icon-chevron-left
+      button.lightbox-next(onclick="MomentsApp.lightboxNav(1)")
+        i.anzhiyufont.anzhiyu-icon-chevron-right
+      button.lightbox-close(onclick="MomentsApp.closeLightbox()")
+        i.anzhiyufont.anzhiyu-icon-times
+      .lightbox-counter#lightboxCounter
+
+  //- 加载 Twikoo JS（只加载一次）
+  script(src=url_for(theme.asset.twikoo))
+  script.
+    window.__twikooEnvId = '!{theme.twikoo.envId}';
+    window.__twikooRegion = '!{theme.twikoo.region || ""}';
+  script(src=url_for("/js/moments.js"))

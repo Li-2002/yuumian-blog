@@ -1,0 +1,50 @@
+- class_name: 朋友圈
+  subTitle: 记录生活中的点滴
+  tips: 万物可爱，生活明朗 ✨
+  top_background: https://yuumii.top/sys/bakcgournd.png
+  buttonText: 关于我
+  buttonLink: /about/
+  moments_list:
+    - content: 今天天气真好，去公园散步了🌳 阳光洒在草地上，一切都那么美好。
+      date: 2026/06/12
+      image:
+        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
+        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
+      address: 佛山·千灯湖公园
+      from: iPhone 15 Pro
+      link: /posts/e140.html
+
+    - content: 博客终于上线了！折腾了好久，从 Hexo 搭建到主题配置，再到各种优化，虽然过程很累但看到成果还是很开心的 🎉
+      date: 2026/06/10
+      image:
+        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
+      from: MacBook Pro
+      link: /posts/hello-world.html
+
+    - content: 推荐一首超好听的歌 🎵 最近一直在循环，太治愈了。
+      date: 2026/06/08
+      aplayer:
+        server: tencent
+        id: 001FGQba3i10mw
+      address: 在家
+
+    - content: B站看到一个超有意思的视频，分享一下 😆
+      date: 2026/06/05
+      video:
+        - https://player.bilibili.com/player.html?aid=226886152&bvid=BV1Ch41137tR&cid=1081639816&p=1&autoplay=0
+      from: iPad
+
+    - content: 深夜写代码，窗外下着小雨，键盘声和雨声混在一起，莫名地让人平静。有时候觉得写代码也是一种修行，不断地面对问题、解决问题，在这个过程中慢慢成长。
+      date: 2026/06/01
+      address: 佛山
+      from: MacBook Pro
+
+    - content: 周末和朋友去爬山，山顶的风景真的绝了！🏔️ 虽然累得够呛，但看到云海的那一刻觉得一切都值了。下次一定要带相机来拍延时。
+      date: 2026/05/28
+      image:
+        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
+        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
+        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
+      address: 西樵山
+      from: iPhone 15 Pro
+      link: /posts/e140.html

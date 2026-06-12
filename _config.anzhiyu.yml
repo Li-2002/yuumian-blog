@@ -13,8 +13,11 @@ menu:
   我的:
     相册集: /album/ || anzhiyu-icon-images
     我的装备: /equipment/ || anzhiyu-icon-dice-d20
-    闲言碎语: /essay/ || anzhiyu-icon-lightbulb
+    # 闲言碎语: /essay/ || anzhiyu-icon-lightbulb
     游戏人生: /games/ || anzhiyu-icon-fire
+
+  动态:
+    朋友圈: /moments/ || anzhiyu-icon-bolt
 
   关于:
     关于本人: /about/ || anzhiyu-icon-paper-plane

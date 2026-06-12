@@ -1,0 +1,496 @@
+/* ============================================================
+ * Hexo Anzhiyu 主题 - 朋友圈/动态页面样式
+ * 路径：themes/anzhiyu/source/css/moments.css
+ * 风格：微信朋友圈 Timeline 布局
+ * ============================================================ */
+
+/* ========== CSS 变量 ========== */
+:root {
+  --moments-primary: #425AEF;
+  --moments-accent: #F2B94B;
+  --moments-like: #FF6B6B;
+  --moments-bg: #F7F9FE;
+  --moments-card-bg: #FFFFFF;
+  --moments-text: #363636;
+  --moments-text-secondary: #8A8A8A;
+  --moments-text-meta: #B0B0B0;
+  --moments-border: #F0F0F0;
+  --moments-card-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  --moments-card-hover-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  --moments-line-color: #E8E8E8;
+}
+
+[data-theme="dark"] {
+  --moments-bg: #0D0D0D;
+  --moments-card-bg: #1A1A1A;
+  --moments-text: #E0E0E0;
+  --moments-text-secondary: #8A8A8A;
+  --moments-text-meta: #666;
+  --moments-border: #2A2A2A;
+  --moments-card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --moments-card-hover-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  --moments-line-color: #2A2A2A;
+}
+
+/* ========== 页面容器（覆盖 common.styl 的全局 card 样式） ========== */
+#moments-page.moments-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 20px 24px 60px;
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: var(--moments-text);
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+}
+
+/* ========== 动画 ========== */
+@keyframes momentFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes likePop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+@keyframes particleFly {
+  0%   { opacity: 1; transform: translate(0,0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--px), var(--py)) scale(0); }
+}
+
+/* ========== Banner ========== */
+.moments-banner {
+  position: relative;
+  height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.5) 100%);
+}
+.banner-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+.banner-tips {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+.banner-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 20px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+.banner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 28px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.banner-link:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+/* ========== 时间线 ========== */
+.moments-timeline {
+  position: relative;
+}
+
+/* 单条动态 */
+.moment-item {
+  padding: 0 0 24px;
+  animation: momentFadeIn 0.5s ease both;
+}
+.moment-item:nth-child(1) { animation-delay: 0.05s; }
+.moment-item:nth-child(2) { animation-delay: 0.1s; }
+.moment-item:nth-child(3) { animation-delay: 0.15s; }
+.moment-item:nth-child(4) { animation-delay: 0.2s; }
+.moment-item:nth-child(5) { animation-delay: 0.25s; }
+.moment-item:nth-child(6) { animation-delay: 0.3s; }
+
+/* 卡片 */
+.moment-card {
+  background: var(--moments-card-bg);
+  border: 1px solid var(--moments-border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: var(--moments-card-shadow);
+  transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1);
+}
+.moment-card:hover {
+  box-shadow: var(--moments-card-hover-shadow);
+}
+
+/* 卡片头部：头像 + 昵称 */
+.moment-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.moment-header-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.moment-header-info {
+  display: flex;
+  flex-direction: column;
+}
+.moment-author {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--moments-primary);
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+.moment-header-time {
+  font-size: 0.75rem;
+  color: var(--moments-text-meta);
+}
+
+/* 正文 */
+.moment-text {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--moments-text);
+  margin-bottom: 14px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+/* ========== 图片画廊 ========== */
+.moment-gallery {
+  margin-bottom: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+/* 1张 */
+.moment-gallery.gallery-1 .gallery-item {
+  width: 100%;
+  max-height: 360px;
+}
+.moment-gallery.gallery-1 .gallery-img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* 2张 */
+.moment-gallery.gallery-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+.moment-gallery.gallery-2 .gallery-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+/* 3张 */
+.moment-gallery.gallery-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+}
+.moment-gallery.gallery-3 .gallery-item:first-child {
+  grid-row: 1 / 3;
+}
+.moment-gallery.gallery-3 .gallery-item:first-child .gallery-img {
+  height: 100%;
+  object-fit: cover;
+}
+.moment-gallery.gallery-3 .gallery-item:not(:first-child) .gallery-img {
+  aspect-ratio: 1;
+  width: 100%;
+  object-fit: cover;
+}
+/* 4-9张 grid */
+.moment-gallery.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+.moment-gallery.gallery-grid .gallery-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 4px;
+}
+.gallery-img {
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.gallery-img:hover {
+  opacity: 0.88;
+  transform: scale(1.02);
+}
+
+/* ========== 视频 ========== */
+.moment-video {
+  margin-bottom: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.moment-video iframe,
+.moment-video video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ========== 音乐 ========== */
+.moment-music {
+  margin-bottom: 14px;
+}
+.moment-music meting-js {
+  border-radius: 8px;
+}
+
+/* ========== 底部信息栏 ========== */
+.moment-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--moments-border);
+}
+
+.moment-meta-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.78rem;
+  color: var(--moments-text-meta);
+}
+.moment-meta-left > * {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.moment-meta-left .anzhiyufont {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+.moment-link {
+  color: var(--moments-primary);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.moment-link:hover {
+  opacity: 0.7;
+}
+
+.moment-meta-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.moment-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border: 1px solid var(--moments-border);
+  background: var(--moments-card-bg);
+  color: var(--moments-text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s;
+  font-family: inherit;
+}
+.moment-action:hover {
+  color: var(--moments-primary);
+  border-color: var(--moments-primary);
+  background: rgba(66,90,239,0.05);
+}
+.moment-action.liked {
+  color: var(--moments-like);
+  border-color: var(--moments-like);
+}
+.moment-action.like-animating .anzhiyufont {
+  animation: likePop 0.4s ease;
+}
+.moment-action .anzhiyufont {
+  font-size: 1rem;
+}
+
+/* 点赞粒子 */
+.like-particle {
+  position: fixed;
+  pointer-events: none;
+  font-size: 0.9rem;
+  z-index: 99999;
+  animation: particleFly 0.7s ease-out forwards;
+}
+
+/* ========== 单条动态内 Twikoo 评论区 ========== */
+.moment-comments-twikoo {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--moments-border);
+  animation: momentFadeIn 0.35s ease;
+  background: var(--moments-card-bg);
+  border-radius: 0 0 var(--moments-radius-sm) var(--moments-radius-sm);
+}
+/* Twikoo 内部自适应 */
+.moment-comments-twikoo .tk-comments {
+  padding: 0;
+}
+.moment-comments-twikoo .tk-comments-title {
+  display: none;
+}
+
+/* ========== Lightbox ========== */
+.moments-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  cursor: pointer;
+}
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 1;
+}
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.lightbox-prev,
+.lightbox-next,
+.lightbox-close {
+  position: absolute;
+  border: none;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: background 0.25s;
+  z-index: 2;
+}
+.lightbox-prev:hover,
+.lightbox-next:hover,
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.25);
+}
+.lightbox-prev { left: -56px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: -56px; top: 50%; transform: translateY(-50%); }
+.lightbox-close { top: -44px; right: 0; }
+.lightbox-counter {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 768px) {
+  .moments-page {
+    padding: 0 12px 40px;
+  }
+  .moments-banner {
+    height: 200px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
+  .banner-title {
+    font-size: 1.5rem;
+  }
+  .moment-item {
+    gap: 10px;
+    padding: 8px 0 18px;
+  }
+  .moment-header-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 5px;
+  }
+  .moment-card {
+    padding: 14px 16px;
+  }
+  .moment-text {
+    font-size: 0.93rem;
+  }
+  .moment-meta-left {
+    gap: 8px;
+    font-size: 0.72rem;
+  }
+  .moment-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .moment-gallery.gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .moment-gallery.gallery-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .lightbox-close { top: -40px; right: 8px; }
+}
+
+@media (max-width: 480px) {
+  .moment-meta-left {
+    gap: 4px;
+  }
+}
