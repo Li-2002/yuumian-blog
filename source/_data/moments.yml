@@ -1,50 +1,55 @@
 - class_name: 朋友圈
-  subTitle: 记录生活中的点滴
+  subTitle: 唠唠嗑发发好玩的
   tips: 万物可爱，生活明朗 ✨
   top_background: https://yuumii.top/sys/bakcgournd.png
   buttonText: 关于我
   buttonLink: /about/
   moments_list:
-    - content: 今天天气真好，去公园散步了🌳 阳光洒在草地上，一切都那么美好。
-      date: 2026/06/12
-      image:
-        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
-        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
-      address: 佛山·千灯湖公园
-      from: iPhone 15 Pro
-      link: /posts/e140.html
 
-    - content: 博客终于上线了！折腾了好久，从 Hexo 搭建到主题配置，再到各种优化，虽然过程很累但看到成果还是很开心的 🎉
+    - content: moment这个页面是原版的闲言碎语页面改过来的，原来的页面不是很喜欢，所以自己用ai写了一个页面，后续会做成我的文章贴出该页面的代码
+      date: 2026/06/15
+      address: 佛山
+      from: Windows 10
+
+    - content: 广东这两天雨好大，天都是黑的
+      date: 2026/06/15
+      address: 佛山
+      from: K90
+
+    - content: 深圳电子展，这次是工业展，对我们来说收获有以前的多。但是还是见到了很多新奇的东西
       date: 2026/06/10
       image:
+        - https://yuumii.top/moments/%E5%85%A5%E5%9C%BA%E5%88%B8.jpg
+        - https://yuumii.top/moments/%E6%B7%B1%E5%9C%B3%E7%94%B5%E5%AD%90%E5%B1%95%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg
+      video:  
+        - https://yuumii.top/moments/%E7%94%B5%E5%AD%90%E5%B1%95%E8%A7%86%E9%A2%912.mp4
+        - https://yuumii.top/moments/%E7%94%B5%E5%AD%90%E5%B1%95%E8%A7%86%E9%A2%911.mp4
+
+      address: 深圳
+      from: K90
+
+    - content: 博客终于上线了！折腾了好久，从 Hexo 搭建到主题配置，插件配置，图库域名等等，花费了好多时间，但是看到搭起来了还是很舒服的
+      date: 2026/06/18
+      image:
         - https://yuumii.top/essay/eassay2026-06-08%20215458.png
+        - https://yuumii.top/moments/%E6%B7%B1%E5%9C%B3%E7%94%B5%E5%AD%90%E5%B1%95%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg
       from: MacBook Pro
-      link: /posts/hello-world.html
+      link: https://blog.yuumii.top
 
     - content: 推荐一首超好听的歌 🎵 最近一直在循环，太治愈了。
       date: 2026/06/08
       aplayer:
-        server: tencent
-        id: 001FGQba3i10mw
-      address: 在家
+        server: netease
+        id: 2082329068
+      address: 佛山
 
-    - content: B站看到一个超有意思的视频，分享一下 😆
+    - content: Anzhiyu主题指南 😆
       date: 2026/06/05
       video:
         - https://player.bilibili.com/player.html?aid=226886152&bvid=BV1Ch41137tR&cid=1081639816&p=1&autoplay=0
-      from: iPad
+      from: Windows 10
 
-    - content: 深夜写代码，窗外下着小雨，键盘声和雨声混在一起，莫名地让人平静。有时候觉得写代码也是一种修行，不断地面对问题、解决问题，在这个过程中慢慢成长。
+    - content: 画船听雨眠祝您六一儿童节快乐，也祝我博客生日快乐
       date: 2026/06/01
       address: 佛山
-      from: MacBook Pro
-
-    - content: 周末和朋友去爬山，山顶的风景真的绝了！🏔️ 虽然累得够呛，但看到云海的那一刻觉得一切都值了。下次一定要带相机来拍延时。
-      date: 2026/05/28
-      image:
-        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
-        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
-        - https://yuumii.top/essay/eassay2026-06-08%20215458.png
-      address: 西樵山
-      from: iPhone 15 Pro
-      link: /posts/e140.html
+      from: Windows 10

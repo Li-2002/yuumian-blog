@@ -1,3 +1,124 @@
+---
+title: 动态/朋友圈(moments)页面开发文档
+top_img: https://yuumii.top/about/about6-yanyun.jpg
+cover: https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/Logo.png
+categories: 博客
+tags: Hexo新页面
+keywords: moment
+description: 动态/朋友圈(moments)页面开发文档
+---
+# 动态/朋友圈(moments)页面开发文档-Anzhiyu主题
+
+## 一、功能概述
+
+### 1、了解该页面
+
+因为原先的闲言碎语页面不是我觉得不是很喜欢，所以就想着自己去做一个，仿照别人的创建新页面的方法做了一个pug模板，一个页面，然后剩下的ai一下，最终做出这个仿微信朋友圈风格的动态展示页面，支持发布文字、图片、视频、音乐等内容，我自己加了一个实况图的，看到这话说明这边还没加入。数据通过_data/moments文件管理，评论系统接入Twikoo，每条动态拥有独立评论区。而且，图片的排版方式我也修改了，按照我喜欢的去排版了
+
+- 页面路径：`/moments/`
+- 数据来源：`source/_data/moments.yml`
+- **这个新增页面好的点就是仅新增文件，不修改任何现有文件**
+
+### 2、查看效果
+
+新增页面这种东西，肯定要先看看效果好不好再看看要不要啦！
+<a href="/moments/" target="_blank" class="moment-post-preview-btn" style="display:inline-flex;align-items:center;gap:8px;padding:8px 24px;background:linear-gradient(135deg,#425AEF,#6C83F7);color:#fff;font-size:0.95rem;font-weight:600;border-radius:50px;text-decoration:none;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.25,0.8,0.25,1);box-shadow:0 4px 12px rgba(66,90,239,0.25);" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(66,90,239,0.4)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(66,90,239,0.25)';">
+  <i class="anzhiyufont anzhiyu-icon-arrow-circle-right" style="font-size:1rem;transition:transform 0.35s ease;"></i>
+  <span>碎碎念动态</span>
+</a>
+
+## 二、实现步骤
+
+### 1、修改菜单配置
+
+在 `_config.anzhiyu.yml` 和 `themes/anzhiyu/_config.yml` 的 `menu` 中添加动态菜单项：
+
+```yaml
+  动态:
+    朋友圈: /moments/ || anzhiyu-icon-bolt
+```
+
+位置在两个文件的 menu 部分，与其他 menu 分组同级。
+
+---
+
+### 2、新建文件
+
+#### 2.1 新建 MD 页面文件
+
+在 `\source\moments\` 中新建 `index.md`：
+
+```markdown
+---
+title: 动态
+date: 2026-06-12 00:00:00
+type: moments
+layout: moments
+comments: false
+aside: false
+top_img: false
+---
+```
+
+#### 2.2 新建 YML 数据文件
+
+在 `\source\_data\` 中新建 `moments.yml`：
+
+
+```yaml
+- class_name: 朋友圈
+  subTitle: 唠唠嗑发发好玩的
+  tips: 万物可爱，生活明朗 ✨
+  top_background: https://yuumii.top/sys/bakcgournd.png
+  buttonText: 关于我
+  buttonLink: /about/
+  moments_list:
+
+    - content: 这条动态只有纯文字
+      date: 2026/06/15
+      address: 佛山
+      from: Windows 10
+
+    - content: 带图片的动态
+      date: 2026/06/10
+      image:
+        - https://example.com/img1.jpg
+        - https://example.com/img2.jpg
+      address: 深圳
+      from: K90
+
+    - content: 带视频的动态
+      date: 2026/06/05
+      video:
+        - https://player.bilibili.com/player.html?aid=226886152&bvid=BV1Ch41137tR&cid=1081639816&p=1&autoplay=0
+      from: Windows 10
+
+    - content: 带音乐推荐
+      date: 2026/06/08
+      aplayer:
+        server: netease
+        id: 2082329068
+      address: 佛山
+```
+
+**字段说明：**
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `content` | 字符串 | 动态正文 |
+| `date` | 字符串 | 日期，格式 `YYYY/MM/DD` |
+| `image` | 数组 | 图片链接列表，支持 1-9 张 |
+| `video` | 数组 | 视频链接列表，支持 B站/YouTube/本地视频 |
+| `aplayer` | 对象 | 音乐播放器，`server` 支持 `netease`/`tencent`/`kugou`/`kuwo`/`baidu` |
+| `address` | 字符串 | 地址，为空默认显示"佛山" |
+| `from` | 字符串 | 设备标识，为空默认显示"Redmi K90" |
+| `link` | 字符串 | 外链地址 |
+
+#### 2.3 新建 PUG 模板文件
+
+在 `\themes\anzhiyu\layout\` 中新建 `moments.pug`：
+
+```pug
 //- ============================================================
 //- Hexo Anzhiyu 主题 - 朋友圈/动态页面模板
 //- 路径：/moments/
@@ -248,3 +369,134 @@ block content
     window.__twikooEnvId = '!{theme.twikoo.envId}';
     window.__twikooRegion = '!{theme.twikoo.region || ""}';
   script(src=url_for("/js/moments.js"))
+
+```
+
+> 完整 CSS 文件共 776 行。
+
+#### 2.5 新建 JS 脚本文件
+
+在 `\themes\anzhiyu\source\js\` 中新建 `moments.js`：
+
+```javascript
+/**
+ * ============================================================
+ * Hexo Anzhiyu 主题 - 朋友圈/动态页面脚本
+ * 路径：themes/anzhiyu/source/js/moments.js
+ * 说明：所有函数挂载在 window.MomentsApp 命名空间下，完全隔离
+ * ============================================================
+ */
+(function () {
+  'use strict';
+
+  var STORAGE_KEY = 'anzhiyu_moments_interact';
+
+  // ========== 数据读写 ==========
+  function loadInteract() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+    catch (e) { return {}; }
+  }
+
+  function saveInteract(data) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }
+
+  // ========== 点赞 ==========
+  // 点赞计数存储在 localStorage 中，点击切换 liked 状态
+  // 点赞时触发心形放大动画 + 5个 ❤️ 粒子扩散效果
+
+  // ========== 评论 ==========
+  // openComment(idx, path): 展开/收起 Twikoo 评论区
+  // 首次点击时延迟初始化 twikoo.init()
+  // 评论超过3条时自动折叠，底部显示"展开更多评论"按钮
+
+  // ========== 视频折叠 ==========
+  // toggleVideos(btn, total): 展开/收起多余视频（多于1个时）
+
+  // ========== 图片画廊展开 ==========
+  // expandGallery(overlay): 6张+图片时点击毛玻璃遮罩展开隐藏图片
+
+  // ========== 4图轮播 ==========
+  // gallery4Prev/gallery4Next: 切换主图 + 自动更新下方3张错落图
+  // 使用 data-all-urls 和 data-main-idx 属性存储状态
+
+  // ========== 分享 ==========
+  // shareMoment(text): 复制动态内容到剪贴板
+
+  // ========== Lightbox ==========
+  // openLightbox / lightboxNav / closeLightbox: 全屏图片查看
+  // 支持键盘 ←→ 切换，ESC 关闭
+
+  // ========== 挂载到全局命名空间 ==========
+  window.MomentsApp = {
+    toggleLike: toggleLike,
+    openComment: openComment,
+    toggleVideos: toggleVideos,
+    expandGallery: expandGallery,
+    gallery4Prev: gallery4Prev,
+    gallery4Next: gallery4Next,
+    shareMoment: shareMoment,
+    openLightbox: openLightbox,
+    lightboxNav: lightboxNav,
+    closeLightbox: closeLightbox
+  };
+
+  // DOM 加载完成后自动初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+```
+
+如果您不想要我这样的样式，可以按照我的标注去修改即可，剩下的东西都是ai帮我总结的 可看可不看， 到这里其实就已经结束了，您可以根据自己的需求去修改。祝早日有自己满意的博客~
+
+
+## 三、文件清单
+
+| 文件 | 作用 | 状态 |
+|------|------|------|
+| `source/moments/index.md` | Hexo 页面入口 | 新建 |
+| `source/_data/moments.yml` | 动态数据文件 | 新建 |
+| `themes/anzhiyu/layout/moments.pug` | 页面模板（Pug） | 新建 |
+| `themes/anzhiyu/source/css/moments.css` | 页面样式 | 新建 |
+| `themes/anzhiyu/source/js/moments.js` | 页面脚本 | 新建 |
+| `_config.anzhiyu.yml` → `menu` | 添加菜单项 | 修改 |
+| `themes/anzhiyu/_config.yml` → `menu` | 添加菜单项 | 修改 |
+
+## 四、图片画廊布局说明
+
+| 图片数量 | 布局 | 特殊效果 |
+|---------|------|---------|
+| 1张 | 16:9 通栏 | 标准圆角 |
+| 2张 | 上下等分，各 16:9 | 简洁纵向排列 |
+| 3张 | 上1通底 + clip-path 斜切分割 + 下2并排 | 斜切分割线 |
+| 4张 | 1张悬浮居中（shadow）+ 下方3张 clip-path 错落 | 左右箭头切换主图 |
+| 5张 | 上横通栏斜切 + 下2×2方格 | 底部斜切边 |
+| 6-9张 | 同5张布局，第5格毛玻璃遮罩 + 点击展开 | blur(4px) 毛玻璃 |
+
+## 五、核心交互功能
+
+1. **点赞** — localStorage 存储计数，心形放大动画 + ❤️ 粒子扩散
+2. **评论** — 每条动态独立 Twikoo，首次点击懒加载，超3条自动折叠
+3. **视频** — 超过1个时折叠，点击展开/收起
+4. **图片查看** — 全屏 Lightbox，键盘 ←→ 切换、ESC 关闭
+5. **4图切换** — 左右箭头轮播主图，下方3张自动替换
+6. **6+图展开** — 点击毛玻璃遮罩展示所有图片
+7. **默认值** — 地址为空→"佛山"，设备为空→"Redmi K90"
+8. **暗色模式** — 通过 `[data-theme="dark"]` 自动切换配色
+
+## 六、如何使用
+
+1. 在 `source/_data/moments.yml` 中编辑动态内容
+2. 运行 `hexo generate` 重新构建
+3. 访问 `https://你的域名/moments/` 查看效果
+4. 评论功能依赖 `_config.anzhiyu.yml` 中已配置的 Twikoo envId
+
+
+
+CSS/JS 均在 `moments.pug` 模板内通过 `<link>` 和 `<script>` 直接引入，完全不侵入主题现有文件。
+
+### 八、最后
+  <span style="color: rgba(252, 142, 2, 1)">愿君安康，平安同乐！</span>
