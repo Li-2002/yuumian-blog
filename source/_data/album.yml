@@ -1,5 +1,5 @@
-- class_name: 相册集
-  path_name: /wordScenery
+- class_name: 凤凰山一日游
+  path_name: /FengHuangMountainTravel
   type: 2
   description: 因为到不了世界各地，所以请网友们发来了各地的夕阳与风景🌇。
   cover: https://upload-bbs.miyoushe.com/upload/2025/06/13/125766904/2cf2b6aea07bba089d0d17c4fea72d1b_5366629137934368264.png
@@ -29,22 +29,22 @@
 - class_name: 我的日常
   path_name: /dailyPhoto
   type: 1
-  description: 这里存放的是有关我自己的一些沙雕生活与有趣的事情。
+  description: 我的日常！分享些好玩的琐事
   top_link: /album
   top_btn_text: 返回
   top_background: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
   cover: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
   album_list:
     - date: 2022-10-24
-      content: 老妹的画
+      content: 日常办公
       image:
         - https://bu.dusays.com/2023/04/09/643293997b92b.jpeg
         - https://bu.dusays.com/2023/04/09/643293997b92b.jpeg
 
 - class_name: 炸厨房
-  path_name: /dailyPhoto
+  path_name: /cookDaily
   type: 1
-  description: 这里存放的是有关我自己的一些沙雕生活与有趣的事情。
+  description: 这里是我做的菜！
   top_link: /album
   top_btn_text: 返回
   top_background: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
