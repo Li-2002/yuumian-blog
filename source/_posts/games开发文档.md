@@ -6,7 +6,10 @@ categories: 博客
 tags: Hexo新页面
 keywords: games
 description: 游戏人生(games)页面开发文档
+ai: >-
+  这里是雨眠，这篇文章介绍了Anzhiyu主题下游戏人生(games)页面的开发过程。该页面用于展示游戏收藏列表，支持多分类分组，卡片形式展示封面、名称、规格、描述及链接，数据通过YAML文件管理并集成评论系统。实现步骤包括：在page.pug中新增games分支，新建games.pug模板文件，编写games.yml数据文件（含游戏分组、游戏列表字段），创建index.md页面文件，以及新增games.styl样式文件。最终页面路径为/games/，数据源为source/_data/games.yml，用户可按格式自行填写游戏信息生成个性化游戏收藏页。
 ---
+
 # 游戏人生(games)页面开发文档-Anzhiyu主题
 
 ## 一、功能概述

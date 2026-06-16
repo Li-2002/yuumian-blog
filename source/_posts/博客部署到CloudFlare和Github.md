@@ -6,7 +6,12 @@ categories: 博客
 tags: CloudFlare
 keywords: 博客上线CloudFlare
 description: 这是一个Hexo博客怎么上线CloudFlare的很简单的教程
+ai: >-
+  这里是雨眠，这篇文章详细介绍了如何通过Git、GitHub和CloudFlare将Hexo博客上线。首先安装Git并配置邮箱和用户名，生成SSH公钥并添加到GitHub，创建GitHub仓库用于存储博客文件。接着安装hexo-deployer-git，修改博客根目录的_config.yml中的deploy配置，填入SSH格式的仓库地址，然后执行hexo
+  clean、generate和deploy将静态文件部署到GitHub Pages。最后在CloudFlare
+  Workers和Pages中创建新项目，连接GitHub仓库并配置构建设置（如Node.js版本），保存并部署即可获得全球可访问的链接。还提到可添加自定义域名，后续更新博客只需提交源码，CloudFlare会自动构建发布。
 ---
+
 # Hexo上线CloudFlare
 
 ## 安装Git

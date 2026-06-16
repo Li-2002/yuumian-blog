@@ -5,6 +5,10 @@ categories: 博客
 tags: Ai摘要
 keywords: Hexo,AI摘要,安知鱼,DeepSeek,OpenAI,hexo-ai-summary
 description: 这篇教程教你如何用 DeepSeek 或 OpenAI 替代安知鱼主题默认的洪墨 AI 摘要，低成本甚至免费实现文章自动摘要生成。
+ai: >-
+  这里是雨眠，这篇文章主要介绍了如何将安知鱼主题自带的AI摘要功能替换为DeepSeek或其他兼容OpenAI接口的服务。文章首先说明了替换原因——默认使用洪墨AI，而用户已有DeepSeek
+  API且成本较低。然后详细讲解了工作原理：插件将文章纯文本发送至AI生成摘要并自动写入Front-matter的ai字段。实现步骤包括安装插件和依赖、开启主题配置文件中的post_head_ai_description并设置mode为local、在Hexo根目录配置文件添加aisummary配置项并填入API地址和token。特别提醒备份博客目录，首次运行会重写所有文章Front-matter，并注意DeepSeek接口需加/v1路径。文章还提供了OpenAI/ChatGPT等其他AI的配置示例，并说明可通过is_summary:
+  false控制单篇文章不显示摘要。最后给出了常见坑点：并发数建议设为2以防限流。
 ---
 
 # 为什么要换掉默认的 AI 摘要？
@@ -164,9 +168,9 @@ is_summary: false
 
 ## 踩过的坑
 
-1. **首次运行会重写所有文章的 Front-matter**，这就是为什么开头一再强调要备份。虽然它只改 `ai`、`description`、`keywords` 这几个字段，但为了保险，备份一下总没错。
+1. **首次运行会重写所有文章的 Front-matter**，这就是为什么开头一再强调要备份。他会修改所有文章的 `ai`、`description`、`keywords` 等字段，所以要备份。
 
-2. **DeepSeek 的接口地址要注意**，早期文档里写的是 `api.deepseek.com/chat/completions`，但现在要加上 `/v1`，不然会 404。
+2. **DeepSeek 的接口地址要注意**，API地址是：https://api.deepseek.com/chat/completions喔~
 
 3. **并发别开太高**，`concurrency: 2` 足够了。开太高有些 API 会给你限流，反而都生成失败。
 
