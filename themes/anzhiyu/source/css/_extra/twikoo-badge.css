@@ -1,0 +1,18 @@
+/* Twikoo 评论区博主标识
+ * 效果：昵称前显示「雨眠」+ 官方「博主」标
+ * 依赖：Vercel 已配置 MASTER_EMAIL_HASH=bd2a13cbada85e2b47923f0c4d4f2637
+ */
+
+/* 「雨眠」标识 — 跟在昵称后面 */
+.tk-comment.tk-master .tk-nick::after {
+  content: "雨眠";
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  font-size: 0.68rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, #F2B94B, #FF8C42);
+  color: #fff;
+  border-radius: 10px;
+  vertical-align: middle;
+}
