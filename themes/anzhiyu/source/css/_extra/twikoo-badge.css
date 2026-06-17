@@ -3,30 +3,34 @@
  * 通过 twikoo.pug 中 onCommentLoaded 根据邮箱头像 URL 匹配识别
  */
 
-/* 「博主」标识 — 昵称前面，蓝色 */
+/* 「博主」标识 — 昵称前面，蓝色半透明药丸形 */
 .tk-comment.tk-master .tk-nick::before {
   content: "博主";
   display: inline-block;
-  margin-right: 6px;
-  padding: 1px 8px;
-  font-size: 0.68rem;
+  margin-right: 5px;
+  padding: 1px 14px;
+  font-size: 0.78rem;
+  line-height: 1.5;
   font-weight: 500;
-  background: linear-gradient(135deg, #4A90D9, #357ABD);
-  color: #fff;
-  border-radius: 10px;
-  vertical-align: middle;
+  background: rgba(74, 144, 226, 0.12);
+  color: #3a8fd4;
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 50px;
+  vertical-align: -0.1em;
 }
 
-/* 「雨眠」标识 — 昵称后面，橙金色 */
+/* 「雨眠」标识 — 昵称后面，暖橙半透明药丸形 */
 .tk-comment.tk-master .tk-nick::after {
-  content: "雨眠";
+  content: "🍉 雨眠";
   display: inline-block;
-  margin-left: 6px;
-  padding: 1px 8px;
-  font-size: 0.68rem;
+  margin-left: 5px;
+  padding: 1px 14px;
+  font-size: 0.78rem;
+  line-height: 1.5;
   font-weight: 500;
-  background: linear-gradient(135deg, #F2B94B, #FF8C42);
-  color: #fff;
-  border-radius: 10px;
-  vertical-align: middle;
+  background: rgba(242, 153, 74, 0.12);
+  color: #d4893a;
+  border: 1px solid rgba(242, 153, 74, 0.3);
+  border-radius: 50px;
+  vertical-align: -0.1em;
 }

@@ -367,7 +367,7 @@ waline:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://yuumian-twikoo.vercel.app/
+  envId: https://twikoo.yuumii.top/ 
   region:
   visitor: false
   option:
