@@ -10,6 +10,12 @@ script.
         region: '!{region}',
         onCommentLoaded: () => {
           anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+          // 博主标识：根据邮箱 MD5 给博主评论添加 tk-master class
+          document.querySelectorAll('#twikoo .tk-avatar img').forEach(img => {
+            if (img.src.includes('bd2a13cbada85e2b47923f0c4d4f2637')) {
+              img.closest('.tk-comment')?.classList.add('tk-master')
+            }
+          })
         }
       }, !{JSON.stringify(option)}))
     }

@@ -1,9 +1,23 @@
 /* Twikoo 评论区博主标识
- * 效果：昵称前显示「雨眠」+ 官方「博主」标
- * 依赖：Vercel 已配置 MASTER_EMAIL_HASH=bd2a13cbada85e2b47923f0c4d4f2637
+ * 效果：博主评论显示「雨眠」标识
+ * 通过 twikoo.pug 中 onCommentLoaded 根据邮箱头像 URL 匹配识别
  */
 
-/* 「雨眠」标识 — 跟在昵称后面 */
+/* 「博主」标识 — 昵称前面，蓝色 */
+.tk-comment.tk-master .tk-nick::before {
+  content: "博主";
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 8px;
+  font-size: 0.68rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, #4A90D9, #357ABD);
+  color: #fff;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+/* 「雨眠」标识 — 昵称后面，橙金色 */
 .tk-comment.tk-master .tk-nick::after {
   content: "雨眠";
   display: inline-block;
