@@ -494,8 +494,8 @@ block content
 ## 六、如何使用
 
 1. 在 `source/_data/moments.yml` 中编辑动态内容
-2. 运行 `hexo generate` 重新构建
-3. 访问 `https://你的域名/moments/` 查看效果
+2. 运行 `hexo clean && hexo generate && hexo server` 三联重新构建
+3. 看看你的网站有评论区的地方看看效果就知道了
 4. 评论功能依赖 `_config.anzhiyu.yml` 中已配置的 Twikoo envId
 
 

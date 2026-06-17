@@ -4,7 +4,7 @@
  */
 
 /* 「博主」标识 — 昵称前面，蓝色半透明药丸形 */
-.tk-comment.tk-master .tk-nick::before {
+/* .tk-comment.tk-master .tk-nick::before {
   content: "博主";
   display: inline-block;
   margin-right: 5px;
@@ -17,7 +17,7 @@
   border: 1px solid rgba(74, 144, 226, 0.3);
   border-radius: 50px;
   vertical-align: -0.1em;
-}
+} */
 
 /* 「雨眠」标识 — 昵称后面，暖橙半透明药丸形 */
 .tk-comment.tk-master .tk-nick::after {

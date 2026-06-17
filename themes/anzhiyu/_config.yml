@@ -380,7 +380,7 @@ waline:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId:
+  envId: https://twikoo.yuumii.top/ 
   region:
   visitor: false
   option:
