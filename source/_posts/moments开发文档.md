@@ -7,7 +7,8 @@ tags: Hexo新页面
 keywords: moment
 description: 动态/朋友圈(moments)页面开发文档
 ai: >-
-  这里是雨眠，这篇文章详细介绍了在Anzhiyu主题中新增仿微信朋友圈动态页面的开发方法，通过创建pug模板、MD页面和YML数据文件实现，无需修改现有文件，仅新增source/_data/moments.yml管理动态，支持文字、图片、视频、音乐，每条动态接入独立Twikoo评论区，并定制了图片排版样式。
+  雨眠AI摘要帮您理解这篇文章~本文档详细介绍了Hexo
+  Anzhiyu主题动态/朋友圈页面的开发步骤，通过新建index.md、moments.yml和moments.pug文件实现仿微信朋友圈风格页面，支持文字、图片、视频、音乐等内容发布，数据从source/_data/moments.yml读取，每条动态有独立Twikoo评论区，无需修改现有文件。
 ---
 
 # 动态/朋友圈(moments)页面开发文档-Anzhiyu主题

@@ -6,6 +6,11 @@
   buttonLink: /about/
   moments_list:
 
+    - content: 好想下班
+      date: 2026/06/18
+      address: 佛山
+      from: Windows 10
+
     - content: moment这个页面是原版的闲言碎语页面改过来的，原来的页面不是很喜欢，所以自己用ai写了一个页面，后续会做成我的文章贴出该页面的代码
       date: 2026/06/15
       address: 佛山

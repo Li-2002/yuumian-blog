@@ -594,7 +594,7 @@ hexo.extend.filter.register(
       },
       post_head_ai_description: {
         enable: true,
-        gptName: "AnZhiYu",
+        gptName: "鱼米AI",
         mode: "local",
         switchBtn: false,
         btnLink: "https://afdian.net/item/886a79d4db6711eda42a52540025c377",
