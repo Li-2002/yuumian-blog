@@ -19,18 +19,24 @@
   vertical-align: -0.1em;
 } */
 
-/* 「雨眠」标识 — 昵称后面，暖橙半透明药丸形 */
+/* 用户名加粗（即时生效，不依赖 styl 编译） */
+.tk-comment .tk-nick,
+.tk-comment .tk-nick a {
+  font-weight: bold;
+}
+
+/* 「雨眠」标识 — 昵称右边，暖橙圆角矩形 */
 .tk-comment.tk-master .tk-nick::after {
-  content: "🍉 雨眠";
+  content: "Yuumii";
   display: inline-block;
-  margin-left: 5px;
-  padding: 1px 14px;
-  font-size: 0.78rem;
-  line-height: 1.5;
-  font-weight: 500;
-  background: rgba(242, 153, 74, 0.12);
-  color: #d4893a;
-  border: 1px solid rgba(242, 153, 74, 0.3);
-  border-radius: 50px;
-  vertical-align: -0.1em;
+  margin-left: 10px;
+  padding: 2px 16px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #ff9e28;
+  color: #ffffff;
+  border-radius: 6px;
+  vertical-align: middle;
 }
