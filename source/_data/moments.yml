@@ -5,6 +5,11 @@
   buttonText: 关于我
   buttonLink: /about/
   moments_list:
+    - content: 游戏页面拖了这么久还没改图片 人怎么能这么拖？
+      date: 2026/06/122
+      address: 佛山
+      from: Windows 10
+
     - content: 端午安康！吃粽子没喔，妈特地从老家给我寄的粽子过来 巨香，本来以为算了太麻烦，吃了一个发现要少了 早知道多寄一点
       date: 2026/06/19
       address: 佛山
@@ -36,7 +41,6 @@
       video:  
         - https://yuumii.top/moments/%E7%94%B5%E5%AD%90%E5%B1%95%E8%A7%86%E9%A2%912.mp4
         - https://yuumii.top/moments/%E7%94%B5%E5%AD%90%E5%B1%95%E8%A7%86%E9%A2%911.mp4
-
       address: 深圳
       from: K90
 
