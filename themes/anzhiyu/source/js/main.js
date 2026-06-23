@@ -1822,7 +1822,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // needRefresh
     // nav中间的标题变化
-    document.getElementById("page-name").innerText = document.title.split(` | ${GLOBAL_CONFIG_SITE.configTitle}`)[0];
+    document.querySelector("#page-name .page-name-text").innerText = document.title.split(` | ${GLOBAL_CONFIG_SITE.configTitle}`)[0];
     anzhiyu.initIndexEssay();
     anzhiyu.changeTimeInEssay();
     anzhiyu.removeBodyPaceClass();

@@ -22,7 +22,9 @@ nav#nav
 
     div.mask-name-container
       #name-container
-        a#page-name(href="javascript:anzhiyu.scrollToDest(0, 500)") PAGE_NAME
+        a#page-name(href="javascript:anzhiyu.scrollToTop()")
+          span.page-name-text PAGE_NAME
+          i.anzhiyufont.anzhiyu-icon-arrow-up.page-name-totop-icon
 
     #menus
       !=partial('includes/header/menu_item', {}, {cache: true})

@@ -366,6 +366,37 @@
   #page-header.nav-fixed #nav #page-name:hover
     background var(--anzhiyu-main)
 
+// 回到顶部：hover 时从左右两边延展为蓝色按钮 + 向上箭头图标
+#page-header.nav-fixed #nav #page-name
+  transition min-width 0.3s ease, padding 0.3s ease, background 0.3s ease, color 0.2s ease
+#page-name .page-name-text
+  transition opacity 0.2s
+#page-name .page-name-totop-icon
+  position absolute
+  left 0
+  right 0
+  top 50%
+  margin auto
+  transform translateY(-50%)
+  opacity 0
+  font-size 1.1rem
+  font-weight 700
+  color var(--anzhiyu-white)
+  transition opacity 0.2s
+  pointer-events none
+@media screen and (min-width: 900px)
+  #page-header.nav-fixed #nav #page-name:hover
+    min-width 160px
+    padding 4px 44px
+    background var(--anzhiyu-main)
+    color var(--anzhiyu-white) !important
+  #page-header.nav-fixed #nav #page-name:hover .page-name-text
+    opacity 0
+  #page-header.nav-fixed #nav #page-name:hover::after
+    opacity 0 !important
+  #page-header.nav-fixed #nav #page-name:hover .page-name-totop-icon
+    opacity 1
+
 #page-header #nav #page-name
   display inline
   font-weight bold
