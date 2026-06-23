@@ -25,6 +25,9 @@ menu:
     标签: /tags/ || anzhiyu-icon-tags
     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
 
+  动态:
+    朋友圈: /moments/ || anzhiyu-icon-bolt
+    
   友链:
     友人帐: /link/ || anzhiyu-icon-link
     朋友圈: /fcircle/ || anzhiyu-icon-artstation
@@ -36,8 +39,7 @@ menu:
     # 闲言碎语: /essay/ || anzhiyu-icon-lightbulb
     游戏人生: /games/ || anzhiyu-icon-fire
 
-  动态:
-    朋友圈: /moments/ || anzhiyu-icon-bolt
+
 
   关于:
     关于本人: /about/ || anzhiyu-icon-paper-plane

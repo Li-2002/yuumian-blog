@@ -29,6 +29,15 @@
       link: https://www.sumi233.top
       avatar: https://cdn.sumi233.top/gh/huang233893/blog-image-bed@main/top/huang233893/imgs/blog/usersumi.png
       descr: 终有一日，寻梦中人
+    - name: 老朱独立开发
+      link: https://ilaozhu.com
+      avatar: https://ilaozhu.com/usr/themes/WaterDrop/static/images/avatar.jpg
+      descr: 用智慧打破边界，以代码书写未来
+    - name: 五岁博客代码安全审计
+      link: https://fiveyoboy.com
+      avatar: https://fiveyoboy.com/favicon.ico
+      descr: 旨在分享一些有价值的内容，让您少走更多弯路
+
 
 - class_name: 友友
   class_desc: 那些人，那些事
