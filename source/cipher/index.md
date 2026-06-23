@@ -36,21 +36,27 @@ top_img: false
   </div>
   <div class="cipher-output-wrap">
     <textarea class="cipher-output" id="cipherOutput" readonly placeholder="结果将显示在这里…"></textarea>
-    <button class="cipher-copy" type="button" title="复制" onclick="cipherCopy(this)">复制</button>
+    <button class="cipher-copy" type="button" title="复制结果" onclick="cipherCopy(this)">
+      <svg class="ic-copy" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      <svg class="ic-check" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      <span class="cipher-copy-text">复制</span>
+    </button>
   </div>
 </div>
 
 <div class="cipher-modal" id="cipherModal" onclick="cipherCloseHelp(event)">
   <div class="cipher-modal-box" onclick="event.stopPropagation()">
     <div class="cipher-modal-head">
-      <span class="cipher-modal-title">📖 算法详解</span>
+      <span class="cipher-modal-title">算法详解</span>
       <button class="cipher-modal-close" type="button" onclick="cipherCloseHelp()">×</button>
     </div>
     <div class="cipher-modal-body">
-      <p class="cipher-modal-intro">所有字符先转为 <b>UTF-8</b> 编码（二进制），再按下列规则换成汉字。仅供娱乐，并非真正安全的加密。</p>
-
-      <div class="cipher-algo-block">
-        <div class="cipher-algo-name"><span class="cipher-dot wbbb"></span>歪比巴卜算法</div>
+      <p class="cipher-modal-intro">所有字符先转为 <b class="cipher-utf8">UTF-8</b> 编码（二进制），再按下列规则换成汉字。仅供娱乐，并非真正安全的加密。</p>
+      <div class="cipher-help-tabs" id="cipherHelpTabs">
+        <button class="cipher-help-tab active" data-panel="wbbb" onclick="cipherHelpTab('wbbb',this)"><span class="cipher-dot wbbb"></span>歪比巴卜算法</button>
+        <button class="cipher-help-tab" data-panel="dao" onclick="cipherHelpTab('dao',this)"><span class="cipher-dot dao"></span>刀盾算法</button>
+      </div>
+      <div class="cipher-algo-block cipher-panel active" data-panel="wbbb">
         <p class="cipher-algo-desc">每个字节（8 位）按「<b>两位一组</b>」拆成 4 组，每组换 1 个字。</p>
         <div class="cipher-map">
           <div class="cipher-map-item"><span class="bin">00</span><span class="arrow">→</span><span class="ch wbbb">歪</span></div>
@@ -58,15 +64,12 @@ top_img: false
           <div class="cipher-map-item"><span class="bin">10</span><span class="arrow">→</span><span class="ch wbbb">巴</span></div>
           <div class="cipher-map-item"><span class="bin">11</span><span class="arrow">→</span><span class="ch wbbb">卜</span></div>
         </div>
-        <div class="cipher-example">
-          <span class="ex-label">示例</span>
-          <code>a</code> = <code>01 10 00 01</code> →
-          <span class="ch wbbb sm">比</span><span class="ch wbbb sm">巴</span><span class="ch wbbb sm">歪</span><span class="ch wbbb sm">比</span>
-        </div>
+        <div class="cipher-ex-title">示例</div>
+        <table class="cipher-ex-table"><thead><tr><th>二进制</th><th>示例</th><th>密文</th></tr></thead><tbody><tr><td><code>01 10 00 01</code></td><td><code>a</code></td><td><span class="ch wbbb sm">比</span><span class="ch wbbb sm">巴</span><span class="ch wbbb sm">歪</span><span class="ch wbbb sm">比</span></td></tr><tr><td><code>01 00 00 01</code></td><td><code>A</code></td><td><span class="ch wbbb sm">比</span><span class="ch wbbb sm">歪</span><span class="ch wbbb sm">歪</span><span class="ch wbbb sm">比</span></td></tr></tbody></table>
+        <p class="cipher-credit">歪比巴卜加密创意来源于清欲老师</p>
+        {% link 歪比巴卜加密算法, 创意来源 · 清欲老师, https://blog.leoo.work/encrypt/ %}
       </div>
-
-      <div class="cipher-algo-block">
-        <div class="cipher-algo-name"><span class="cipher-dot dao"></span>刀盾算法</div>
+      <div class="cipher-algo-block cipher-panel" data-panel="dao">
         <p class="cipher-algo-desc">密文固定以「<b>我的</b>」开头；其后每位：<b>0 → 刀</b>、<b>1 → 盾</b>，按「两个一组」阅读。</p>
         <div class="cipher-map">
           <div class="cipher-map-item"><span class="bin">00</span><span class="arrow">→</span><span class="ch dao">刀刀</span></div>
@@ -74,11 +77,8 @@ top_img: false
           <div class="cipher-map-item"><span class="bin">10</span><span class="arrow">→</span><span class="ch dao">盾刀</span></div>
           <div class="cipher-map-item"><span class="bin">11</span><span class="arrow">→</span><span class="ch dao">盾盾</span></div>
         </div>
-        <div class="cipher-example">
-          <span class="ex-label">示例</span>
-          <code>a</code> = <code>01 10 00 01</code> →
-          <span class="ch dao sm">我的</span><span class="ch dao sm">刀盾</span><span class="ch dao sm">盾刀</span><span class="ch dao sm">刀刀</span><span class="ch dao sm">刀盾</span>
-        </div>
+        <div class="cipher-ex-title">示例</div>
+        <table class="cipher-ex-table"><thead><tr><th>二进制</th><th>示例</th><th>密文</th></tr></thead><tbody><tr><td><code>01 10 00 01</code></td><td><code>a</code></td><td><span class="ch dao sm">我的</span><span class="ch dao sm">刀</span><span class="ch dao sm">盾</span><span class="ch dao sm">盾</span><span class="ch dao sm">刀</span><span class="ch dao sm">刀</span><span class="ch dao sm">刀</span><span class="ch dao sm">刀</span><span class="ch dao sm">盾</span></td></tr><tr><td><code>01 00 00 01</code></td><td><code>A</code></td><td><span class="ch dao sm">我的</span><span class="ch dao sm">刀</span><span class="ch dao sm">盾</span><span class="ch dao sm">刀</span><span class="ch dao sm">刀</span><span class="ch dao sm">刀</span><span class="ch dao sm">刀</span><span class="ch dao sm">刀</span><span class="ch dao sm">盾</span></td></tr></tbody></table>
       </div>
     </div>
   </div>
@@ -91,7 +91,7 @@ top_img: false
 .cipher-seg{display:inline-flex;padding:3px;border-radius:10px;background:var(--anzhiyu-background,#eee)}
 .cipher-seg button{padding:5px 18px;font-size:.9rem;font-weight:bold;color:var(--anzhiyu-secondtext,#888);background:transparent;border:none;border-radius:7px;cursor:pointer;transition:all .2s}
 .cipher-seg button.active{color:#fff;background:var(--anzhiyu-main,#3b82f6)}
-.cipher-input,.cipher-output{width:100%;min-height:110px;padding:.8rem 1rem;border-radius:10px;border:1px solid var(--anzhiyu-card-border,rgba(0,0,0,.12));background:var(--anzhiyu-background,#fff);color:var(--anzhiyu-fontcolor,#1f2328);font-size:1rem;line-height:1.8;resize:vertical;box-sizing:border-box;font-family:inherit}
+.cipher-input,.cipher-output{width:100%;min-height:150px;padding:.8rem 1rem;border-radius:10px;border:1px solid var(--anzhiyu-card-border,rgba(0,0,0,.12));background:var(--anzhiyu-background,#fff);color:var(--anzhiyu-fontcolor,#1f2328);font-size:1rem;line-height:1.8;resize:vertical;box-sizing:border-box;font-family:inherit}
 .cipher-input:focus,.cipher-output:focus{outline:none;border-color:var(--anzhiyu-main,#3b82f6)}
 .cipher-input-wrap{position:relative}
 .cipher-input-wrap .cipher-input{padding-right:108px}
@@ -106,17 +106,21 @@ top_img: false
 .cipher-copy{position:absolute;top:10px;right:10px;padding:3px 12px;font-size:.8rem;color:var(--anzhiyu-secondtext,#888);background:var(--anzhiyu-background,#fff);border:1px solid var(--anzhiyu-card-border,rgba(0,0,0,.12));border-radius:6px;cursor:pointer;opacity:.85;transition:all .2s}
 .cipher-copy:hover{opacity:1;color:var(--anzhiyu-main,#3b82f6);border-color:var(--anzhiyu-main,#3b82f6)}
 .cipher-copy.copied{color:#fff;background:#4caf50;border-color:#4caf50}
-.cipher-btn.ghost{margin-left:auto;color:var(--anzhiyu-main,#3b82f6);border-color:var(--anzhiyu-main,#3b82f6);background:transparent}
-.cipher-btn.ghost:hover{color:#fff;background:var(--anzhiyu-main,#3b82f6)}
+.cipher-btn.ghost{margin-left:auto;position:relative;color:#fff;border:none;background:linear-gradient(135deg,#3b82f6,#2563eb);box-shadow:0 4px 14px rgba(59,130,246,.4);font-size:.92rem;padding:8px 22px;overflow:hidden}
+.cipher-btn.ghost::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(59,130,246,.5);animation:cipherPulse 2.4s ease-out infinite}
+@keyframes cipherPulse{0%{box-shadow:0 0 0 0 rgba(59,130,246,.45)}70%{box-shadow:0 0 0 12px rgba(59,130,246,0)}100%{box-shadow:0 0 0 0 rgba(59,130,246,0)}}
+.cipher-btn.ghost:hover{color:#fff;transform:translateY(-2px);box-shadow:0 8px 22px rgba(59,130,246,.5)}
+.cipher-btn.ghost:active{transform:translateY(0) scale(.97)}
 .cipher-modal{position:fixed;inset:0;z-index:1001;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.5);backdrop-filter:blur(3px)}
 .cipher-modal.show{display:flex;animation:cipherFade .25s ease}
 @keyframes cipherFade{from{opacity:0}to{opacity:1}}
-.cipher-modal-box{width:100%;max-width:560px;max-height:86vh;overflow:hidden;display:flex;flex-direction:column;border-radius:16px;background:var(--anzhiyu-card-bg,var(--anzhiyu-background,#fff));box-shadow:0 20px 60px rgba(0,0,0,.3);animation:cipherPop .3s cubic-bezier(.2,.9,.3,1.3)}
+.cipher-modal-box{width:100%;max-width:640px;max-height:86vh;overflow:hidden;display:flex;flex-direction:column;border-radius:16px;background:var(--anzhiyu-card-bg,var(--anzhiyu-background,#fff));box-shadow:0 20px 60px rgba(0,0,0,.3);animation:cipherPop .3s cubic-bezier(.2,.9,.3,1.3)}
 @keyframes cipherPop{from{opacity:0;transform:translateY(20px) scale(.96)}to{opacity:1;transform:none}}
-.cipher-modal-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--anzhiyu-card-border,rgba(0,0,0,.08));background:linear-gradient(135deg,var(--anzhiyu-main,#3b82f6),#8b5cf6)}
-.cipher-modal-title{font-size:1.1rem;font-weight:bold;color:#fff}
-.cipher-modal-close{width:30px;height:30px;line-height:1;font-size:1.4rem;color:#fff;background:rgba(255,255,255,.2);border:none;border-radius:50%;cursor:pointer;transition:background .2s}
-.cipher-modal-close:hover{background:rgba(255,255,255,.4)}
+.cipher-modal-head{display:flex;align-items:center;justify-content:space-between;padding:18px 22px 14px;border-bottom:1px solid var(--anzhiyu-card-border,rgba(0,0,0,.08));background:transparent}
+.cipher-modal-title{font-size:1.35rem;font-weight:800;letter-spacing:1px;color:var(--anzhiyu-fontcolor,#1f2328)}
+.cipher-modal-close{width:32px;height:32px;line-height:1;font-size:1.5rem;color:var(--anzhiyu-secondtext,#999);background:transparent;border:none;border-radius:50%;cursor:pointer;transition:all .2s}
+.cipher-modal-close:hover{color:var(--anzhiyu-main,#3b82f6);background:rgba(125,125,125,.12)}
+.cipher-utf8{color:#3b82f6;font-weight:bold}
 .cipher-modal-body{padding:20px;overflow-y:auto}
 .cipher-modal-intro{margin:0 0 1.2rem;font-size:.9rem;line-height:1.7;color:var(--anzhiyu-secondtext,#888)}
 .cipher-algo-block{margin-bottom:1.4rem;padding:1rem 1.1rem;border-radius:12px;background:var(--anzhiyu-secondbg,#f7f7f9)}
@@ -126,6 +130,7 @@ top_img: false
 .cipher-dot.wbbb{background:#ff9e28}
 .cipher-dot.dao{background:#3b82f6}
 .cipher-algo-desc{margin:.5rem 0 .9rem;font-size:.88rem;line-height:1.7;color:var(--anzhiyu-secondtext,#888)}
+.cipher-credit{margin:.4rem 0 .5rem;font-size:.95rem;text-align:center;color:var(--anzhiyu-secondtext,#888)}
 .cipher-map{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:.9rem}
 .cipher-map-item{display:flex;align-items:center;gap:8px;padding:7px 12px;border-radius:9px;background:var(--anzhiyu-background,#fff);border:1px solid var(--anzhiyu-card-border,rgba(0,0,0,.06))}
 .cipher-map-item .bin{font-family:Consolas,Monaco,monospace;font-size:.95rem;font-weight:bold;letter-spacing:2px;color:var(--anzhiyu-fontcolor,#333);background:rgba(125,125,125,.12);padding:2px 8px;border-radius:5px}
@@ -134,9 +139,31 @@ top_img: false
 .ch.wbbb{background:#ff9e28}
 .ch.dao{background:#3b82f6}
 .ch.sm{padding:1px 7px;font-size:.85rem;margin:0 1px}
-.cipher-example{padding:9px 12px;border-radius:9px;background:var(--anzhiyu-background,#fff);border:1px dashed var(--anzhiyu-card-border,rgba(0,0,0,.12));font-size:.9rem;line-height:2;color:var(--anzhiyu-fontcolor,#333)}
-.cipher-example .ex-label{display:inline-block;margin-right:8px;padding:1px 8px;font-size:.78rem;font-weight:bold;color:#fff;background:var(--anzhiyu-secondtext,#aaa);border-radius:5px}
-.cipher-example code{font-family:Consolas,Monaco,monospace;background:rgba(125,125,125,.12);padding:1px 6px;border-radius:4px}
+.cipher-ex-title{margin-bottom:.6rem;font-size:.9rem;font-weight:bold;color:var(--anzhiyu-fontcolor,#1f2328)}
+.cipher-ex-table{width:100%;border-collapse:separate;border-spacing:0;font-size:.88rem;border-radius:10px;overflow:hidden;border:1px solid var(--anzhiyu-card-border,rgba(0,0,0,.1))}
+.cipher-ex-table th,.cipher-ex-table td{padding:8px 10px;text-align:center;border-bottom:1px solid var(--anzhiyu-card-border,rgba(0,0,0,.06))}
+.cipher-ex-table thead th{font-weight:bold;color:var(--anzhiyu-secondtext,#888);background:var(--anzhiyu-background,#f2f3f5)}
+.cipher-ex-table tbody tr:last-child td{border-bottom:none}
+.cipher-ex-table tbody td{background:var(--anzhiyu-background,#fff);color:var(--anzhiyu-fontcolor,#333)}
+.cipher-ex-table td:nth-child(3){text-align:left}
+.cipher-ex-table code{font-family:Consolas,Monaco,monospace;background:rgba(125,125,125,.12);padding:1px 6px;border-radius:4px;white-space:nowrap}
+.cipher-help-tabs{display:flex;gap:6px;margin-bottom:1.1rem;padding:5px;border-radius:12px;background:var(--anzhiyu-secondbg,#f2f3f5)}
+.cipher-help-tab{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9px 10px;font-size:.92rem;font-weight:bold;color:var(--anzhiyu-secondtext,#888);background:transparent;border:none;border-radius:9px;cursor:pointer;transition:color .25s,background .25s,box-shadow .25s}
+.cipher-help-tab .cipher-dot{transition:transform .25s}
+.cipher-help-tab.active{color:#fff;background:linear-gradient(135deg,#3b82f6,#2563eb);box-shadow:0 4px 12px rgba(59,130,246,.35)}
+.cipher-help-tab.active .cipher-dot{background:#fff;transform:scale(1.15)}
+.cipher-help-tab:not(.active):hover{color:var(--anzhiyu-main,#3b82f6);background:rgba(59,130,246,.08)}
+.cipher-panel{display:none}
+.cipher-panel.active{display:block;animation:cipherPanel .3s ease}
+@keyframes cipherPanel{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media screen and (max-width:480px){
+  .cipher-modal{padding:12px}
+  .cipher-modal-body{padding:16px}
+  .cipher-map{grid-template-columns:1fr}
+  .cipher-input-img{width:88px;height:88px;right:10px}
+  .cipher-input-wrap .cipher-input{padding-right:110px}
+  .cipher-btn.ghost{margin-left:0;width:100%}
+}
 </style>
 <script>
 (function(){
@@ -157,13 +184,11 @@ top_img: false
   window.cipherSwap=function(){var inp=document.getElementById('cipherInput'),out=document.getElementById('cipherOutput');if(!inp||!out)return;inp.value=out.value;out.value='';};
   window.cipherClear=function(){var inp=document.getElementById('cipherInput'),out=document.getElementById('cipherOutput');if(inp)inp.value='';if(out)out.value='';};
   window.cipherCopy=function(b){var out=document.getElementById('cipherOutput');if(!out||!out.value)return;var done=function(){b.classList.add('copied');var o=b.textContent;b.textContent='已复制';setTimeout(function(){b.classList.remove('copied');b.textContent=o;},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out.value).then(done).catch(function(){});}else{out.select();try{document.execCommand('copy');}catch(e){}done();}};
-  window.cipherOpenHelp=function(){var m=document.getElementById('cipherModal');if(m)m.classList.add('show');};
+  window.cipherHelpTab=function(which,el){var tabs=document.querySelectorAll('.cipher-help-tab');for(var i=0;i<tabs.length;i++)tabs[i].classList.remove('active');if(el)el.classList.add('active');var panels=document.querySelectorAll('.cipher-panel');for(var j=0;j<panels.length;j++)panels[j].classList.toggle('active',panels[j].getAttribute('data-panel')===which);};
+  window.cipherOpenHelp=function(){var tab=document.querySelector('.cipher-help-tab[data-panel="'+state.algo+'"]');if(tab)cipherHelpTab(state.algo,tab);var m=document.getElementById('cipherModal');if(m)m.classList.add('show');};
   window.cipherCloseHelp=function(){var m=document.getElementById('cipherModal');if(m)m.classList.remove('show');};
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.getElementById('cipherModal');if(m)m.classList.remove('show');}});
 })();
 </script>
 
-## 算法说明
-
-点击工具区右侧的「📖 算法详解」按钮，查看两套算法的二进制对照表与示例。
 
