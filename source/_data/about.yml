@@ -37,7 +37,7 @@
         color: "#FFA500"
       # - desc: 佛山
         # color: "#357ef5"
-    img: https://yuumii.top/about/about-photo1.jpg
+    img: https://yuumii.top/about/about-photo1.png
   statistic:
     link: /archives
     text: 文章隧道
@@ -57,7 +57,7 @@
   personalities:
     author_name: 执政官
     personality_type: INFJ-A
-    photo_url: https://yuumii.top/about/INFJ-A.png
+    photo_url: https://yuumii.top/about/%E6%B5%B7%E7%BB%B5%E5%AE%9D%E5%AE%9D.png
     personality_img: https://yuumii.top/about/INFJ-A.png
     name_url: https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC
   maxim:

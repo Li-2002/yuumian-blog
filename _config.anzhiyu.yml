@@ -156,7 +156,7 @@ disable_top_img: false
 
 # The banner image of home page
 # index_img: false # "background: url() top / cover no-repeat"
-index_img: "background: url(https://yuumii.top/sys/bakcgournd.png) top / cover no-repeat"
+index_img: "background: url(https://yuumii.top/sys/homeBackground.png) top / cover no-repeat"
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: "#0000FF"
@@ -822,8 +822,11 @@ aside:
     name_link: /
 
   card_announcement:
-    enable: false
-    content: 欢迎来看我的博客鸭~
+    enable: true
+    content: <span>👋🏻 Hi，欢迎来到我的博客！</span><br>
+             <span>❓ 如有问题欢迎评论区交流！</span><br>
+             <span>😫 页面异常？尝试<kbd>Ctrl</kbd>+<kbd>F5</kbd></span><br>
+             <div id="welcome-info"></div>
   card_weixin:
     enable: false
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
@@ -1121,7 +1124,7 @@ LA:
 umami:
   enable: false
   # Umami API 地址，如 https://analytics.example.com
-apiHost:
+  apiHost:
   # 网站 ID
   websiteId:
   # API Token（在 Umami 后台 Settings -> API Keys 中生成）
@@ -1267,6 +1270,7 @@ inject:
   bottom:
     # 自定义js
     # - <script src="/js/xxx"></script>
+    - <script src="/static/card-welcome.js"></script>
     - <script src="/js/countdown.js"></script>
     - <script src="/js/livephoto.js"></script>
 # CDN
