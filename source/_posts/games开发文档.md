@@ -6,7 +6,7 @@ categories: 博客
 tags: Hexo新页面
 keywords: games
 description: 游戏人生(games)页面开发文档
-sticky: 99
+top: 99
 ai: >-
   雨眠AI摘要帮您理解这篇文章~本文介绍了在Anzhiyu主题中开发游戏人生页面的步骤，包括修改PUG模板、新建页面和数据文件，实现游戏收藏卡片式分组展示，支持YAML管理数据与评论系统。
 ---
