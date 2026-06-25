@@ -1,10 +1,67 @@
+---
+title: 安知鱼接入腾讯位置服务实现访客IP定位
+top_img: https://yuumii.top/sys/bakcgournd.png
+categories: 博客教程
+tags:
+  - Hexo
+  - 安知鱼
+  - 腾讯位置服务
+  - IP定位
+keywords: 安知鱼,腾讯位置服务,IP定位,访客定位,card-welcome,JSONP
+description: 教程：用腾讯位置服务 IP 定位 API 给安知鱼博客加上访客城市定位功能，显示访客城市、距离和专属问候语。
+ai: 雨眠AI摘要帮您理解这篇文章~请提供您想要摘要的文章内容。
+date: 2026-06-24 00:00:00
+---
+
+# 安知鱼主题接入腾讯位置服务实现访客IP定位
+
+## 前言
+
+前段时间在别的博主看到有这样一个功能：您当前的ip是xxx，距离博主xxx公里，欢迎来到我的博客！
+
+我是一个对统计有着很固执的一个人，我想着所有东西我都想统计起来，这个东西加上我的侧边栏一直空空，所以就找一下实现的方法，安知鱼默认用的 IP 定位 API 全是海外的——<span style="color: rgba(247, 79, 79, 1)">ip.sb、ipapi.co、ipinfo.io</span>，在国内访问要么超时、要么被墙，成功率感人。我是死活访问不了，于是只能去百度，通过这位老师的博客，我仿照这位老师的做了一个类似的（因为老师提到的api已经过期，我只能另寻他路），
+
+{% link 给主题侧边栏添加来访者卡片,[科技-刘](https://blog.zxlwq.dpdns.org/2025/04/13/%E7%BB%99%E4%B8%BB%E9%A2%98%E4%BE%A7%E8%BE%B9%E6%A0%8F%E6%B7%BB%E5%8A%A0%E6%9D%A5%E8%AE%BF%E8%80%85%E5%8D%A1%E7%89%87/),https://github.com/owen0o0/getFavicon %}
+
+
+后续考虑过后，虽然没有现成的 但是根据老师的代码我可以换成<span style="color: rgba(53, 163, 241, 1)">腾讯位置服务</span>。腾讯在国内的节点又多又稳，几秒内就能拿到访客的省/市/经纬度，体验直接拉满。几波体验下来很丝滑很流畅，以下就是使用腾讯ip定位的方法
+
+![腾讯定位结果](https://yuumii.top/article/tencentIp/TencentIpResult.png)
+
+## 实现步骤
+
+### 第一步：申请腾讯位置服务 Key
+
+1. 打开 [lbs.qq.com](https://lbs.qq.com)，登录一下
+2. 完成**开发者实名认证**（个人认证即可，有一定的免费额度，够我们博客使用了）
+3. 进入 **控制台 → 应用管理 → 我的应用 → 创建应用**
+4. 在应用下 **添加 Key**，配置如下：
+
+| 配置项 | 值 | 说明 |
+|--------|-----|------|
+| Key 名称 | 随便填，比如「博客IP定位」 |  |
+| 启用产品 | <span style="color: rgba(247, 79, 79, 1)">勾选 WebServiceAPI</span> | IP 定位属于这个产品 |
+| 域名白名单 | `https://你的域名/*` | Referer 防盗用，**可填可不填** |
+| 签名校验(SN) | <span style="color: rgba(247, 79, 79, 1)">不勾选</span> |  |
+
+<span style="color: rgba(53, 163, 241, 1)">Key 会暴露在前端 JS 里</span>，防盗用全靠腾讯控制台的 **Referer 白名单**。只要别人从别的域名发请求就会被拦截<span style="color: rgba(247, 79, 79, 1)">千万别开</span>。
+
+如果本地 `hexo s` 预览，白名单里也加一条 `http://localhost:*`。
+
+![腾讯定位Key](https://yuumii.top/article/tencentIp/Tencentip.png)
+
+### 第二步：创建 card-welcome.js
+
+在博客 `source/` 下新建 `static/` 文件夹，创建 `card-welcome.js`，完整代码如下：
+
+```js
 window.IP_CONFIG = {
-	API_KEY: 'J7BBZ-6XILC-L5V2T-AVA4A-CMEPJ-73BTA', // 腾讯位置服务 Key 申请地址：https://lbs.qq.com
+	API_KEY: '你的腾讯Key', // 替换成你申请的 Key
 	BLOG_LOCATION: {
-		lng: 113.174398, // 经度
-		lat: 23.025356 // 纬度
+		lng: 113.174398, // 你的经度（随便找一个经纬度查询网站查，推荐高德地图坐标拾取器）
+		lat: 23.025356  // 你的纬度
 	},
-	CACHE_DURATION: 1000 * 60 * 60 , // 可配置缓存时间(默认1小时)
+	CACHE_DURATION: 1000 * 60 * 60, // 可配置缓存时间(默认1小时)
 	HOME_PAGE_ONLY: true, // 是否只在首页显示 开启后其它页面将不会显示这个容器
 };
 
@@ -58,8 +115,7 @@ const fetchIpData = async () => {
 	const url = `https://apis.map.qq.com/ws/location/v1/ip?key=${encodeURIComponent(IP_CONFIG.API_KEY)}`;
 	const res = await jsonp(url);
 	if (!res || res.status !== 0 || !res.result) {
-		const msg = res && res.message ? res.message : '腾讯定位失败';
-		throw new Error(`[${res && res.status}] ${msg}`);
+		throw new Error((res && res.message) || '腾讯定位失败');
 	}
 	const r = res.result;
 	const ad = r.ad_info || {};
@@ -226,7 +282,7 @@ const fetchIpInfo = async () => {
 		showWelcome(data);
 	} catch (error) {
 		console.error('获取IP信息失败:', error);
-		showErrorMessage(error.message || '抱歉，无法获取信息');
+		showErrorMessage();
 	}
 };
 
@@ -343,3 +399,66 @@ document.addEventListener('DOMContentLoaded', () => {
 	insertAnnouncementComponent();
 	document.addEventListener('pjax:complete', insertAnnouncementComponent);
 });
+```
+
+### 第三步：配置主题文件
+
+打开 `_config.anzhiyu.yml`（注意是安知鱼主题的配置文件，不是 Hexo 根目录那个），改两处。
+
+**3.1 开启公告卡片并放入欢迎容器**
+
+找到 `aside` → `card_announcement`，改成：
+
+```yaml
+  card_announcement:
+    enable: true   # 必须开启
+    content: <span>👋🏻 Hi，欢迎来到我的博客！</span><br>
+             <span>❓ 如有问题欢迎评论区交流！</span><br>
+             <span>😫 页面异常？尝试<kbd>Ctrl</kbd>+<kbd>F5</kbd></span><br>
+             <div id="welcome-info"></div>   # ← 这个是必须的容器
+```
+
+**3.2 引入 JS**
+
+找到 `inject` → `bottom`，加入：
+
+```yaml
+inject:
+  head:
+    # ...
+  bottom:
+    - <script src="/static/card-welcome.js"></script>
+```
+
+
+### 第四步：部署生效
+
+```bash
+hexo clean && hexo g && hexo s
+```
+
+打开 `http://localhost:4000`，你应该能看到公告卡片下方的欢迎区域先显示转圈动画，几秒后切换成访客位置信息。
+
+## 代码是怎么工作的
+
+整个流程非常直观，我把基础的原理写出来，大家可以参考一下：
+
+```
+页面加载 → 找到 #welcome-info 容器 → 显示加载动画
+  → JSONP 调用腾讯 API（带上你的 Key）
+  → 腾讯返回 { ip, ad_info: { nation, province, city }, location: { lat, lng } }
+  → 字段映射 → 计算距离（Haversine 公式）
+  → 匹配问候语文案（国家 → 省 → 市三级）
+  → localStorage 缓存结果
+  → 渲染 HTML
+```
+
+PJAX 切换页面时（安知鱼主题在站内切换页面不走整页刷新，用的是 PJAX），`insertAnnouncementComponent` 会重新跑一次：如果有缓存就直接从 `localStorage` 恢复，不会重复调 API。
+
+## 最后
+
+腾讯位置服务的 IP 定位每天有 1 万次免费调用额度，个人博客完全够用。如果你后续想加更多玩法——比如在地图上标出访客位置、统计访客城市分布之类——腾讯还提供了 JavaScript API GL 和静态图 API，有空我再写一篇。
+
+有问题的话欢迎在评论区留言，看到会回复。
+
+<span style="color: rgba(252, 142, 2, 1)">愿君安康，平安同乐！</span>

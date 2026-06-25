@@ -866,8 +866,8 @@ aside:
 # 访问人数
 busuanzi:
   site_uv: true
-  site_pv: ture
-  page_pv: ture
+  site_pv: true
+  page_pv: true
 
 # Time difference between publish date and now (网页运行时间)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
@@ -1115,8 +1115,8 @@ console:
 
 # 51la统计配置
 LA:
-  enable: false
-  ck:
+  enable: true
+  ck: 3QMSDLh40WIi9Wr4
   LingQueMonitorID:
 
 # Umami 统计配置（关于页面访问统计卡片）
