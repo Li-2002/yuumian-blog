@@ -1,7 +1,7 @@
 ---
 title: 安知鱼接入腾讯位置服务实现访客IP定位
 top_img: https://yuumii.top/sys/bakcgournd.png
-categories: 博客教程
+categories: 博客
 tags:
   - Hexo
   - 安知鱼
