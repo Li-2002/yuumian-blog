@@ -18,6 +18,10 @@
   flink_style: telescopic
   hundredSuffix: ""
   link_list:
+    - name: 雨眠碎碎念
+      link: https://blog.yuumii.top
+      avatar: https://yuumii.top/sys/avatar.ico
+      descr: 愿君安康
     - name: 安知鱼
       link: https://hexo.anheyu.com/
       avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
@@ -41,6 +45,23 @@
       link: https://blog.leoo.work
       avatar: https://bu.dusays.com/2024/11/11/6731ad4c16396.jpg
       descr: 沙雕网友清欲的碎碎念
+    - name: Akilarの糖果屋
+      link: https://akilar.top/
+      siteshot: https://npm.elemecdn.com/akilar-friends@latest/siteshot/akilar.top.jpg
+      avatar: https://npm.elemecdn.com/akilar-friends@latest/avatar/akilar.top.jpg
+      descr: 欢迎光临糖果屋
+    - name: menkar
+      link: https://www.blatr.cn
+      siteshot: https://npm.elemecdn.com/akilar-friends@latest/siteshot/akilar.top.jpg
+      avatar: https://www.blatr.cn/images/adminAvatar.jpg
+      descr: 再渺小的星光，也有属于它的光芒
+    - name: 关关和六六
+      tag: 甜甜生活
+      link: https://www.gmcllp.cn
+      siteshot: https://npm.elemecdn.com/akilar-friends@latest/siteshot/akilar.top.jpg
+      avatar: https://www.gmcllp.cn/logo-y.png
+      descr: 向世界分享我们的故事
+
 
 
 - class_name: 友友

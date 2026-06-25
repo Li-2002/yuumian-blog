@@ -124,7 +124,7 @@ div
     != partial("includes/third-party/pjax", {}, { cache: true })
 
   if theme.busuanzi.site_uv || theme.busuanzi.site_pv || theme.busuanzi.page_pv
-    script(async data-pjax src= theme.asset.busuanzi || '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
+    script(async data-pjax src= 'https://jsd.dusays.com/npm/penndu@17.0.0/bsz.js' data-prefix="busuanzi_value")
   if theme.accesskey.enable
     script(charset="UTF-8" src=url_for(theme.asset.accesskey_js))
 
