@@ -86,7 +86,13 @@
                       else
                         img.cf-friends-avatar.no-lightbox(src=url_for(item.avatar) cf-src=url_for(item.avatar) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt=item.name )
                       .flink-item-info
-                        .flink-item-name.cf-friends-name= item.name
+                        .flink-item-name.cf-friends-name
+                          = item.name
+                          if item.addDate
+                            span.flink-days(data-add-date=item.addDate)
+                              i.anzhiyufont.anzhiyu-icon-calendar
+                              span.days-num
+                              span.days-unit 天
                         .flink-item-desc(title=item.descr)= item.descr
         
         else if i.flink_style === 'telescopic'
@@ -111,7 +117,13 @@
                   .site-card-avatar
                     img.flink-avatar.cf-friends-avatar.no-fancybox(data-lazy-src=item.avatar, cf-src=url_for(item.avatar), onerror=`this.onerror=null;this.src='${theme.default_img}'`, alt=item.name, src=item.avatar)
                   .site-card-text
-                    span.title.cf-friends-name #[=item.name]
+                    span.title.cf-friends-name
+                      = item.name
+                      if item.addDate
+                        span.flink-days(data-add-date=item.addDate)
+                          i.anzhiyufont.anzhiyu-icon-calendar
+                          span.days-num
+                          span.days-unit 天
                     span.desc(title=`${item.descr}`) #[=item.descr]
         else if i.flink_style === 'flexcard'
           .flexcard-flink-list
@@ -130,3 +142,19 @@
                     img.cf-friends-avatar.no-lightbox(src=url_for(item.avatar) cf-src=url_for(item.avatar) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt='cover' )
                   span.flink-sitename.cf-friends-name= item.name
     != page.content
+
+script.
+  (function() {
+    var daysEls = document.querySelectorAll('.flink-days');
+    if (daysEls.length) {
+      var now = new Date();
+      daysEls.forEach(function(el) {
+        var addDate = el.getAttribute('data-add-date');
+        if (addDate) {
+          var diff = Math.floor((now - new Date(addDate)) / (1000 * 60 * 60 * 24));
+          var numEl = el.querySelector('.days-num');
+          if (numEl) numEl.textContent = diff;
+        }
+      });
+    }
+  })();
