@@ -61,6 +61,33 @@
       siteshot: https://npm.elemecdn.com/akilar-friends@latest/siteshot/akilar.top.jpg
       avatar: https://www.gmcllp.cn/logo-y.png
       descr: 向世界分享我们的故事
+    - name: 枫叶
+      link: https://blog.aqcoder.cn
+      avatar: https://blog.aqcoder.cn/img/avatar.png
+      descr: 分享知识，认识世界
+    - name: XKの博客
+      link: https://blog.xukaiyyds.cn
+      avatar: https://blog.xukaiyyds.cn/img/avatar.png
+      descr: 一个干净整洁的个人博客
+    - name: Yard 旅游博客
+      link: https://travel.yardvisionsite.com/
+    - name: 竹山一叶
+      link: https://zsyyblog.com
+      avatar: https://img.zsyyblog.com/favicon.jpg
+      descr: 来了就不想走的小家
+      status: https://img.zsyyblog.com/siteshot.png
+    - name: 彬红茶日记
+      link: https://note.redcha.cn
+      avatar: https://note.redcha.cn/upload/favicon-256x256.png
+      descr: 来了就不想走的小家
+      status: https://img.zsyyblog.com/siteshot.png
+    - name: 云雀Lark
+      link: https://cloudlark.cn
+      avatar: https://cdn.cloudlark.cn/configs/logo.avif
+      descr: 山不让尘，川不辞盈
+      status: https://img.zsyyblog.com/siteshot.png
+
+
 
 
 
