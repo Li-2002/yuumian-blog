@@ -88,12 +88,12 @@
                       .flink-item-info
                         .flink-item-name.cf-friends-name
                           = item.name
-                          if item.addDate
-                            span.flink-days(data-add-date=item.addDate)
-                              i.anzhiyufont.anzhiyu-icon-calendar
-                              span.days-num
-                              span.days-unit 天
                         .flink-item-desc(title=item.descr)= item.descr
+                        if item.addDate
+                          .flink-days(data-add-date=item.addDate)
+                            span.days-emoji 📅
+                            span.days-num
+                            span.days-unit 天
         
         else if i.flink_style === 'telescopic'
           .telescopic-site-card-group
@@ -119,12 +119,12 @@
                   .site-card-text
                     span.title.cf-friends-name
                       = item.name
-                      if item.addDate
-                        span.flink-days(data-add-date=item.addDate)
-                          i.anzhiyufont.anzhiyu-icon-calendar
-                          span.days-num
-                          span.days-unit 天
                     span.desc(title=`${item.descr}`) #[=item.descr]
+                    if item.addDate
+                      span.flink-days(data-add-date=item.addDate)
+                        span.days-emoji 📅
+                        span.days-num
+                        span.days-unit 天
         else if i.flink_style === 'flexcard'
           .flexcard-flink-list
             each item in i.link_list

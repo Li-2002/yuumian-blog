@@ -3,6 +3,7 @@ title: link
 date: 2026-06-03 16:59:59
 type: "link"
 top_img: false
+aside: false
 ---
 
 ## 如何添加我的友链
