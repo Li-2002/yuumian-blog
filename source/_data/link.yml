@@ -22,6 +22,8 @@
       link: https://blog.yuumii.top
       avatar: https://yuumii.top/sys/avatar.ico
       descr: 愿君安康
+      rss: https://blog.yuumii.top/atom.xml
+
     - name: 安知鱼
       link: https://hexo.anheyu.com/
       avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
@@ -75,20 +77,29 @@
       link: https://zsyyblog.com
       avatar: https://img.zsyyblog.com/favicon.jpg
       descr: 来了就不想走的小家
-      status: https://img.zsyyblog.com/siteshot.png
+      siteshot: https://img.zsyyblog.com/siteshot.png
     - name: 彬红茶日记
       link: https://note.redcha.cn
       avatar: https://note.redcha.cn/upload/favicon-256x256.png
       descr: 来了就不想走的小家
-      status: https://img.zsyyblog.com/siteshot.png
+      siteshot: https://img.zsyyblog.com/siteshot.png
     - name: 云雀Lark
       link: https://cloudlark.cn
       avatar: https://cdn.cloudlark.cn/configs/logo.avif
       descr: 山不让尘，川不辞盈
-      status: https://img.zsyyblog.com/siteshot.png
-
-
-
+      siteshot: https://img.zsyyblog.com/siteshot.png
+    - name: 小林の木屋
+      link: https://www.wjlin0.com
+      avatar: https://www.wjlin0.com/upload/log.png
+      rss: https://www.wjlin0.com/rss.xml
+      descr: 一个黑客小子！
+    - name: 洛屿的小站
+      link: https://www.drluo.top/
+      avatar: https://www.drluo.top/img/avatar.webp
+      rss: https://www.wjlin0.com/rss.xml
+      descr: 嗨，靓仔，今天也要有个好心情哦！
+      siteshot: https://www.drluo.top/img/link/www.drluo.top.webp
+      rss: https://www.drluo.top/atom.xml
 
 
 - class_name: 友友
