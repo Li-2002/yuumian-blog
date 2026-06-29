@@ -17,6 +17,7 @@
       #skills-tags-group-all
         .tags-group-wrapper
           - function getAvatarWithoutExclamationMark(url) {
+          -   if (!url) return '';
           -   const index = url.indexOf('!');
           -   return index !== -1 ? url.substring(0, index) : url;
           - }

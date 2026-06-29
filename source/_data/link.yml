@@ -1,16 +1,18 @@
-# - class_name: 框架
-#   flink_style: flexcard
-#   hundredSuffix: ""
-#   link_list:
-#     - name: Hexo
-#       link: https://hexo.io/zh-tw/
-#       avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
-#       descr: 快速、简单且强大的网站框架
-#     - name: anzhiyu主题
-#       link: https://hexo.anheyu.com/
-#       avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
-#       descr: 生活明朗，万物可爱
-#       siteshot: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/hexo.anheyu.com.jpg
+- class_name: 常看的优质博客
+  flink_style: flexcard
+  hundredSuffix: ""
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/zh-tw/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单且强大的网站框架
+    - name: 青萍叙事
+      link: https://blog.lusyoe.com
+      avatar: https://cdn.lusyoe.com/images/lusyoe-logo.webp
+      descr: 一个懂技术的产品汪🐶
+      color: vip
+      tag: 技术大佬
+      siteshot: https://cdn.lusyoe.com/images/blog-cover.webp
 
 
 
@@ -23,7 +25,13 @@
       avatar: https://yuumii.top/sys/avatar.ico
       descr: 愿君安康
       addDate: 2026-06-25
-
+    - name: 青萍叙事
+      link: https://blog.lusyoe.com
+      avatar: https://cdn.lusyoe.com/images/lusyoe-logo.webp
+      descr: 一个懂技术的产品汪🐶
+      color: vip
+      tag: 技术大佬
+      siteshot: https://cdn.lusyoe.com/images/blog-cover.webp
     - name: 安知鱼
       link: https://hexo.anheyu.com/
       avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
@@ -37,7 +45,13 @@
       avatar: https://cdn.sumi233.top/gh/huang233893/blog-image-bed@main/top/huang233893/imgs/blog/usersumi.png
       descr: 终有一日，寻梦中人
       addDate: 2026-06-25
-
+    - name: 张洪Heo
+      link: https://blog.zhheo.com/
+      avatar: https://img.zhheo.com/i/67d8fa75943e4.webp
+      siteshot: https://img.zhheo.com/i/67d8fb3c51399.webp
+      descr: 分享设计与科技生活
+      tag: 技术
+      addDate: 2026-06-29
     - name: 老朱独立开发
       link: https://ilaozhu.com
       avatar: https://ilaozhu.com/usr/themes/WaterDrop/static/images/avatar.jpg
