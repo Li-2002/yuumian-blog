@@ -88,12 +88,12 @@
                       .flink-item-info
                         .flink-item-name.cf-friends-name
                           = item.name
+                          if item.addDate
+                            span.flink-days(data-add-date=item.addDate)
+                              i.anzhiyufont.anzhiyu-icon-calendar
+                              span.days-num
+                              span.days-unit 天
                         .flink-item-desc(title=item.descr)= item.descr
-                        if item.addDate
-                          .flink-days(data-add-date=item.addDate)
-                            span.days-emoji 📅
-                            span.days-num
-                            span.days-unit 天
         
         else if i.flink_style === 'telescopic'
           .telescopic-site-card-group
@@ -113,6 +113,10 @@
                   span.site-card-tag=_p('flink.recommend')
                 a.img.no-text-decoration(target='_blank', title=`${item.name}`, href=`${item.link}`, rel='external nofollow')
                   img.flink-avatar(data-lazy-src=siteshot, onerror=`this.onerror=null;this.src='${theme.default_img}'`, alt=item.name, style="pointer-events: none;", src=`${siteshot}`)
+                  if item.addDate
+                    span.flink-days(data-add-date=item.addDate)
+                      span.days-num
+                      span.days-unit 天
                 a.info.cf-friends-link.no-text-decoration(target='_blank', title=`${item.name}`, href=`${item.link}`, cf-href=url_for(item.link), rel='external nofollow')
                   .site-card-avatar
                     img.flink-avatar.cf-friends-avatar.no-fancybox(data-lazy-src=item.avatar, cf-src=url_for(item.avatar), onerror=`this.onerror=null;this.src='${theme.default_img}'`, alt=item.name, src=item.avatar)
@@ -120,11 +124,6 @@
                     span.title.cf-friends-name
                       = item.name
                     span.desc(title=`${item.descr}`) #[=item.descr]
-                    if item.addDate
-                      span.flink-days(data-add-date=item.addDate)
-                        span.days-emoji 📅
-                        span.days-num
-                        span.days-unit 天
         else if i.flink_style === 'flexcard'
           .flexcard-flink-list
             each item in i.link_list

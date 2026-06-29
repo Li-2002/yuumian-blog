@@ -157,7 +157,7 @@ body[data-type="link"]
         .flink-item-desc
           @extend .limit-one-line
           white-space: normal;
-          padding: 5px 10px 8px 0;
+          padding: 5px 10px 16px 0;
           color: var(--anzhiyu-fontcolor);
           text-align: left;
           font-size: 0.93em;
@@ -170,24 +170,14 @@ body[data-type="link"]
           -webkit-line-clamp: 2;
 
       .flink-days
-        display: none
-        width: fit-content
-        align-self: flex-start
-        font-size: 0.68em
-        line-height: 1.2
-        color: #d9913a
-        opacity: 0.95
-        margin-left: 0
-        margin-top: 0
+        font-size: 0.75em
+        color: var(--anzhiyu-fontcolor)
+        opacity: 0.4
+        margin-left: 4px
         white-space: nowrap
-        font-weight: 500
-        padding: 3px 8px
-        border-radius: 999px
-        background: rgba(217, 145, 58, 0.12)
-        border: 1px solid rgba(217, 145, 58, 0.28)
-        .days-emoji
-          margin-right: 4px
-          font-size: 1.05em
+        i
+          margin-right: 2px
+          font-size: 0.85em
       &:hover
         transform: scale(1);
         background: var(--anzhiyu-theme);
@@ -206,22 +196,12 @@ body[data-type="link"]
             min-height: 0px;
           .flink-item-info
             min-width: calc(100% - 20px);
-            justify-content: flex-start;
           .flink-item-name
             color: var(--anzhiyu-white);
           .flink-item-desc
             overflow: hidden;
             width: 100%;
             color: var(--anzhiyu-white);
-            height: 22px;
-            padding-bottom: 2px;
-            -webkit-line-clamp: 1;
-          .flink-days
-            display: inline-flex;
-            align-items: center;
-            color: rgba(255, 232, 201, 0.92);
-            background: rgba(255, 255, 255, 0.14);
-            border-color: rgba(255, 244, 227, 0.22);
 
 .flink-name
   margin-bottom: 5px
@@ -427,25 +407,17 @@ body[data-type="link"]
         box-shadow: var(--anzhiyu-shadow-main);
         .info
           background: var(--anzhiyu-theme);
-          height: 138px;
+          height: 120px;
           .site-card-text 
-            justify-content: flex-start;
             .title
               color: var(--anzhiyu-white);
             .desc
               transition: 0.3s;
               color: var(--anzhiyu-white);
               width: 100%;
-              -webkit-line-clamp: 1;
             +minWidth768()
               .desc
-                -webkit-line-clamp: 1;
-            .flink-days
-              display: inline-flex;
-              align-items: center;
-              color: rgba(255, 232, 201, 0.92);
-              background: rgba(255, 255, 255, 0.14);
-              border-color: rgba(255, 244, 227, 0.22);
+                -webkit-line-clamp: 4;
 
         .site-card-tag
           left: -50px;
@@ -466,7 +438,6 @@ body[data-type="link"]
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          gap: 4px;
           .title
             color: var(--anzhiyu-fontcolor);
             text-align: left;
@@ -488,9 +459,6 @@ body[data-type="link"]
             -webkit-box-orient: vertical;
             overflow: hidden;
             -webkit-line-clamp: 2;
-          .flink-days
-            display: none;
-            margin-top: 0;
         .img-alt
           display: none;
         img
@@ -511,9 +479,22 @@ body[data-type="link"]
         border: none;
         padding: 0 !important;
         transition: all 0.3s ease 0s;
+        position: relative;
+        .flink-days
+          position: absolute;
+          right: 6px;
+          bottom: 6px;
+          background: rgba(0, 0, 0, 0.55);
+          color: #fff;
+          font-size: 11px;
+          padding: 2px 7px;
+          border-radius: 10px;
+          line-height: 1.4;
+          white-space: nowrap;
         img
           border-radius: 0;
           transform: scale(1.03);
           transition: 0.3s;
           margin: 0;
           max-width: 100%;
+
