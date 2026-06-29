@@ -1,0 +1,38 @@
+.livephoto {
+    display: grid;
+    place-items: center; 
+    margin: 0;
+    padding: 0;
+}
+
+.live-photo {
+    display: grid;
+    place-items: center; 
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 4/3;
+    margin: 20px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.live-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.live-photo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+作者: 琅環书生
+链接: https://www.chn.us.kg/blog/zz-21/
+来源: 琅環书生
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

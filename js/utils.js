@@ -118,6 +118,18 @@ const anzhiyu = {
     });
   },
 
+  scrollToTop: (time = 450) => {
+    const start = window.pageYOffset;
+    let startTime = null;
+    const ease = t => 1 - Math.pow(1 - t, 3);
+    window.requestAnimationFrame(function step(now) {
+      startTime = startTime || now;
+      const progress = Math.min((now - startTime) / time, 1);
+      window.scrollTo(0, start * (1 - ease(progress)));
+      if (progress < 1) window.requestAnimationFrame(step);
+    });
+  },
+
   initJustifiedGallery: function (selector) {
     const runJustifiedGallery = i => {
       if (!anzhiyu.isHidden(i)) {

@@ -5483,23 +5483,8 @@ body[data-type='about'] #web_bg {
   pointer-events: none;
   z-index: 3;
 }
-#about-page .author-content-item-group.column.mapAndInfo {
-  width: 100%;
-}
-#about-page .author-content-item-group.column {
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -o-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-#about-page .author-content-item.map {
-  width: 50%;
-}
-#about-page .author-content-item.selfInfo {
-  height: 100%;
-  width: 49%;
+ {
+  body: 1;
 }
 @-moz-keyframes loading-bar {
   0% {
@@ -6497,6 +6482,19 @@ body[data-type="link"] #page .page-title {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+#article-container .anzhiyu-flink-list .flink-list-item .flink-days {
+  font-size: 0.75em;
+  color: var(--anzhiyu-fontcolor);
+  opacity: 0.4;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  filter: alpha(opacity=40);
+  margin-left: 4px;
+  white-space: nowrap;
+}
+#article-container .anzhiyu-flink-list .flink-list-item .flink-days i {
+  margin-right: 2px;
+  font-size: 0.85em;
+}
 #article-container .anzhiyu-flink-list .flink-list-item:hover {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
@@ -6999,6 +6997,19 @@ body[data-type="link"] #page .page-title {
   -o-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  position: relative;
+}
+#article-container .telescopic-site-card-group .site-card .img .flink-days {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 #article-container .telescopic-site-card-group .site-card .img img {
   border-radius: 0;
@@ -7078,6 +7089,163 @@ body[data-type="link"] #page .page-title {
     -ms-transform: skewx(-25deg) translateX(50px);
     transform: skewx(-25deg) translateX(50px);
   }
+}
+.goodgames-title {
+  margin: 1rem 0;
+  line-height: 1;
+}
+.games-item .games-item-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+.games-item .games-item-content .games-item-content-item {
+  width: calc(25% - 12px);
+  border-radius: 12px;
+  border: var(--style-border-always);
+  overflow: hidden;
+  margin: 8px 6px;
+  background: var(--anzhiyu-card-bg);
+  -webkit-box-shadow: var(--anzhiyu-shadow-border);
+  box-shadow: var(--anzhiyu-shadow-border);
+  min-height: 400px;
+  position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .games-item .games-item-content .games-item-content-item {
+    width: calc(50% - 12px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .games-item .games-item-content .games-item-content-item {
+    width: 100%;
+  }
+}
+.games-item .games-item-content .games-item-content-item .games-item-content-item-info {
+  padding: 8px 16px 16px 16px;
+  margin-top: 12px;
+}
+.games-item .games-item-content .games-item-content-item .games-item-content-item-name {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: visable;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  width: fit-content;
+  cursor: pointer;
+}
+.games-item .games-item-content .games-item-content-item .games-item-content-item-name:hover {
+  color: var(--anzhiyu-main);
+}
+.games-item .games-item-content .games-item-content-item .games-item-content-item-specification {
+  font-size: 12px;
+  color: var(--anzhiyu-secondtext);
+  line-height: 16px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.games-item .games-item-content .games-item-content-item .games-item-content-item-description {
+  line-height: 20px;
+  color: var(--anzhiyu-secondtext);
+  height: 60px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+}
+.games-item .games-item-content .games-item-content-item a.games-item-content-item-link {
+  font-size: 12px;
+  background: var(--anzhiyu-gray-op);
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.games-item .games-item-content .games-item-content-item a.games-item-content-item-link:hover {
+  background: var(--anzhiyu-main);
+  color: var(--anzhiyu-white);
+}
+.games-item .games-item-content .games-item-content-item .games-item-content-item-cover {
+  width: 100%;
+  height: 200px;
+  background: var(--anzhiyu-secondbg);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.games-item .games-item-content .games-item-content-item img.games-item-content-item-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.games-item .games-item-content .games-item-content-item .games-item-content-item-toolbar {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  padding: 0 16px;
+}
+body[data-type="games"] #web_bg {
+  background: var(--anzhiyu-background);
+}
+body[data-type="games"] #page {
+  border: 0;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  background: 0 0 !important;
+}
+body[data-type="games"] #page .page-title {
+  display: none;
 }
 #recent-posts > .recent-post-item:not(:first-child) {
   margin-top: 20px;
@@ -12885,6 +13053,67 @@ h1.page-title + .tag-cloud-list {
   }
   #page-header.nav-fixed #nav #page-name:hover {
     background: var(--anzhiyu-main);
+  }
+}
+#page-header.nav-fixed #nav #page-name {
+  -webkit-transition: min-width 0.3s ease, padding 0.3s ease, background 0.3s ease, color 0.2s ease;
+  -moz-transition: min-width 0.3s ease, padding 0.3s ease, background 0.3s ease, color 0.2s ease;
+  -o-transition: min-width 0.3s ease, padding 0.3s ease, background 0.3s ease, color 0.2s ease;
+  -ms-transition: min-width 0.3s ease, padding 0.3s ease, background 0.3s ease, color 0.2s ease;
+  transition: min-width 0.3s ease, padding 0.3s ease, background 0.3s ease, color 0.2s ease;
+}
+#page-name .page-name-text {
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+#page-name .page-name-totop-icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--anzhiyu-white);
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+@media screen and (min-width: 900px) {
+  #page-header.nav-fixed #nav #page-name:hover {
+    min-width: 160px;
+    padding: 4px 44px;
+    background: var(--anzhiyu-main);
+    color: var(--anzhiyu-white) !important;
+  }
+  #page-header.nav-fixed #nav #page-name:hover .page-name-text {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  #page-header.nav-fixed #nav #page-name:hover::after {
+    opacity: 0 !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" !important;
+    filter: alpha(opacity=0) !important;
+  }
+  #page-header.nav-fixed #nav #page-name:hover .page-name-totop-icon {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
   }
 }
 #page-header #nav #page-name {
@@ -20059,6 +20288,8 @@ a
   cursor: pointer;
 }
 #twikoo .tk-comments .tk-nick {
+  font-size: 0.92em;
+  font-weight: bold;
   line-height: 40px;
 }
 #twikoo .tk-comments .tk-extras {
@@ -28333,5 +28564,48 @@ div#runtime {
   -o-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
+}
+
+/* Twikoo 评论区博主标识
+ * 效果：博主评论显示「雨眠」标识
+ * 通过 twikoo.pug 中 onCommentLoaded 根据邮箱头像 URL 匹配识别
+ */
+
+/* 「博主」标识 — 昵称前面，蓝色半透明药丸形 */
+/* .tk-comment.tk-master .tk-nick::before {
+  content: "博主";
+  display: inline-block;
+  margin-right: 5px;
+  padding: 1px 14px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  font-weight: 500;
+  background: rgba(74, 144, 226, 0.12);
+  color: #3a8fd4;
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 50px;
+  vertical-align: -0.1em;
+} */
+
+/* 用户名加粗（即时生效，不依赖 styl 编译） */
+.tk-comment .tk-nick,
+.tk-comment .tk-nick a {
+  font-weight: bold;
+}
+
+/* 「雨眠」标识 — 昵称右边，暖橙圆角矩形 */
+.tk-comment.tk-master .tk-nick::after {
+  content: "Yuumii";
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 16px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #ff9e28;
+  color: #ffffff;
+  border-radius: 6px;
+  vertical-align: middle;
 }
 
