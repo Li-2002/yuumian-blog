@@ -1,7 +1,7 @@
-- class_name: 凤凰山一日游
+- class_name: 因为到不了世界各地，所以请网友们发来了各地的夕阳与风景🌇。
   path_name: /FengHuangMountainTravel
   type: 2
-  description: 因为到不了世界各地，所以请网友们发来了各地的夕阳与风景🌇。
+  description: 凤凰山一日游
   cover: https://upload-bbs.miyoushe.com/upload/2025/06/13/125766904/2cf2b6aea07bba089d0d17c4fea72d1b_5366629137934368264.png
   top_background: https://bu.dusays.com/2023/06/30/649e546ada7dd.webp
   rowHeight: 220
@@ -26,10 +26,10 @@
         - https://bu.dusays.com/2023/04/09/64329399db122.webp
         - https://bu.dusays.com/2023/04/09/64329399db2e1.webp
 
-- class_name: 我的日常
+- class_name: 我的日常！分享些好玩的琐事
   path_name: /dailyPhoto
   type: 1
-  description: 我的日常！分享些好玩的琐事
+  description: 我的日常
   top_link: /album
   top_btn_text: 返回
   top_background: https://bu.dusays.com/2023/04/09/64329399cea5a.webp

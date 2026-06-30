@@ -1115,7 +1115,7 @@ console:
 
 # 51la统计配置
 LA:
-  enable: true
+  enable: false
   ck: 3QMSDLh40WIi9Wr4
   LingQueMonitorID:
 

@@ -5,11 +5,15 @@
   buttonText: 关于我
   buttonLink: /about/
   moments_list:
-    - content: 游戏页面拖了这么久还没改图片 人怎么能这么拖？
-      date: 2026/06/122
+    
+    - content: 好 现在是只有图片页面没有更新了 跟很多大佬交换了一下友链哈哈哈我也出现在大佬的博客中了，另外友链页面也做了更新
+      date: 2026/06/29
       address: 佛山
       from: Windows 10
-
+    - content: 游戏页面拖了这么久还没改图片 人怎么能这么拖？
+      date: 2026/06/12
+      address: 佛山
+      from: Windows 10
     - content: 端午安康！吃粽子没喔，妈特地从老家给我寄的粽子过来，结果巨香，本来以为算了太麻烦，吃了一个发现要少了（早知道多寄一点）
       date: 2026/06/19
       address: 佛山
