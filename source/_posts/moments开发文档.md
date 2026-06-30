@@ -1,7 +1,7 @@
 ---
 title: 动态/朋友圈(moments)页面开发文档
 top_img: https://yuumii.top/about/about6-yanyun.jpg
-cover: https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/Logo.png
+cover: https://yuumii.top/article/gamesAndMoment/moment.png
 categories: 博客
 tags: Hexo新页面
 keywords: moment

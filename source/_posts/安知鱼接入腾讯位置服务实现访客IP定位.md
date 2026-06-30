@@ -1,6 +1,6 @@
 ---
 title: 安知鱼接入腾讯位置服务实现访客IP定位
-top_img: https://yuumii.top/sys/bakcgournd.png
+cover: https://yuumii.top/article/tencentIp/Tencentip.png
 categories: 博客
 tags:
   - Hexo
