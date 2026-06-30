@@ -1115,8 +1115,9 @@ console:
 
 # 51la统计配置
 LA:
-  enable: false
-  ck: 3QMSDLh40WIi9Wr4
+  enable: true
+  id: "3QMSDLh40WIi9Wr4"
+  ck: "3QMSDLh40WIi9Wr4"
   LingQueMonitorID:
 
 # Umami 统计配置（关于页面访问统计卡片）
