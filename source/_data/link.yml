@@ -138,7 +138,11 @@
       descr: 仰望星空，脚踏实地。
       topimg: https://pic.imgdb.cn/item/66eed947f21886ccc089a02b.png
       addDate: 2026-06-25
-
+    - name: 君主阁
+      link: https://blog.apigf.cn
+      avatar: https://blog.apigf.cn/wp-content/uploads/2026/05/君主阁Logo.png
+      descr: 君临代码，阁藏烟火
+      addDate: 2026-07-01
 
 
 - class_name: 友友

@@ -10,15 +10,6 @@ script.
         region: '!{region}',
         onCommentLoaded: () => {
           anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
-          // 博主标识：昵称是「雨眠」且网址为 blog.yuumii.top 才显示
-          document.querySelectorAll('#twikoo .tk-comment').forEach(comment => {
-            const nick = comment.querySelector('.tk-nick')?.textContent.trim() || ''
-            const linkEl = comment.querySelector('.tk-meta a[href*="blog.yuumii.top"]') || comment.querySelector('a[href*="blog.yuumii.top"]')
-            const link = linkEl?.getAttribute('href') || ''
-            if (nick === '雨眠' && link.includes('blog.yuumii.top')) {
-              comment.classList.add('tk-master')
-            }
-          })
         }
       }, !{JSON.stringify(option)}))
     }

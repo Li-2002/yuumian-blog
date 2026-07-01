@@ -22,9 +22,10 @@ aside: false
     </button>
   </div>
 <pre class="my-yaml-code">名称：雨眠碎碎念
-地址：https://blog.yuumii.top
+链接：https://blog.yuumii.top
 头像：https://yuumii.top/sys/avatar.ico
-简介：愿君安康</pre>
+简介：愿君安康
+RSS：https://blog.yuumii.top/atom.xml</pre>
 </div>
 
 <style>
