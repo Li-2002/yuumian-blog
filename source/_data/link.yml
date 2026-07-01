@@ -15,7 +15,6 @@
       siteshot: https://cdn.lusyoe.com/images/blog-cover.webp
 
 
-
 - class_name: 各位小伙伴
   flink_style: telescopic
   hundredSuffix: ""
@@ -25,6 +24,7 @@
       avatar: https://yuumii.top/sys/avatar.ico
       descr: 愿君安康
       addDate: 2026-06-25
+
     - name: 青萍叙事
       link: https://blog.lusyoe.com
       avatar: https://cdn.lusyoe.com/images/lusyoe-logo.webp
@@ -117,8 +117,12 @@
       link: https://www.wjlin0.com
       avatar: https://www.wjlin0.com/upload/log.png
       addDate: 2026-06-25
-
       descr: 一个黑客小子！
+    - name: 懋和道人
+      link: https://blog.dao.js.cn/
+      avatar: https://dao.wulintang.net/article_image/1782411113099442183.jpg
+      descr: 李懋和，俗名李栋梁。书法、国画爱好者，互联网安全与前端建设者。
+      addDate: 2026-07-01
     - name: 洛屿的小站
       link: https://www.drluo.top/
       avatar: https://www.drluo.top/img/avatar.webp
