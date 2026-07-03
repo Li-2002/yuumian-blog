@@ -1,7 +1,7 @@
 - class_name: 游戏人生
   description: 我的游戏世界
   tip: 跟 雨眠 一起探索第九艺术
-  top_background: https://th.bing.com/th/id/R.13a97ef4830efa5e0b87134d622719f3?rik=G7RaJFpxg5PtkA&riu=http%3a%2f%2fupload.techweb.com.cn%2fs%2f640%2f2019%2f0530%2f1559208230699.jpg&ehk=j1G8rMX98TRX52EkLgI5jW1p7lIQp4I8Si1nqEggFRs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1
+  top_background: https://dash.cloudflare.com/f4dbaf996927c3d0ebab2c6a164a40f0/r2/default/buckets/yuumian/objects/pic%2Fyysls%2FMEITU_20260630_205911792.jpg/details?prefix=pic%2Fyysls%2F
   buttonText: Steam
   buttonLink: https://steamcommunity.com/
   good_games:

@@ -127,7 +127,6 @@
       link: https://www.drluo.top/
       avatar: https://www.drluo.top/img/avatar.webp
       addDate: 2026-06-25
-
       descr: 嗨，靓仔，今天也要有个好心情哦！
       siteshot: https://www.drluo.top/img/link/www.drluo.top.webp
 
@@ -147,7 +146,11 @@
       avatar: https://blog.apigf.cn/wp-content/uploads/2026/05/君主阁Logo.png
       descr: 君临代码，阁藏烟火
       addDate: 2026-07-01
-
+    - name: Cik
+      link: https://blog.cikcc.com
+      avatar: https://s21.ax1x.com/2025/11/14/pZCzDAO.png
+      descr: 分享技术与数字生活
+      addDate: 2026-07-03
 
 - class_name: 友友
   class_desc: 那些人，那些事
