@@ -3,6 +3,7 @@ title: 安知鱼主题如何接入自己的AI摘要？DeepSeek也能用！
 top_img: https://yuumii.top/sys/bakcgournd.png
 categories: 博客
 tags: Ai摘要
+date: 2026-06-30 15:42:05
 keywords: Hexo,AI摘要,安知鱼,DeepSeek,OpenAI,hexo-ai-summary
 description: 这篇教程教你如何用 DeepSeek 或 OpenAI 替代安知鱼主题默认的洪墨 AI 摘要，低成本甚至免费实现文章自动摘要生成。
 ai: >-

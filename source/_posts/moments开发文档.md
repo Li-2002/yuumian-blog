@@ -5,6 +5,7 @@ cover: https://yuumii.top/article/gamesAndMoment/moment.png
 categories: 博客
 tags: Hexo新页面
 keywords: moment
+date: 2026-06-15 15:16:25
 description: 动态/朋友圈(moments)页面开发文档
 ai: >-
   雨眠AI摘要帮您理解这篇文章~本文档详细介绍了Hexo
