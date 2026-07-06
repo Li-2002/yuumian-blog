@@ -5,8 +5,9 @@ menu:
     标签: /tags/ || anzhiyu-icon-tags
     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
 
-  动态:
-    朋友圈: /moments/ || anzhiyu-icon-bolt
+  游戏工具:
+    加密小工具: /cipher/ || anzhiyu-icon-font
+    文字修仙: https://xiuxian.yuumii.top/#/home || anzhiyu-icon-pagelines
 
   友链:
     友人帐: /link/ || anzhiyu-icon-link
@@ -18,7 +19,7 @@ menu:
     我的装备: /equipment/ || anzhiyu-icon-dice-d20
     # 闲言碎语: /essay/ || anzhiyu-icon-lightbulb
     游戏人生: /games/ || anzhiyu-icon-fire
-    加密小工具: /cipher/ || anzhiyu-icon-font
+    朋友圈: /moments/ || anzhiyu-icon-bolt
 
   关于:
     关于本人: /about/ || anzhiyu-icon-paper-plane
