@@ -33,7 +33,7 @@ menu:
 nav:
   enable: true
   travelling: true
-  clock: true
+  clock: false
   menu:
     - title: 网页
       item:
@@ -1264,7 +1264,7 @@ dynamicEffect:
 inject:
   head:
     - <link rel="stylesheet" href="/css/oppo-sans.css">
-    - <link rel="stylesheet" href="/css/livephoto.js">
+    - <link rel="stylesheet" href="/css/livephoto.css">
     # 自定义css
     # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
 
