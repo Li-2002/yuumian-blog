@@ -27,10 +27,7 @@ ai: >-
 ### 2、查看效果
 
 新增页面这种东西，肯定要先看看效果好不好再看看要不要啦！
-<a href="/moments/" target="_blank" class="moment-post-preview-btn" style="display:inline-flex;align-items:center;gap:8px;padding:8px 24px;background:linear-gradient(135deg,#425AEF,#6C83F7);color:#fff;font-size:0.95rem;font-weight:600;border-radius:50px;text-decoration:none;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.25,0.8,0.25,1);box-shadow:0 4px 12px rgba(66,90,239,0.25);" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(66,90,239,0.4)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(66,90,239,0.25)';">
-  <i class="anzhiyufont anzhiyu-icon-arrow-circle-right" style="font-size:1rem;transition:transform 0.35s ease;"></i>
-  <span>碎碎念动态</span>
-</a>
+{% btn '/moments/', 碎碎念动态, anzhiyufont anzhiyu-icon-circle-arrow-right, larger %}
 
 ## 二、实现步骤
 

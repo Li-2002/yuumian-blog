@@ -5,6 +5,7 @@ cover: https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/Logo.png
 categories: 博客
 tags: CloudFlare
 keywords: 博客上线CloudFlare
+date: 2026-06-01 14:23:06
 description: 这是一个Hexo博客怎么上线CloudFlare的很简单的教程
 ai: >-
   雨眠AI摘要帮您理解这篇文章~本文详细介绍了将Hexo博客部署到Cloudflare的完整流程：安装Git并配置SSH密钥连接GitHub，创建仓库并安装hexo-deployer-git将静态文件部署到GitHub
