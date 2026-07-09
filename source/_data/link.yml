@@ -2,6 +2,7 @@
   flink_style: flexcard
   hundredSuffix: ""
   link_list:
+
     - name: Hexo
       link: https://hexo.io/zh-tw/
       avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
@@ -130,6 +131,10 @@
       descr: 嗨，靓仔，今天也要有个好心情哦！
       siteshot: https://www.drluo.top/img/link/www.drluo.top.webp
 
+    - name: FRDLINK
+      link: https://www.frdlink.link
+      avatar: https://www.frdlink.link/favicon.ico
+      descr:FRD Link——一个穿越时光的友链小站。没有花哨特效，只有朴实的链接、RSS文章和真诚的讨论。
     - name: 冰梦
       link: https://icemyst.github.io
       avatar: https://icemyst.github.io/img/about.webp
