@@ -24,6 +24,7 @@
       link: https://blog.yuumii.top
       avatar: https://yuumii.top/sys/avatar.ico
       descr: 愿君安康
+      tag: 是我~
       addDate: 2026-06-25
 
     - name: 青萍叙事
@@ -156,6 +157,11 @@
       avatar: https://s21.ax1x.com/2025/11/14/pZCzDAO.png
       descr: 分享技术与数字生活
       addDate: 2026-07-03
+    - name: Prorise - 博客小栈
+      link: https://blog.prorisehub.com
+      avatar: https://prorise-blog.oss-cn-guangzhou.aliyuncs.com/cover/avatar.png
+      descr: Prorise - 一位全栈工程师分享全栈技术与实战调优
+      siteshot: https://bu.dusays.com/2026/01/01/6955e8ec3e9a3.jpg
 
 - class_name: 友友
   class_desc: 那些人，那些事
