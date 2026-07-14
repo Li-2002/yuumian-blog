@@ -39,9 +39,19 @@ top_img: false
   #page .article-container {
     padding: 0 !important;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .air-conditioner-title {
+    color: var(--anzhiyu-main, #4259ef);
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px 0 10px;
   }
 </style>
+
+<h2 class="air-conditioner-title">雨眠牌空调!</h2>
 
 <div id="air-conditioner-vue">
   <iframe src="https://air-conditioner-vue-six.vercel.app"></iframe>

@@ -25,7 +25,429 @@ date: 2026-07-10 16:27:02
 
 <span style="color: rgba(66, 133, 244, 1)">MaixCamera</span> 是 Sipeed推出的一款 AI 视觉开发板，搭载了<span style="color: rgba(52, 168, 83, 1)">SG200X</span> 系列芯片，自带摄像头和屏幕，跑的是 <span style="color: rgba(53, 163, 241, 1)">MaixPy</span>——一个基于 MicroPython 的 AI 框架。
 
-ok 官方话唠完 <span style="color: rgba(52, 168, 83, 1)">从基础开始</span>
+ok <span style="color: rgba(245, 40, 217, 1)">官方话</span>唠完 <span style="color: rgba(52, 168, 83, 1)">从基础开始</span>
+
+---
+
+## 基础操作
+
+下面记一些基础操作，方便以后写代码的时候直接翻。
+
+### 获取摄像头图像
+
+```python
+from maix import camera
+
+cam = camera.Camera(640, 480)
+
+while 1:
+    img = cam.read()
+    print(img)
+```
+
+`cam.read()` 返回的就是当前帧的图像对象，打印出来能看到分辨率、格式这些信息。
+
+### 设置分辨率
+
+初始化的时候直接指定宽高就行：
+
+```python
+from maix import camera
+cam = camera.Camera(width=640, height=480)
+```
+
+也可以初始化之后再改：
+
+```python
+from maix import camera
+cam = camera.Camera()
+cam.set_resolution(width=640, height=480)
+```
+
+### 设置帧率
+
+MaixPy 支持手动指定帧率，不过分辨率高了帧率会自动降：
+
+```python
+from maix import camera
+
+cam = camera.Camera(640, 480, fps=30)    # 30帧
+cam = camera.Camera(640, 480, fps=60)    # 60帧
+cam = camera.Camera(640, 480, fps=80)    # 80帧
+```
+
+分辨率高于 1280x720 的时候会自动锁定到 30 帧，低于的话默认能到 80 帧。
+
+### 跳过开头几帧
+
+摄像头刚初始化的时候画面可能还没稳定，可以用 `skip_frames` 跳过：
+
+```python
+cam = camera.Camera(640, 480)
+cam.skip_frames(30)  # 跳过前30帧
+```
+
+### 显示图像
+
+MaixPy 的 `display` 模块用来在设备屏幕上显示内容：
+
+```python
+from maix import camera, display
+
+cam = camera.Camera(640, 480)
+disp = display.Display()
+
+while 1:
+    img = cam.read()
+    disp.show(img)
+```
+
+### 显示图片和文字
+
+不光能显示摄像头画面，也能加载本地图片或者画文字：
+
+```python
+from maix import image, display
+
+disp = display.Display()
+img = image.load("/root/dog.jpg")
+disp.show(img)
+```
+
+或者自己画一个：
+
+```python
+from maix import image, display
+
+disp = display.Display()
+img = image.Image(320, 240)
+img.draw_rect(0, 0, disp.width(), disp.height(), color=image.Color.from_rgb(255, 0, 0), thickness=-1)
+img.draw_rect(10, 10, 100, 100, color=image.Color.from_rgb(255, 0, 0))
+img.draw_string(10, 10, "Hello MaixPy!", color=image.Color.from_rgb(255, 255, 255))
+disp.show(img)
+```
+
+### 显示到 MaixVision
+
+如果你没有接屏幕，或者单纯想在电脑上看画面，MaixVision 也支持接收图像显示。不用初始化屏幕，直接用 `display.send_to_maixvision` 就行：
+
+```python
+from maix import image, display
+
+img = image.Image(320, 240)
+disp = display.Display()
+
+img.draw_rect(0, 0, img.width(), img.height(), color=image.Color.from_rgb(255, 0, 0), thickness=-1)
+img.draw_rect(10, 10, 100, 100, color=image.Color.from_rgb(255, 0, 0))
+img.draw_string(10, 10, "Hello MaixPy!", color=image.Color.from_rgb(255, 255, 255))
+display.send_to_maixvision(img)
+```
+
+这样在 MaixVision 的界面里就能看到画面了，调试的时候挺方便的。
+
+### 录制 H265 视频
+
+MaixPy 支持直接录制成 H265 格式的视频，保存到设备上：
+
+```python
+from maix import video, image, camera, app, time
+
+cam = camera.Camera(640, 480, image.Format.FMT_YVU420SP)
+e = video.Encoder(width=cam.width(), height=cam.height())
+f = open('/root/output.h265', 'wb')
+
+record_ms = 5000
+start_ms = time.ticks_ms()
+while not app.need_exit():
+    img = cam.read()
+    frame = e.encode(img)
+    print(frame.size())
+    f.write(frame.to_bytes())
+
+    if time.ticks_ms() - start_ms > record_ms:
+        app.set_exit_flag(True)
+```
+
+几个要点说一下：
+
+- Encoder 目前只支持 <span style="color: rgba(66, 133, 244, 1)">NV21 格式</span>，所以摄像头初始化的时候要指定 `image.Format.FMT_YVU420SP`
+- 默认编码 <span style="color: rgba(52, 168, 83, 1)">H265</span>，想用 H264 的话改一下初始化参数：`video.Encoder(type=video.VideoType.VIDEO_H264_CBR)`
+- <span style="color: rgba(234, 67, 53, 1)">同时只能存在一个编码器</span>，不能同时编两路
+- 编码完记得调用 `frame.to_bytes()` 转成 bytes 再写入文件
+- 示例里设置了 5 秒自动退出，实际用的时候改 `record_ms` 就行
+
+## 推流
+
+MaixCamera 支持多种推流方式，可以把摄像头画面实时推到其他设备上看。
+
+### RTSP 推流
+
+RTSP 适合局域网内看实时画面，用 VLC 或者其他播放器就能拉流：
+
+```python
+from maix import time, rtsp, camera, image
+
+cam = camera.Camera(2560, 1440, image.Format.FMT_YVU420SP)
+server = rtsp.Rtsp()
+server.bind_camera(cam)
+server.start()
+
+print(server.get_url())
+
+while True:
+    time.sleep(1)
+```
+
+注意点：
+
+- RTSP 模块只支持 <span style="color: rgba(66, 133, 244, 1)">NV21 格式</span>，摄像头初始化要指定 `image.Format.FMT_YVU420SP`
+- `bind_camera` 之后原来的 Camera 对象就不能再用了
+- 默认播放地址是 `rtsp://设备IP:8554/live`，可以用 VLC（3.0.20 以上）打开
+
+如果需要同时推音频：
+
+```python
+from maix import time, rtsp, camera, image, audio
+
+cam = camera.Camera(640, 480, image.Format.FMT_YVU420SP)
+audio_recorder = audio.Recorder()
+
+server = rtsp.Rtsp()
+server.bind_camera(cam)
+server.bind_audio_recorder(audio_recorder)
+server.start()
+
+print(server.get_url())
+
+while True:
+    time.sleep(1)
+```
+
+注：音频推流需要 MaixPy v4.7.8 之后的版本。
+
+### RTMP 推流
+
+RTMP 适合推到公网直播平台，比如 Bilibili：
+
+```python
+from maix import camera, time, rtmp, image
+
+cam = camera.Camera(640, 480, image.Format.FMT_YVU420SP)
+
+host = '192.168.0.30'
+port = 1935
+app = 'live'
+stream = 'stream'
+bitrate = 1000_000
+r = rtmp.Rtmp(host, port, app, stream, bitrate)
+r.bind_camera(cam)
+r.start()
+
+while True:
+    time.sleep(1)
+```
+
+几个参数说明：
+- `host`：RTMP 服务器地址或域名
+- `port`：端口，默认 1935
+- `app`：服务器上的应用名
+- `stream`：流名称，也可以作为推流密钥
+
+加音频也是类似的，多一个 `bind_audio_recorder`：
+
+```python
+from maix import camera, time, app, rtmp, image, audio
+
+cam = camera.Camera(640, 480, image.Format.FMT_YVU420SP)
+audio_recorder = audio.Recorder()
+
+host = "192.168.0.63"
+port = 1935
+app_name = "live"
+stream_name = "stream"
+client = rtmp.Rtmp(host, port, app_name, stream_name)
+client.bind_camera(cam)
+client.bind_audio_recorder(audio_recorder)
+client.start()
+
+print(f"rtmp://{host}:{port}/{app_name}/{stream_name}")
+while not app.need_exit():
+    time.sleep(1)
+```
+
+#### 推流到 Bilibili
+
+想推到 B 站直播的话，先去 B 站开播设置里拿到推流地址，格式一般是：
+
+```
+rtmp://live-push.bilivideo.com/live-bvc/?streamname=live_xxx&key=xxx&schedule=rtmp&pflag=1
+```
+
+拆开来填：
+
+```python
+from maix import camera, time, rtmp, image
+
+cam = camera.Camera(640, 480, image.Format.FMT_YVU420SP)
+
+host = 'live-push.bilivideo.com'
+port = 1935
+app = 'live-bvc'
+stream = '?streamname=live_xxxx&key=1fbfxxxxxxxxxxxxxffe0&schedule=rtmp&pflag=1'
+bitrate = 1000_000
+r = rtmp.Rtmp(host, port, app, stream, bitrate)
+r.bind_camera(cam)
+r.start()
+
+while True:
+    time.sleep(1)
+```
+
+运行之后去直播间就能看到 MaixCamera 的画面了。如果没显示，试试先关掉直播间再重新打开。
+
+### WebRTC 推流
+
+WebRTC 的优势是浏览器直接看，不用装额外软件：
+
+```python
+from maix import time, webrtc, camera, image
+
+cam = camera.Camera(640, 480, image.Format.FMT_YVU420SP)
+server = webrtc.WebRTC()
+server.bind_camera(cam)
+server.start()
+
+print(server.get_url())
+
+while True:
+    time.sleep(1)
+```
+
+同样是 NV21 格式要求，`bind_camera` 之后原 Camera 对象失效。用 Chrome 浏览器访问打印出来的 URL 就能看到画面了。
+
+---
+
+## Modbus 通信
+
+Modbus 是一个工业上常用的总线协议，支持一主多从，基于 UART 或 TCP 传输。MaixPy 适配了 Modbus 协议，主机从机模式都支持。
+
+### Modbus 从机模式
+
+把 MaixCAM 当作从机，暴露几组寄存器给主机读写：
+
+```python
+from maix.comm import modbus
+from maix import app, err
+
+slave = modbus.Slave(
+    modbus.Mode.RTU,
+    "/dev/ttyS0",
+    0x00, 10,
+    0x00, 10,
+    0x00, 10,
+    0x00, 10,
+    115200, 1,
+    0, False
+)
+
+# 读取 input registers
+old_ir = slave.input_registers()
+print("old ir: ", old_ir)
+
+# 写入数据
+data = [0x22, 0x33, 0x44]
+slave.input_registers(data, 2)
+new_ir = slave.input_registers()
+print("new ir:", new_ir)
+
+while not app.need_exit():
+    if err.Err.ERR_NONE != slave.receive(2000):
+        continue
+
+    rtype = slave.request_type()
+    if rtype == modbus.RequestType.READ_HOLDING_REGISTERS:
+        print("master read hr")
+        hr = slave.holding_registers()
+        print("now hr: ", hr)
+        hr = [x+1 for x in hr]
+        print("update hr")
+        slave.holding_registers(hr)
+
+    slave.reply()
+```
+
+如果要走 TCP 模式，把 `Mode.RTU` 改成 `Mode.TCP`，串口号留空，后面填端口号就行。
+
+### Modbus 主机模式
+
+作为主机时可以主动读写从机的数据：
+
+```python
+from maix import pinmap, app, err, time
+from maix.comm import modbus
+
+REGISTERS_START_ADDRESS = 0x00
+REGISTERS_NUMBER = 10
+RTU_SLAVE_ID = 1
+RTU_BAUDRATE = 115200
+
+pinmap.set_pin_function("A19", "UART1_TX")
+pinmap.set_pin_function("A18", "UART1_RX")
+
+master = modbus.MasterRTU("/dev/ttyS1", RTU_BAUDRATE)
+
+while not app.need_exit():
+    hr = master.read_holding_registers(
+        RTU_SLAVE_ID,
+        REGISTERS_START_ADDRESS,
+        REGISTERS_NUMBER,
+        2000
+    )
+    if len(hr) == 0:
+        continue
+    print("Master read hr: ", hr)
+    time.sleep(1)
+```
+
+---
+
+## 寻线功能
+
+用 `image` 模块的 `get_regression` 可以快速找到画面中的直线，适合做小车寻线之类的项目：
+
+```python
+from maix import camera, display, image
+
+cam = camera.Camera(320, 240)
+disp = display.Display()
+
+thresholds = [[0, 80, -120, -10, 0, 30]]  # 绿色的阈值
+
+while 1:
+    img = cam.read()
+
+    lines = img.get_regression(thresholds, area_threshold=100)
+    for a in lines:
+        img.draw_line(a.x1(), a.y1(), a.x2(), a.y2(), image.COLOR_GREEN, 2)
+        theta = a.theta()
+        rho = a.rho()
+        if theta > 90:
+            theta = 270 - theta
+        else:
+            theta = 90 - theta
+        img.draw_string(0, 0, "theta: " + str(theta) + ", rho: " + str(rho), image.COLOR_BLUE)
+
+    disp.show(img)
+```
+
+几个要点：
+- `thresholds` 要按实际环境颜色调参数，代码里的是绿色的
+- `area_threshold` 用来过滤小面积的干扰
+- `a.theta()` 获取直线角度，`a.rho()` 获取直线到原点的距离
+- 调好参数之后可以拿这些数据控制小车方向
+
+
+
 
 ---
 
@@ -235,3 +657,4 @@ toothbrush
 <span style="color: rgba(53, 163, 241, 1)">设备文件系统</span>：程序运行时会将程序发送到设备上运行，所以代码里面读取的文件都是从设备文件系统读取。
 比如你电脑保存了D:\data\a.jpg，然后在设备上使用这个文件img = image.load("D:\data\a.jpg")，这样当然是找不到文件的，因为设备上没有D:\data\a.jpg这个文件。
 
+---
