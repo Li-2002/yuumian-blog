@@ -1,6 +1,6 @@
 ---
 title: 混元模型免费用？如何使用
-cover: https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=a%20modern%20IDE%20interface%20with%20AI%20coding%20assistant%20on%20a%20laptop%20screen%2C%20dark%20theme%2C%20futuristic%20tech%20style&image_size=landscape_16_9
+cover: https://yuumii.top/article/TencentHY3Free/hunYuanCover.png
 categories: 工具推荐
 tags:
   - 混元
