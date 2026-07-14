@@ -1,5 +1,5 @@
 ---
-title: 便携小空调 - 为你的夏日带去清凉!
+title: 雨眠牌空调!
 date: 2026-07-14 9:50:17
 comments: true
 aside: false
@@ -11,6 +11,9 @@ top_img: false
     width: 100%;
     display: flex;
     justify-content: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 0;
   }
   #air-conditioner-vue iframe {
     width: 100%;
@@ -26,10 +29,11 @@ top_img: false
   }
   #content-inner > #post,
   #content-inner > #page {
-    background: transparent !important;
+    background: #fff !important;
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
+    border-radius: 12px;
   }
   #post .article-container,
   #page .article-container {
