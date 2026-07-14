@@ -275,6 +275,37 @@ while not app.need_exit():
     time.sleep(1)
 ```
 
+```python
+from maix import camera, rtmp, image,display
+
+host = '192.168.60.11'
+port = 1935
+app = 'live'
+stream_name = 'maixcam'
+bitrate = 1000_000
+
+sign = 'xxxx' 
+
+# sign = hashlib.md5(push_key.encode()).hexdigest()
+
+stream = f'{stream_name}?sign={sign}'
+
+cam = camera.Camera(640, 480, image.Format.FMT_YVU420SP)
+
+disp = display.Display()
+
+r = rtmp.Rtmp(host, port, app, stream, bitrate)
+r.bind_camera(cam)
+r.start()
+
+print(f"开始推流到: rtmp://{host}:{port}/{app}/{stream}")
+
+while True:
+    img = cam.read()
+    disp.show(img)
+```
+
+
 #### 推流到 Bilibili
 
 想推到 B 站直播的话，先去 B 站开播设置里拿到推流地址，格式一般是：
