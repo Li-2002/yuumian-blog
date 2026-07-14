@@ -6,13 +6,39 @@ aside: false
 top_img: false
 ---
 
-> 炎热夏天来个小空调吹吹~
-
 <style>
-.copyright-box a {
-  border-bottom: none !important;
-  padding: 0 !important;
-}
+  #air-conditioner-vue {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #air-conditioner-vue iframe {
+    width: 100%;
+    max-width: 420px;
+    height: 740px;
+    border: none;
+    border-radius: 12px;
+  }
+  /* 移除页面容器限制 */
+  #body-wrap .layout#content-inner {
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+  #content-inner > #post,
+  #content-inner > #page {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  #post .article-container,
+  #page .article-container {
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+  }
 </style>
 
-<iframe height="740" src="https://air-conditioner-vue-six.vercel.app"></iframe>
+<div id="air-conditioner-vue">
+  <iframe src="https://air-conditioner-vue-six.vercel.app"></iframe>
+</div>
