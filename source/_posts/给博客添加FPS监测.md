@@ -1,6 +1,6 @@
 ---
 title: 给博客添加 FPS 监测
-cover: https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=a%20blog%20website%20on%20a%20laptop%20screen%20showing%20a%20small%20FPS%20counter%20in%20the%20navigation%20bar%2C%20minimalist%20dark%20theme&image_size=landscape_16_9
+cover: https://yuumii.top/article/%E5%8D%9A%E5%AE%A2%E9%AD%94%E6%94%B9%E8%AE%B0%E5%BD%95/ScreenShot_2026-07-14_114920_711.png
 categories: 博客
 tags:
   - 博客
@@ -14,37 +14,6 @@ ai: >-
 date: 2026-07-14 10:12:00
 ---
 
-## 前言
-
-
-
-最近在优化博客的性能，想着能不能实时看到页面的 <span style="color: rgba(66, 133, 244, 1)">帧率</span>，这样优化前后有没有效果一目了然。
-
-找了一圈发现安知鱼主题本身没有这个功能，那就自己动手搞一个。效果就是在导航栏右侧显示当前 FPS，并且可以通过中控台开关，想开就开想关就关。
-
-先看看效果（虽然你也看不到动效但是意思到了）：
-
-```
-导航栏右侧显示：  [ 60 FPS ]
-                ↑ 实时更新的帧率
-```
-
----
-
-## 实现思路
-
-整体流程是这样的：
-
-| 步骤 | 干啥 |
-|:---|:---|
-| ① 写 JS | 监听 `requestAnimationFrame` 计算每秒帧数 |
-| ② 写 CSS | 给 FPS 显示区域写样式 |
-| ③ 改 nav | 在导航栏右侧加一个 FPS 显示位 |
-| ④ 改控制台 | 加一个 FPS 开关按钮 |
-| ⑤ 加函数 | 在主题的 utils.js 里加开关逻辑 |
-| ⑥ 注入 | 把自定义 js/css 注入到页面 |
-
----
 
 ## 具体操作
 
@@ -215,22 +184,5 @@ FPSToggle: function () {
 4. 不用了再点一下关闭，状态会保存在浏览器里
 
 ---
-
-## 一些说明
-
-- <span style="color: rgba(52, 168, 83, 1)">60 FPS</span> 说明页面很流畅
-- <span style="color: rgba(252, 142, 2, 1)">30 FPS 左右</span> 说明有点卡了，可以看看是不是插件太多
-- <span style="color: rgba(234, 67, 53, 1)">低于 30 FPS</span> 那就要考虑优化了
-- 移动端默认隐藏，毕竟手机屏幕小，没必要占位置
-
-这个功能的好处就是可以直观看到页面的性能状况，加了新功能或者新插件之后看看 FPS 有没有掉，心里有个数。
-
----
-
-## 最后
-
-代码量不大，主要是要改几个文件。如果你也是安知鱼主题，照着上面步骤来就行。其他主题的话原理一样，找到对应的地方改就可以了。
-
-有什么问题可以来问我~
 
 <span style="color: rgba(252, 142, 2, 1)">愿君安康，平安同乐！</span>
