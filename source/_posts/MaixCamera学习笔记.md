@@ -1,6 +1,6 @@
 ---
 title: MaixCamera 学习笔记一
-cover: https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=a%20small%20AI%20camera%20module%20on%20a%20desk%20connected%20to%20a%20screen%20showing%20real-time%20object%20detection%20with%20bounding%20boxes%2C%20tech%20workspace%20style&image_size=landscape_16_9
+cover: https://yuumii.top/article/MaixCam2Learning/maxicamcover.png
 categories:  MaixCam
 tags:
   - MaixCamera
