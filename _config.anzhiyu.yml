@@ -8,6 +8,7 @@ menu:
   游戏工具:
     加密小工具: /cipher/ || anzhiyu-icon-font
     文字修仙: https://xiuxian.yuumii.top/#/home || anzhiyu-icon-pagelines
+    便携小空调: /air-conditioner/ || anzhiyu-icon-snowflake
 
   友链:
     友人帐: /link/ || anzhiyu-icon-link
@@ -1267,11 +1268,11 @@ inject:
     - <link rel="stylesheet" href="/css/oppo-sans.css">
     - <link rel="stylesheet" href="/css/livephoto.css">
     # 自定义css
-    # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/custom.css">
 
   bottom:
     # 自定义js
-    # - <script src="/js/xxx"></script>
+    - <script src="/js/custom.js"></script>
     - <script src="/static/card-welcome.js"></script>
     - <script src="/js/countdown.js"></script>
     - <script src="/js/livephoto.js"></script>

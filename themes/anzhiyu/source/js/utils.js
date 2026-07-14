@@ -1366,6 +1366,22 @@ const anzhiyu = {
     }
     authorInfoSayHiElement.textContent = randomGreeting;
   },
+  // FPS 开关
+  FPSToggle: function () {
+    const isFPSOn = anzhiyu_FPS;
+    const fpsGroup = document.querySelector("#fps-group");
+    const consoleFPS = document.querySelector("#consoleFPS");
+    if (isFPSOn) {
+      fpsGroup?.classList.remove("show");
+      consoleFPS?.classList.remove("on");
+      anzhiyu_FPS = false;
+    } else {
+      fpsGroup?.classList.add("show");
+      consoleFPS?.classList.add("on");
+      anzhiyu_FPS = true;
+    }
+    localStorage.setItem("anzhiyuFPSToggle", isFPSOn ? "false" : "true");
+  },
 };
 
 const anzhiyuPopupManager = {

@@ -1,0 +1,58 @@
+/* ===== FPS 监测 ===== */
+#page-header #nav #nav-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#fps-group {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  padding: 0 6px;
+  min-width: 36px;
+  color: var(--anzhiyu-white);
+  transition: opacity 0.3s ease;
+}
+
+#fps-group.show {
+  opacity: 1;
+}
+
+.nav-fixed #fps-group,
+.not-top-img #fps-group {
+  color: var(--anzhiyu-fontcolor);
+}
+
+#fps {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.fps-text {
+  font-size: 10px;
+  line-height: 1;
+  opacity: 0.6;
+  letter-spacing: 1px;
+}
+
+/* 中控台 FPS 按钮 */
+#consoleFPS.on {
+  color: var(--anzhiyu-main);
+}
+
+#consoleFPS.on .FPS-switch i {
+  color: var(--anzhiyu-main) !important;
+}
+
+/* 移动端隐藏 */
+@media screen and (max-width: 768px) {
+  #fps-group.show {
+    display: none;
+  }
+}

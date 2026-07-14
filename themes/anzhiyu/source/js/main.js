@@ -2,6 +2,8 @@
 var anzhiyu_musicFirst = false;
 // 快捷键
 var anzhiyu_keyboard = null;
+// FPS 状态
+var anzhiyu_FPS = false;
 // 音乐播放状态
 var anzhiyu_musicPlaying = false;
 var $bodyWrap = document.getElementById("body-wrap");
