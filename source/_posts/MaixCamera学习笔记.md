@@ -1,15 +1,17 @@
 ---
 title: MaixCamera 学习笔记一
 cover: https://yuumii.top/article/MaixCam2Learning/maxicamcover.png
-categories:  MaixCam
+categories: MaixCam
 tags:
   - MaixCamera
   - MaixPy
   - YOLOv5
 keywords: MaixCamera,MaixPy,YOLOv5,目标检测
-description: 
 ai: >-
+  雨眠AI摘要帮您理解这篇文章~本文记录MaixCamera
+  AI视觉开发板的基础操作，包括摄像头图像获取、分辨率与帧率设置、图像显示、H265视频录制，以及RTSP和RTMP推流方法，适合初学者快速上手。
 date: 2026-07-10 16:27:02
+description:
 ---
 
 ## 前言

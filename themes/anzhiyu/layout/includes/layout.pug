@@ -81,6 +81,11 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
       !=partial('includes/shortcutKey', {}, {cache: true})
     include ./rightside.pug
 
+    //- FPS 监测角标（固定显示在页面右下角，挂在 body 下避免被 #nav 的 transform 影响定位）
+    #fps-group
+      #fps 0
+      span.fps-text FPS
+
     if (theme.nav_music.enable || theme.nav_music.console_widescreen_music)
       include ./music.pug
     !=partial('includes/third-party/search/index', {}, {cache: true})

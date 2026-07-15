@@ -6,9 +6,11 @@ tags:
   - 混元
   - AI
 keywords: Trae,混元,AI编程,IDE,腾讯混元,免费模型
-description: 
 ai: >-
+  雨眠AI摘要帮您理解这篇文章~文章介绍了腾讯混元HY3模型限时免费活动（至7.21），如何通过OpenRouter获取API
+  Key，并在Trae中配置自定义模型（模型id为tencent/hy3:free），从而实现免费调用混元模型辅助编程。
 date: 2026-07-10 14:00:00
+description:
 ---
 
 ## 前言
