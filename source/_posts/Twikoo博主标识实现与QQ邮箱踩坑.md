@@ -7,10 +7,9 @@ tags:
   - 评论系统
 categories: 博客
 description: >-
-  记录在 AnZhiYu 主题中实现 Twikoo 评论区博主双标的过程，以及 QQ 邮箱导致
-  MASTER_EMAIL_HASH环境变量始终不生效的踩坑经历。
+
 ai: >-
-  雨眠AI摘要帮您理解这篇文章~本文记录了在Twikoo评论区添加博主标识的踩坑过程，指出QQ邮箱因不走Gravatar体系导致MASTER_EMAIL_HASH环境变量失效，最终采用前端JS双重匹配（昵称+网址）加CSS样式实现“博主”和“雨眠”两个标签，并附上具体配置代码。
+。
 date: 2026-06-21 16:34:54
 ---
 
