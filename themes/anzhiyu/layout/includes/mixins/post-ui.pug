@@ -6,6 +6,8 @@ mixin postUI(posts)
   each article , index in page.posts.data
     - let link = article.link || article.path
     div(class = (index === 0 ? 'recent-post-item lastestpost-item' : 'recent-post-item') onclick=`pjax.loadUrl('${url_for(link)}')`)
+      if (is_home() && article.featured)
+        span.featured-badge 推荐
       -
         let title = article.title || _p('no_title')
         const position = theme.cover.position

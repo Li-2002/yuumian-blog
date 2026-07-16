@@ -63,3 +63,21 @@ html[data-theme="light"] #fps-group {
     display: none;
   }
 }
+
+/* ===== 推荐角标 ===== */
+.featured-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 5px 18px;
+  background: linear-gradient(135deg, #FF7242, #F47466);
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.8;
+  border-radius: 0 12px 0 12px;
+  pointer-events: none;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 8px rgba(255, 114, 66, 0.35);
+}
