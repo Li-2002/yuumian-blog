@@ -14,7 +14,11 @@
       color: vip
       tag: 技术大佬
       siteshot: https://cdn.lusyoe.com/images/blog-cover.webp
-
+    - name: 杜老师说
+      link: https://dusays.com
+      avatar: https://cdn.dusays.com/favicon.ico
+      color: vip
+      tag: 杜老师说
 
 - class_name: 各位小伙伴
   flink_style: telescopic
@@ -43,6 +47,11 @@
       color: vip
       tag: 技术
       addDate: 2026-06-25
+    - name: 杜老师说
+      link: https://dusays.com
+      avatar: https://cdn.dusays.com/favicon.ico
+      color: vip
+      tag: 杜老师说
     - name: 酥米的小站
       link: https://www.sumi233.top
       avatar: https://cdn.sumi233.top/gh/huang233893/blog-image-bed@main/top/huang233893/imgs/blog/usersumi.png
