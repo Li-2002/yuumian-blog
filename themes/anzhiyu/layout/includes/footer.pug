@@ -31,6 +31,9 @@
     else
       .copyright!= `&copy;${nowYear} By ${config.author}`
 
+  .icp
+    a(href="https://icp.gov.moe/?keyword=20262190" target="_blank") 萌ICP备20262190号
+
   - let work_img = theme.footer.runtime.work_img
   - let work_description = theme.footer.runtime.work_description
   if theme.footer.runtime.enable
@@ -85,6 +88,7 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
       .footer-bar-right
         each item in theme.footer.footerBar.linkList
           a.footer-bar-link(href=url_for(item.link) title=item.text)=item.text
+        a.footer-bar-link(href="https://icp.gov.moe/?keyword=20262190" target="_blank") 萌ICP备20262190号
         if theme.footer.footerBar.cc.enable
           a.footer-bar-link.cc(href=url_for(theme.footer.footerBar.cc.link) title=_p('footer.cc_license'))
             i.anzhiyufont.anzhiyu-icon-copyright-line
