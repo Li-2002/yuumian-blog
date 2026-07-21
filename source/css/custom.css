@@ -179,6 +179,37 @@ html[data-theme="dark"] #footer-link-bar .extra-links .footer-extra-link:hover {
   color: var(--anzhiyu-main) !important;
 }
 
+/* 开往友链接力 */
+.travelling-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.travelling-link:hover {
+  opacity: 1;
+}
+
+.travelling-link img {
+  width: 72px;
+  height: auto;
+}
+
+.travelling-link span {
+  font-size: 13px;
+  color: #333 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+html[data-theme="dark"] .travelling-link span {
+  color: #bbb !important;
+}
+
 /* 移动端 */
 @media screen and (max-width: 500px) {
   #footer-link-bar {
