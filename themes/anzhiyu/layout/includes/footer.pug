@@ -31,9 +31,6 @@
     else
       .copyright!= `&copy;${nowYear} By ${config.author}`
 
-  .icp
-    a(href="https://icp.gov.moe/?keyword=20262190" target="_blank") 萌ICP备20262190号
-
   - let work_img = theme.footer.runtime.work_img
   - let work_description = theme.footer.runtime.work_description
   if theme.footer.runtime.enable
@@ -43,6 +40,20 @@
       #runtimeTextTip
   if theme.footer.custom_text
     .footer_custom_text!=`${theme.footer.custom_text}`
+
+  #footer-link-bar.footer-extra
+    .footer-extra-group.extra-links
+      .footer-extra-title 其他链接
+      .footer-extra-links
+        a.footer-extra-link(href="/cipher/") 加密小工具
+        a.footer-extra-link(href="https://xiuxian.yuumii.top/#/home" target="_blank") 文字修仙
+        a.footer-extra-link(href="/air-conditioner/") 便携小空调
+    .footer-extra-group
+      .footer-extra-title 备案
+      .footer-extra-links
+        a.icp-badge(href="https://icp.gov.moe/?keyword=20262190" target="_blank")
+          span.icp-badge-left 萌
+          span.icp-badge-right 萌ICP备20262190号
 
   if theme.footer.list.enable
     - let projectList = theme.footer.list.project
@@ -88,7 +99,9 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
       .footer-bar-right
         each item in theme.footer.footerBar.linkList
           a.footer-bar-link(href=url_for(item.link) title=item.text)=item.text
-        a.footer-bar-link(href="https://icp.gov.moe/?keyword=20262190" target="_blank") 萌ICP备20262190号
+        a.icp-badge(href="https://icp.gov.moe/?keyword=20262190" target="_blank")
+          span.icp-badge-left 萌
+          span.icp-badge-right 萌ICP备20262190号
         if theme.footer.footerBar.cc.enable
           a.footer-bar-link.cc(href=url_for(theme.footer.footerBar.cc.link) title=_p('footer.cc_license'))
             i.anzhiyufont.anzhiyu-icon-copyright-line
