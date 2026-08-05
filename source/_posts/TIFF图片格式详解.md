@@ -68,14 +68,6 @@ TIFF 还能像 PDF 一样把一个文件里存<span style="color: rgba(240, 110,
 
 ---
 
-
-
-
-
-
-
----
-
 {% p center logo large, TIFF 在地图、导航行业的 <span style="color: rgba(66, 133, 244, 1)">妙用</span> %}
 
 TIFF 在普通人的生活里存在感不高，但在<span style="color: rgba(66, 133, 244, 1)">地图、导航、测绘</span>这些行业里，它可是<span style="color: rgba(240, 110, 35, 1)">硬通货</span>般的存在，甚至可以说没有 TIFF 就没有今天的地图应用。
@@ -104,13 +96,6 @@ TIFF 支持<span style="color: rgba(66, 133, 244, 1)">多波段</span>存储，�
 
 ---
 
-{% p center logo large, 最后总结 %}
-
-TIFF 是一个<span style="color: rgba(66, 133, 244, 1)">为专业而生</span>的格式，它不追求小、不追求快，只追求一件事——<span style="color: rgba(240, 110, 35, 1)">最大程度保留画质</span>。在这个大家都在拼压缩率、拼体积的时代，TIFF 依然坚持"原汁原味"，还挺有态度的。
-
-对普通人来说，你大概率用不上 TIFF，但如果你有<span style="color: rgba(66, 133, 244, 1)">扫描老照片、打印照片、专业修图</span>的需求，请记住这个格式——它能帮你守住每一份细节。
-
-> 一句话：{% label 细节控专用格式 blue %}，大，但是值得。
 
 ## 最后
 
