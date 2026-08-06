@@ -1,0 +1,23 @@
+{
+  "name": "yuumii",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:ssg",
+    "build:spa": "valaxy build",
+    "build:ssg": "valaxy build --ssg",
+    "dev": "valaxy",
+    "rss": "valaxy rss",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "valaxy": "1.0.0-rc.3",
+    "valaxy-addon-twikoo": "^0.0.4",
+    "valaxy-theme-yun": "1.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@iconify-json/ri": "^1.2.10",
+    "typescript": "^5.9.3"
+  }
+}
