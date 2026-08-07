@@ -7,6 +7,13 @@ export default defineThemeConfig({
   },
 
 
+  nav: [
+    { text: '博客文章', link: '/posts/', icon: 'i-ri-article-line' },
+    { text: '我的小伙伴们', link: '/links/', icon: 'i-ri-genderless-line' },
+    { text: '游戏人生', link: '/games/', icon: 'i-ri-game-line' },
+    { text: '相册', link: '/albums/', icon: 'i-ri-image-line' },
+  ],
+
   pages: [
     {
       name: '我的小伙伴们',
@@ -25,6 +32,24 @@ export default defineThemeConfig({
       url: '/albums/',
       icon: 'i-ri-image-line',
       color: '#EC53B0',
+    },
+    {
+      name: '文字修仙',
+      url: 'https://xiuxian.yuumii.top',
+      icon: 'i-ri-sword-line',
+      color: '#a78bfa',
+    },
+    {
+      name: '加密小工具',
+      url: '/crypto/',
+      icon: 'i-ri-lock-line',
+      color: '#f59e0b',
+    },
+    {
+      name: '便携小空调',
+      url: '/air-conditioner/',
+      icon: 'i-ri-snowy-line',
+      color: '#38bdf8',
     },
   ],
 

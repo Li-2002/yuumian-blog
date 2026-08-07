@@ -1,0 +1,67 @@
+{
+  "top_background": "https://dash.cloudflare.com/f4dbaf996927c3d0ebab2c6a164a40f0/r2/default/buckets/yuumian/objects/pic%2Fyysls%2FMEITU_20260630_205911792.jpg/details?prefix=pic%2Fyysls%2F",
+  "buttonText": "Steam",
+  "buttonLink": "https://steamcommunity.com/",
+  "categories": [
+    {
+      "title": "剧情超绝",
+      "description": "只羡鸳鸯 不羡仙",
+      "games": [
+        {
+          "name": "艾尔登法环",
+          "spec": "Elden Ring.",
+          "desc": "即使引导早已破碎，也请您当上艾尔登之王",
+          "image": "https://yuumii.top/about/about3-fahuan.jpg",
+          "link": "https://www.xiaoheihe.cn/app/topic/game/pc/1245620"
+        },
+        {
+          "name": "燕云十六声",
+          "spec": "松子糖.",
+          "desc": "苍生无言，侠为其声",
+          "image": "https://yuumii.top/pic/yysls/MEITU_20260315_182144963.jpg",
+          "link": "https://www.yysls.cn/fab/bingsem/"
+        },
+        {
+          "name": "黑神话悟空",
+          "spec": "只怕你聋了耳，又乱了心",
+          "desc": "小猴子你听，那风里传来的，都是求而不得的声音",
+          "image": "https://yuumii.top/games/blackMeth.jpg",
+          "link": "https://gamesci.cn/wukong"
+        }
+      ]
+    },
+    {
+      "title": "武侠江湖",
+      "description": "桃李春风一杯酒，江湖夜雨十年灯",
+      "games": [
+        {
+          "name": "永劫无间",
+          "spec": "武侠游戏之首",
+          "desc": "我身无拘 武道无穷",
+          "image": "https://yuumii.top/games/%E6%B0%B8%E5%8A%AB.png",
+          "link": "https://www.yjwujian.cn/"
+        },
+        {
+          "name": "燕云十六声",
+          "spec": "Where Wind Meeting.",
+          "desc": "苍生无言，侠为其声",
+          "image": "https://yuumii.top/pic/yysls/MEITU_20260315_182144963.jpg",
+          "link": "https://www.yysls.cn/fab/bingsem/"
+        }
+      ]
+    },
+    {
+      "title": "风景超绝",
+      "description": "万物都是自由诗",
+      "games": [
+        {
+          "name": "地平线4",
+          "spec": "Xbox",
+          "desc": "你知道，我真的爱你，句句不轻易~",
+          "image": "https://yuumii.top/games/dpx4.png",
+          "link": "https://www.xiaoheihe.cn/app/topic/game/pc/1293830"
+        }
+      ]
+    }
+  ]
+}

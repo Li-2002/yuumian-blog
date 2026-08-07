@@ -343,7 +343,7 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'pages/air-conditioner/index.md': {
+    'pages/air-conditioner/index.vue': {
       routes:
         | '/air-conditioner/'
       views:
@@ -351,7 +351,7 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'pages/albums/index.md': {
+    'pages/albums/index.vue': {
       routes:
         | '/albums/'
       views:
@@ -375,7 +375,7 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'pages/crypto/index.md': {
+    'pages/crypto/index.vue': {
       routes:
         | '/crypto/'
       views:
@@ -383,7 +383,7 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'pages/games/index.md': {
+    'pages/games/index.vue': {
       routes:
         | '/games/'
       views:
