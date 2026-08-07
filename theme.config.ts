@@ -16,9 +16,15 @@ export default defineThemeConfig({
     },
     {
       name: '游戏人生',
-      url: '/girl/',
+      url: '/games/',
       icon: 'i-ri-game-line',
       color: 'hotpink',
+    },
+    {
+      name: '相册',
+      url: '/albums/',
+      icon: 'i-ri-image-line',
+      color: '#EC53B0',
     },
   ],
 

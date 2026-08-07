@@ -153,8 +153,10 @@ html[data-theme="dark"] .icp-badge-left {
 
 .footer-extra-links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -179,35 +181,10 @@ html[data-theme="dark"] #footer-link-bar .extra-links .footer-extra-link:hover {
   color: var(--anzhiyu-main) !important;
 }
 
-/* 开往友链接力 */
-.travelling-link {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
-  text-decoration: none;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-}
-
-.travelling-link:hover {
-  opacity: 1;
-}
-
-.travelling-link img {
-  width: 77px;
-  height: auto;
-}
-
-.travelling-link span {
-  font-size: 13px;
-  color: #333 !important;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-html[data-theme="dark"] .travelling-link span {
-  color: #bbb !important;
+/* 萌ICP shields.io 徽章 */
+.moicp-badge-img {
+  height: 20px;
+  vertical-align: middle;
 }
 
 /* 移动端 */
@@ -215,4 +192,67 @@ html[data-theme="dark"] .travelling-link span {
   #footer-link-bar {
     gap: 30px;
   }
+}
+
+/* ===== 页脚工具按钮栏 ===== */
+#footer-tools-bar {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 18px;
+  padding-top: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 18px;
+  border-radius: 20px;
+  background: var(--va-c-bg-soft, #f3f4f6);
+  color: var(--va-c-text-light);
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.footer-tool-btn:hover {
+  background: var(--va-c-primary, #667eea);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+html[data-theme="dark"] .footer-tool-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: #bbb;
+}
+
+html[data-theme="dark"] .footer-tool-btn:hover {
+  background: var(--va-c-primary, #667eea);
+  color: #fff;
+}
+
+/* ===== 空白页面容器 ===== */
+.empty-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+  gap: 16px;
+  padding: 60px 20px;
+  color: var(--va-c-text-light);
+}
+
+.empty-page-icon {
+  font-size: 64px;
+  opacity: 0.6;
+}
+
+.empty-page-container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--va-c-text);
+  margin: 0;
 }

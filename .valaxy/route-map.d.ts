@@ -66,6 +66,20 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/air-conditioner/': RouteRecordInfo<
+      '/air-conditioner/',
+      '/air-conditioner',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/albums/': RouteRecordInfo<
+      '/albums/',
+      '/albums',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/archives/': RouteRecordInfo<
       '/archives/',
       '/archives',
@@ -76,6 +90,20 @@ declare module 'vue-router/auto-routes' {
     '/categories/': RouteRecordInfo<
       '/categories/',
       '/categories',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/crypto/': RouteRecordInfo<
+      '/crypto/',
+      '/crypto',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/games/': RouteRecordInfo<
+      '/games/',
+      '/games',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -255,6 +283,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/xiuxian/': RouteRecordInfo<
+      '/xiuxian/',
+      '/xiuxian',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
   }
 
   /**
@@ -308,6 +343,22 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
+    'pages/air-conditioner/index.md': {
+      routes:
+        | '/air-conditioner/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/albums/index.md': {
+      routes:
+        | '/albums/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
     'pages/archives/index.md': {
       routes:
         | '/archives/'
@@ -319,6 +370,22 @@ declare module 'vue-router/auto-routes' {
     'pages/categories/index.md': {
       routes:
         | '/categories/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/crypto/index.md': {
+      routes:
+        | '/crypto/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/games/index.md': {
+      routes:
+        | '/games/'
       views:
         | never
       pathParamNames:
@@ -519,6 +586,14 @@ declare module 'vue-router/auto-routes' {
     'pages/tags/index.md': {
       routes:
         | '/tags/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/xiuxian/index.md': {
+      routes:
+        | '/xiuxian/'
       views:
         | never
       pathParamNames:
