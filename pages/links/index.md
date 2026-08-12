@@ -129,6 +129,12 @@ links:
     url: https://blog.prorisehub.com
     avatar: https://prorise-blog.oss-cn-guangzhou.aliyuncs.com/cover/avatar.png
     desc: Prorise - 一位全栈工程师分享全栈技术与实战调优
+  - name: 一望成欢🍀
+    blog: 一望成欢🍀
+    url: https://wanqingcheng.cn
+    avatar: https://wanqingcheng.cn/tlogo.jpg
+    desc: 一望成欢🍀、记录光阴、珍藏热爱。
+    rss: https://wanqingcheng.cn/feed/
 random: true
 ---
 
