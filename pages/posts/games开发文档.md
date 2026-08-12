@@ -4,6 +4,7 @@ cover: https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/Logo.png
 categories: 博客
 tags:
   - Hexo新页面
+date: 2026-06-15
 description: 游戏人生(games)页面开发文档
 ---
 ## 一、功能概述
