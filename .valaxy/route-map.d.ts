@@ -157,6 +157,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/大模型学习(二)': RouteRecordInfo<
+      '/posts/大模型学习(二)',
+      '/posts/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0(%E4%BA%8C)',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/大模型学习(1)': RouteRecordInfo<
       '/posts/大模型学习(1)',
       '/posts/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0(1)',
@@ -216,6 +223,13 @@ declare module 'vue-router/auto-routes' {
     '/posts/记录一下我的键盘': RouteRecordInfo<
       '/posts/记录一下我的键盘',
       '/posts/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%88%91%E7%9A%84%E9%94%AE%E7%9B%98',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2026影单': RouteRecordInfo<
+      '/posts/2026影单',
+      '/posts/2026%E5%BD%B1%E5%8D%95',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -447,6 +461,14 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
+    'pages/posts/大模型学习(二).md': {
+      routes:
+        | '/posts/大模型学习(二)'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
     'pages/posts/大模型学习(1).md': {
       routes:
         | '/posts/大模型学习(1)'
@@ -514,6 +536,14 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/记录一下我的键盘.md': {
       routes:
         | '/posts/记录一下我的键盘'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2026影单.md': {
+      routes:
+        | '/posts/2026影单'
       views:
         | never
       pathParamNames:
