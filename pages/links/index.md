@@ -7,6 +7,7 @@ links:
     url: https://blog.yuumii.top
     avatar: https://yuumii.top/sys/avatar.ico
     desc: 愿君安康
+    rss: https://blog.yuumii.top/atom.xml
   - name: 青萍叙事
     blog: 青萍叙事
     url: https://blog.lusyoe.com
@@ -136,5 +137,18 @@ links:
 
 random: false
 ---
+
+## 我的信息
+
+互换友链请添加~
+
+```yaml
+- name: 雨眠碎碎念
+  blog: 雨眠碎碎念
+  url: https://blog.yuumii.top
+  avatar: https://yuumii.top/sys/avatar.ico
+  desc: 愿君安康
+  rss: https://blog.yuumii.top/atom.xml
+```
 
 <YunLinks :links="frontmatter.links" :random="frontmatter.random" />
