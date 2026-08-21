@@ -1,5 +1,6 @@
 ---
 title: 玩《黑神话：悟空》有感
+from: '/posts/玩黑神话悟空有感'
 cover: https://yuumii.top/article/20260715BlackMeth/blackMethcover.png
 categories: 游戏
 top: 1

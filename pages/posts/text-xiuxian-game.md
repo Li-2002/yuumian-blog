@@ -1,5 +1,6 @@
 ---
 title: 文字修仙游戏上线啦
+from: '/posts/文字修仙游戏上线啦'
 date: 2026-07-06
 categories: 博客
 tags:

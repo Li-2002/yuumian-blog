@@ -1,5 +1,6 @@
 ---
 title: 博客上线啦！博客诞生的心路历程
+from: '/posts/博客上线啦！博客诞生的心路历程'
 cover: https://yuumii.top/sys/bakcgournd.png
 categories: 博客
 tags:

@@ -1,5 +1,6 @@
 ---
 title: 大模型学习(1)
+from: '/posts/大模型学习(1)'
 cover: https://yuumii.top/article/20260716_LearningSpringAI/1784791739901-6a86d7f7-e607-4022-b91b-f0099ee78274.png
 categories: 大模型
 tags:

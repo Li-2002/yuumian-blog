@@ -1,5 +1,6 @@
 ---
 title: 记录一下我的键盘
+from: '/posts/记录一下我的键盘'
 cover: https://yuumii.top/article/2026_07_29%20MyKeyboard/%E6%A1%8C%E5%AD%90.jpg
 categories: 数码
 tags:

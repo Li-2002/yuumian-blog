@@ -1,5 +1,6 @@
 ---
 title: 安知鱼腾讯位置IP定位
+from: '/posts/安知鱼接入腾讯位置服务实现访客IP定位'
 cover: https://yuumii.top/article/tencentIp/Tencentip.png
 categories: 博客
 tags:

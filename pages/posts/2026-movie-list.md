@@ -1,5 +1,6 @@
 ---
 title: 2026 影单
+from: '/posts/2026影单'
 categories: 生活
 tags:
   - 电影

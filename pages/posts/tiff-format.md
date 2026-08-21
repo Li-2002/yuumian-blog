@@ -1,5 +1,6 @@
 ---
 title: TIFF图片格式详解
+from: '/posts/TIFF图片格式详解'
 categories: 技术
 tags:
   - 图片格式

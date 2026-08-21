@@ -1,5 +1,6 @@
 ---
 title: 安知鱼主题接入51LA统计展示访问数据
+from: '/posts/安知鱼主题接入51LA统计展示访问数据'
 cover: https://yuumii.top/article/51LA/51LA%E7%BB%9F%E8%AE%A1.png
 categories: 博客
 tags:

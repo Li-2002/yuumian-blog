@@ -1,5 +1,6 @@
 ---
 title: 安知鱼主题如何接入自己的AI摘要？DeepSeek也能用！
+from: '/posts/安知鱼主题接入DeepSeek实现AI摘要'
 categories: 博客
 tags:
   - Ai摘要

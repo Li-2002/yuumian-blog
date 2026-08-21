@@ -1,5 +1,6 @@
 ---
 title: 游戏人生(games)页面开发文档
+from: '/posts/games开发文档'
 cover: https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/Logo.png
 categories: 博客
 tags:

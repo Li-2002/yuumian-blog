@@ -1,5 +1,6 @@
 ---
 title: 给博客添加 FPS 监测
+from: '/posts/给博客添加FPS监测'
 cover: >-
   https://yuumii.top/article/%E5%8D%9A%E5%AE%A2%E9%AD%94%E6%94%B9%E8%AE%B0%E5%BD%95/ScreenShot_2026-07-14_114920_711.png
 categories: 博客

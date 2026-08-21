@@ -1,5 +1,6 @@
 ---
 title: 混元模型免费用？如何使用
+from: '/posts/Trae接入混元限时免费模型'
 cover: https://yuumii.top/article/TencentHY3Free/hunYuanCover.png
 categories: 工具推荐
 tags:

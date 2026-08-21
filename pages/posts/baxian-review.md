@@ -1,5 +1,6 @@
 ---
 title: 《八仙》观后感
+from: '/posts/《八仙》观后感'
 cover: https://yuumii.top/article/2026_08_04_%E3%80%8A%E5%85%AB%E4%BB%99%E3%80%8B/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260804092753_61_67.jpg
 categories:
   - 电影

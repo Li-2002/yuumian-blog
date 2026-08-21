@@ -1,5 +1,6 @@
 ---
 title: Twikoo 评论区博主标识实现与 QQ 邮箱踩坑记录
+from: '/posts/Twikoo博主标识实现与QQ邮箱踩坑'
 tags:
   - Hexo
   - Twikoo

@@ -1,5 +1,6 @@
 ---
 title: Hexo博客怎么上线CloudFlare
+from: '/posts/博客部署到CloudFlare和Github'
 cover: https://yuumii.top/article/DeployWithGitHubAndCLoudFlare/Logo.png
 categories: 博客
 tags:

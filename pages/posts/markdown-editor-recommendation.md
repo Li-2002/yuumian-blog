@@ -1,5 +1,6 @@
 ---
 title: Markdown编辑器推荐
+from: '/posts/Markdown编辑器推荐'
 cover: https://obsidian.md/images/obsidian-logo-gradient.svg
 categories: 工具推荐
 tags:

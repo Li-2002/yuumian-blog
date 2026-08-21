@@ -1,5 +1,6 @@
 ---
 title: 动态/朋友圈(moments)页面开发文档
+from: '/posts/moments开发文档'
 cover: https://yuumii.top/article/gamesAndMoment/moment.png
 categories: 博客
 tags:

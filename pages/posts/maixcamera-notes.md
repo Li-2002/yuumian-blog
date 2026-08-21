@@ -1,5 +1,6 @@
 ---
 title: MaixCamera 学习笔记一
+from: '/posts/MaixCamera学习笔记'
 cover: https://yuumii.top/article/MaixCam2Learning/maxicamcover.png
 categories: MaixCam
 tags:

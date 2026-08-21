@@ -1,5 +1,6 @@
 ---
 title: 博客魔改记录
+from: '/posts/博客魔改记录'
 cover: >-
   https://yuumii.top/article/%E5%8D%9A%E5%AE%A2%E9%AD%94%E6%94%B9%E8%AE%B0%E5%BD%95/ScreenShot_2026-07-14_114920_711.png
 categories: 博客
@@ -14,13 +15,13 @@ description:
 ### 小工具 / 娱乐
 
 - [x] 🏖️ 便携小空调
-[查看页面](/air-conditioner/) [安装文档](/posts/给博客装个小空调.html)
+[查看页面](/air-conditioner/) [安装文档](/posts/blog-air-conditioner.html)
 
 - [x] 🧊 加密小工具
 [查看页面](/cipher/)
 
 - [x] 🎮 文字修仙游戏
-[开始修仙](https://xiuxian.yuumii.top/#/home) [安装文档](/posts/文字修仙游戏上线啦.html)
+[开始修仙](https://xiuxian.yuumii.top/#/home) [安装文档](/posts/text-xiuxian-game.html)
 
 ### 博客页面
 
@@ -40,19 +41,19 @@ description:
 ## 功能类
 
 - [x] 🤖 DeepSeek AI 摘要
-[安装文档](/posts/安知鱼主题接入DeepSeek实现AI摘要.html)
+[安装文档](/posts/anzhiyu-deepseek-ai-summary.html)
 
 - [x] 💬 Twikoo 评论 + 博主标识
-[安装文档](/posts/Twikoo博主标识实现与QQ邮箱踩坑.html)
+[安装文档](/posts/twikoo-blogger-badge-qq-mail.html)
 
 - [x] 📊 51LA 访问统计
-[安装文档](/posts/安知鱼主题接入51LA统计展示访问数据.html)
+[安装文档](/posts/anzhiyu-51la-stats.html)
 
 - [x] 📍 腾讯位置服务（访客IP定位）
-[安装文档](/posts/安知鱼接入腾讯位置服务实现访客IP定位.html)
+[安装文档](/posts/anzhiyu-tencent-ip-location.html)
 
 - [x] 🎯 FPS 帧率监测（导航栏 + 中控台开关）
-[安装文档](/posts/给博客添加FPS监测.html)
+[安装文档](/posts/blog-fps-monitor.html)
 
 
 

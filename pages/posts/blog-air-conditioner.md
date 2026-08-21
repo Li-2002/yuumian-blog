@@ -1,5 +1,6 @@
 ---
 title: 给博客装个小空调
+from: '/posts/给博客装个小空调'
 cover: https://yuumii.top/article/airconditioner/airconditioner.png
 categories: 博客
 tags:
