@@ -33,6 +33,7 @@ export default defineAppSetup(({ isClient }) => {
     bar.innerHTML = `
       <div class="footer-extra-group">
         <a class="footer-extra-link" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力">开往-友链接力</a>
+        <a class="footer-extra-link" href="https://www.blogsclub.org/" target="_blank" rel="noopener" title="BlogsClub">BlogsClub</a>
       </div>
       <div class="footer-extra-group">
         <span style="white-space: nowrap; display: flex; align-items: center; justify-content: center;">
