@@ -134,6 +134,14 @@ links:
     url: https://blog.prorisehub.com
     avatar: https://prorise-blog.oss-cn-guangzhou.aliyuncs.com/cover/avatar.png
     desc: Prorise - 一位全栈工程师分享全栈技术与实战调优
+  - name: 若愚
+    blog: 若愚
+    url: https://www.xrdsxj.com
+    avatar: https://i-avatar.csdnimg.cn/eee95a7fcdb940f8ae6215beccf151ce_automoblie0.jpg!1
+    desc: 听君之心，行君之意，无问西东
+
+
+
 
 random: false
 ---
