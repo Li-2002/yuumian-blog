@@ -129,114 +129,79 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/posts/《八仙》观后感': RouteRecordInfo<
-      '/posts/《八仙》观后感',
-      '/posts/%E3%80%8A%E5%85%AB%E4%BB%99%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F',
+    '/posts/2026-movie-list': RouteRecordInfo<
+      '/posts/2026-movie-list',
+      '/posts/2026-movie-list',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/博客上线啦！博客诞生的心路历程': RouteRecordInfo<
-      '/posts/博客上线啦！博客诞生的心路历程',
-      '/posts/%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF%E5%95%A6%EF%BC%81%E5%8D%9A%E5%AE%A2%E8%AF%9E%E7%94%9F%E7%9A%84%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B',
+    '/posts/anzhiyu-51la-stats': RouteRecordInfo<
+      '/posts/anzhiyu-51la-stats',
+      '/posts/anzhiyu-51la-stats',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/博客部署到CloudFlare和Github': RouteRecordInfo<
-      '/posts/博客部署到CloudFlare和Github',
-      '/posts/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0CloudFlare%E5%92%8CGithub',
+    '/posts/anzhiyu-deepseek-ai-summary': RouteRecordInfo<
+      '/posts/anzhiyu-deepseek-ai-summary',
+      '/posts/anzhiyu-deepseek-ai-summary',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/博客魔改记录': RouteRecordInfo<
-      '/posts/博客魔改记录',
-      '/posts/%E5%8D%9A%E5%AE%A2%E9%AD%94%E6%94%B9%E8%AE%B0%E5%BD%95',
+    '/posts/anzhiyu-tencent-ip-location': RouteRecordInfo<
+      '/posts/anzhiyu-tencent-ip-location',
+      '/posts/anzhiyu-tencent-ip-location',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/大模型学习(二)': RouteRecordInfo<
-      '/posts/大模型学习(二)',
-      '/posts/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0(%E4%BA%8C)',
+    '/posts/baxian-review': RouteRecordInfo<
+      '/posts/baxian-review',
+      '/posts/baxian-review',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/大模型学习(1)': RouteRecordInfo<
-      '/posts/大模型学习(1)',
-      '/posts/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0(1)',
+    '/posts/blog-air-conditioner': RouteRecordInfo<
+      '/posts/blog-air-conditioner',
+      '/posts/blog-air-conditioner',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/安知鱼主题接入51LA统计展示访问数据': RouteRecordInfo<
-      '/posts/安知鱼主题接入51LA统计展示访问数据',
-      '/posts/%E5%AE%89%E7%9F%A5%E9%B1%BC%E4%B8%BB%E9%A2%98%E6%8E%A5%E5%85%A551LA%E7%BB%9F%E8%AE%A1%E5%B1%95%E7%A4%BA%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE',
+    '/posts/blog-customization-log': RouteRecordInfo<
+      '/posts/blog-customization-log',
+      '/posts/blog-customization-log',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/安知鱼主题接入DeepSeek实现AI摘要': RouteRecordInfo<
-      '/posts/安知鱼主题接入DeepSeek实现AI摘要',
-      '/posts/%E5%AE%89%E7%9F%A5%E9%B1%BC%E4%B8%BB%E9%A2%98%E6%8E%A5%E5%85%A5DeepSeek%E5%AE%9E%E7%8E%B0AI%E6%91%98%E8%A6%81',
+    '/posts/blog-deploy-cloudflare-github': RouteRecordInfo<
+      '/posts/blog-deploy-cloudflare-github',
+      '/posts/blog-deploy-cloudflare-github',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/安知鱼接入腾讯位置服务实现访客IP定位': RouteRecordInfo<
-      '/posts/安知鱼接入腾讯位置服务实现访客IP定位',
-      '/posts/%E5%AE%89%E7%9F%A5%E9%B1%BC%E6%8E%A5%E5%85%A5%E8%85%BE%E8%AE%AF%E4%BD%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E7%8E%B0%E8%AE%BF%E5%AE%A2IP%E5%AE%9A%E4%BD%8D',
+    '/posts/blog-fps-monitor': RouteRecordInfo<
+      '/posts/blog-fps-monitor',
+      '/posts/blog-fps-monitor',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/文字修仙游戏上线啦': RouteRecordInfo<
-      '/posts/文字修仙游戏上线啦',
-      '/posts/%E6%96%87%E5%AD%97%E4%BF%AE%E4%BB%99%E6%B8%B8%E6%88%8F%E4%B8%8A%E7%BA%BF%E5%95%A6',
+    '/posts/blog-launch-story': RouteRecordInfo<
+      '/posts/blog-launch-story',
+      '/posts/blog-launch-story',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/玩黑神话悟空有感': RouteRecordInfo<
-      '/posts/玩黑神话悟空有感',
-      '/posts/%E7%8E%A9%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA%E6%9C%89%E6%84%9F',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/posts/给博客添加FPS监测': RouteRecordInfo<
-      '/posts/给博客添加FPS监测',
-      '/posts/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0FPS%E7%9B%91%E6%B5%8B',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/posts/给博客装个小空调': RouteRecordInfo<
-      '/posts/给博客装个小空调',
-      '/posts/%E7%BB%99%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%B8%AA%E5%B0%8F%E7%A9%BA%E8%B0%83',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/posts/记录一下我的键盘': RouteRecordInfo<
-      '/posts/记录一下我的键盘',
-      '/posts/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%88%91%E7%9A%84%E9%94%AE%E7%9B%98',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/posts/2026影单': RouteRecordInfo<
-      '/posts/2026影单',
-      '/posts/2026%E5%BD%B1%E5%8D%95',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/posts/games开发文档': RouteRecordInfo<
-      '/posts/games开发文档',
-      '/posts/games%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3',
+    '/posts/games-dev-doc': RouteRecordInfo<
+      '/posts/games-dev-doc',
+      '/posts/games-dev-doc',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -248,44 +213,79 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/posts/MaixCamera学习笔记': RouteRecordInfo<
-      '/posts/MaixCamera学习笔记',
-      '/posts/MaixCamera%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0',
+    '/posts/llm-learning-1': RouteRecordInfo<
+      '/posts/llm-learning-1',
+      '/posts/llm-learning-1',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/Markdown编辑器推荐': RouteRecordInfo<
-      '/posts/Markdown编辑器推荐',
-      '/posts/Markdown%E7%BC%96%E8%BE%91%E5%99%A8%E6%8E%A8%E8%8D%90',
+    '/posts/llm-learning-2': RouteRecordInfo<
+      '/posts/llm-learning-2',
+      '/posts/llm-learning-2',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/moments开发文档': RouteRecordInfo<
-      '/posts/moments开发文档',
-      '/posts/moments%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3',
+    '/posts/maixcamera-notes': RouteRecordInfo<
+      '/posts/maixcamera-notes',
+      '/posts/maixcamera-notes',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/TIFF图片格式详解': RouteRecordInfo<
-      '/posts/TIFF图片格式详解',
-      '/posts/TIFF%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3',
+    '/posts/markdown-editor-recommendation': RouteRecordInfo<
+      '/posts/markdown-editor-recommendation',
+      '/posts/markdown-editor-recommendation',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/Trae接入混元限时免费模型': RouteRecordInfo<
-      '/posts/Trae接入混元限时免费模型',
-      '/posts/Trae%E6%8E%A5%E5%85%A5%E6%B7%B7%E5%85%83%E9%99%90%E6%97%B6%E5%85%8D%E8%B4%B9%E6%A8%A1%E5%9E%8B',
+    '/posts/moments-dev-doc': RouteRecordInfo<
+      '/posts/moments-dev-doc',
+      '/posts/moments-dev-doc',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/posts/Twikoo博主标识实现与QQ邮箱踩坑': RouteRecordInfo<
-      '/posts/Twikoo博主标识实现与QQ邮箱踩坑',
-      '/posts/Twikoo%E5%8D%9A%E4%B8%BB%E6%A0%87%E8%AF%86%E5%AE%9E%E7%8E%B0%E4%B8%8EQQ%E9%82%AE%E7%AE%B1%E8%B8%A9%E5%9D%91',
+    '/posts/my-keyboard': RouteRecordInfo<
+      '/posts/my-keyboard',
+      '/posts/my-keyboard',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/text-xiuxian-game': RouteRecordInfo<
+      '/posts/text-xiuxian-game',
+      '/posts/text-xiuxian-game',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/tiff-format': RouteRecordInfo<
+      '/posts/tiff-format',
+      '/posts/tiff-format',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/trae-hunyuan-free-model': RouteRecordInfo<
+      '/posts/trae-hunyuan-free-model',
+      '/posts/trae-hunyuan-free-model',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/twikoo-blogger-badge-qq-mail': RouteRecordInfo<
+      '/posts/twikoo-blogger-badge-qq-mail',
+      '/posts/twikoo-blogger-badge-qq-mail',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/wukong-review': RouteRecordInfo<
+      '/posts/wukong-review',
+      '/posts/wukong-review',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -429,129 +429,89 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'pages/posts/《八仙》观后感.md': {
+    'pages/posts/2026-movie-list.md': {
       routes:
-        | '/posts/《八仙》观后感'
+        | '/posts/2026-movie-list'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/博客上线啦！博客诞生的心路历程.md': {
+    'pages/posts/anzhiyu-51la-stats.md': {
       routes:
-        | '/posts/博客上线啦！博客诞生的心路历程'
+        | '/posts/anzhiyu-51la-stats'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/博客部署到CloudFlare和Github.md': {
+    'pages/posts/anzhiyu-deepseek-ai-summary.md': {
       routes:
-        | '/posts/博客部署到CloudFlare和Github'
+        | '/posts/anzhiyu-deepseek-ai-summary'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/博客魔改记录.md': {
+    'pages/posts/anzhiyu-tencent-ip-location.md': {
       routes:
-        | '/posts/博客魔改记录'
+        | '/posts/anzhiyu-tencent-ip-location'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/大模型学习(二).md': {
+    'pages/posts/baxian-review.md': {
       routes:
-        | '/posts/大模型学习(二)'
+        | '/posts/baxian-review'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/大模型学习(1).md': {
+    'pages/posts/blog-air-conditioner.md': {
       routes:
-        | '/posts/大模型学习(1)'
+        | '/posts/blog-air-conditioner'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/安知鱼主题接入51LA统计展示访问数据.md': {
+    'pages/posts/blog-customization-log.md': {
       routes:
-        | '/posts/安知鱼主题接入51LA统计展示访问数据'
+        | '/posts/blog-customization-log'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/安知鱼主题接入DeepSeek实现AI摘要.md': {
+    'pages/posts/blog-deploy-cloudflare-github.md': {
       routes:
-        | '/posts/安知鱼主题接入DeepSeek实现AI摘要'
+        | '/posts/blog-deploy-cloudflare-github'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/安知鱼接入腾讯位置服务实现访客IP定位.md': {
+    'pages/posts/blog-fps-monitor.md': {
       routes:
-        | '/posts/安知鱼接入腾讯位置服务实现访客IP定位'
+        | '/posts/blog-fps-monitor'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/文字修仙游戏上线啦.md': {
+    'pages/posts/blog-launch-story.md': {
       routes:
-        | '/posts/文字修仙游戏上线啦'
+        | '/posts/blog-launch-story'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/玩黑神话悟空有感.md': {
+    'pages/posts/games-dev-doc.md': {
       routes:
-        | '/posts/玩黑神话悟空有感'
-      views:
-        | never
-      pathParamNames:
-        | never
-    }
-    'pages/posts/给博客添加FPS监测.md': {
-      routes:
-        | '/posts/给博客添加FPS监测'
-      views:
-        | never
-      pathParamNames:
-        | never
-    }
-    'pages/posts/给博客装个小空调.md': {
-      routes:
-        | '/posts/给博客装个小空调'
-      views:
-        | never
-      pathParamNames:
-        | never
-    }
-    'pages/posts/记录一下我的键盘.md': {
-      routes:
-        | '/posts/记录一下我的键盘'
-      views:
-        | never
-      pathParamNames:
-        | never
-    }
-    'pages/posts/2026影单.md': {
-      routes:
-        | '/posts/2026影单'
-      views:
-        | never
-      pathParamNames:
-        | never
-    }
-    'pages/posts/games开发文档.md': {
-      routes:
-        | '/posts/games开发文档'
+        | '/posts/games-dev-doc'
       views:
         | never
       pathParamNames:
@@ -565,49 +525,89 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'pages/posts/MaixCamera学习笔记.md': {
+    'pages/posts/llm-learning-1.md': {
       routes:
-        | '/posts/MaixCamera学习笔记'
+        | '/posts/llm-learning-1'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/Markdown编辑器推荐.md': {
+    'pages/posts/llm-learning-2.md': {
       routes:
-        | '/posts/Markdown编辑器推荐'
+        | '/posts/llm-learning-2'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/moments开发文档.md': {
+    'pages/posts/maixcamera-notes.md': {
       routes:
-        | '/posts/moments开发文档'
+        | '/posts/maixcamera-notes'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/TIFF图片格式详解.md': {
+    'pages/posts/markdown-editor-recommendation.md': {
       routes:
-        | '/posts/TIFF图片格式详解'
+        | '/posts/markdown-editor-recommendation'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/Trae接入混元限时免费模型.md': {
+    'pages/posts/moments-dev-doc.md': {
       routes:
-        | '/posts/Trae接入混元限时免费模型'
+        | '/posts/moments-dev-doc'
       views:
         | never
       pathParamNames:
         | never
     }
-    'pages/posts/Twikoo博主标识实现与QQ邮箱踩坑.md': {
+    'pages/posts/my-keyboard.md': {
       routes:
-        | '/posts/Twikoo博主标识实现与QQ邮箱踩坑'
+        | '/posts/my-keyboard'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/text-xiuxian-game.md': {
+      routes:
+        | '/posts/text-xiuxian-game'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/tiff-format.md': {
+      routes:
+        | '/posts/tiff-format'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/trae-hunyuan-free-model.md': {
+      routes:
+        | '/posts/trae-hunyuan-free-model'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/twikoo-blogger-badge-qq-mail.md': {
+      routes:
+        | '/posts/twikoo-blogger-badge-qq-mail'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/wukong-review.md': {
+      routes:
+        | '/posts/wukong-review'
       views:
         | never
       pathParamNames:
