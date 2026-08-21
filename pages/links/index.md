@@ -71,9 +71,7 @@ links:
     url: https://blog.xukaiyyds.cn
     avatar: https://blog.xukaiyyds.cn/img/avatar.png
     desc: 一个干净整洁的个人博客
-  - name: Yard 旅游博客
-    blog: Yard 旅游博客
-    url: https://travel.yardvisionsite.com/
+
   - name: 竹山一叶
     blog: 竹山一叶
     url: https://zsyyblog.com
@@ -136,7 +134,7 @@ links:
     avatar: https://prorise-blog.oss-cn-guangzhou.aliyuncs.com/cover/avatar.png
     desc: Prorise - 一位全栈工程师分享全栈技术与实战调优
 
-random: true
+random: false
 ---
 
 <YunLinks :links="frontmatter.links" :random="frontmatter.random" />
