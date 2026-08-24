@@ -139,6 +139,11 @@ links:
     url: https://www.xrdsxj.com
     avatar: https://i-avatar.csdnimg.cn/eee95a7fcdb940f8ae6215beccf151ce_automoblie0.jpg!1
     desc: 听君之心，行君之意，无问西东
+  - name: 子夜集
+    blog: 子夜集
+    url: https://leoreo.me
+    avatar: https://pic.leoreo.me/img/2025/11/13/69158a2e057e4.jpg
+    desc: 一个深度、自主且真实的小世界。
 
 
 
