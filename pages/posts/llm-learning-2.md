@@ -13,6 +13,7 @@ description: 从函数到神经网络，理解深度学习的基石
 <code>依旧是Deepsleep深度睡眠镇楼</code>
 ![](https://yuumii.top/article/20260716_LearningSpringAI/1784791739901-6a86d7f7-e607-4022-b91b-f0099ee78274.png)
 
+两个可能有用能够帮助到理解的网站
 https://alexlenail.me/NN-SVG/
 
 https://playground.tensorflow.org/
