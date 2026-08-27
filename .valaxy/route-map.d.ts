@@ -199,6 +199,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/complete': RouteRecordInfo<
+      '/posts/complete',
+      '/posts/complete',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/games-dev-doc': RouteRecordInfo<
       '/posts/games-dev-doc',
       '/posts/games-dev-doc',
@@ -227,6 +234,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/llm-learning-3': RouteRecordInfo<
+      '/posts/llm-learning-3',
+      '/posts/llm-learning-3',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/maixcamera-notes': RouteRecordInfo<
       '/posts/maixcamera-notes',
       '/posts/maixcamera-notes',
@@ -251,6 +265,13 @@ declare module 'vue-router/auto-routes' {
     '/posts/my-keyboard': RouteRecordInfo<
       '/posts/my-keyboard',
       '/posts/my-keyboard',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/saa-chatModel-and-chatClient': RouteRecordInfo<
+      '/posts/saa-chatModel-and-chatClient',
+      '/posts/saa-chatModel-and-chatClient',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -509,6 +530,14 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
+    'pages/posts/complete.md': {
+      routes:
+        | '/posts/complete'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
     'pages/posts/games-dev-doc.md': {
       routes:
         | '/posts/games-dev-doc'
@@ -541,6 +570,14 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
+    'pages/posts/llm-learning-3.md': {
+      routes:
+        | '/posts/llm-learning-3'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
     'pages/posts/maixcamera-notes.md': {
       routes:
         | '/posts/maixcamera-notes'
@@ -568,6 +605,14 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/my-keyboard.md': {
       routes:
         | '/posts/my-keyboard'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/saa-chatModel-and-chatClient.md': {
+      routes:
+        | '/posts/saa-chatModel-and-chatClient'
       views:
         | never
       pathParamNames:
