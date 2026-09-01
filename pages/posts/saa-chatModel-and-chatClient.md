@@ -11,7 +11,7 @@ description:
 ---
 
 
-#ChatModel和ChatClient
+# ChatModel和ChatClient
 学习SAA(SpringAI Alibaba)过程中搞混了ChatModel和ChatClient，现在记录一下
 ![](https://yuumii.top/article/20260826_SAA_ChatModelAndChatClient/1787716228709-2382e382-6ec1-46a6-aa79-61cbbe85f12b.png)
 详情的区别看一下上面图片 下面分开讲一讲
