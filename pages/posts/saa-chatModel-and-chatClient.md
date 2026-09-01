@@ -154,7 +154,7 @@ public class ChatClientController
 
 ### 调用方式和输出 
 
-ChatModel是使用call或者Stream 但是需要手动解析响应的文本 我们是使用String或者Flux<String>来接收的然后返回 
+ChatModel是使用call或者Stream 但是需要手动解析响应的文本 我们是使用`String`或者`Flux<String>`来接收的然后返回 
    
 ``` java
 @RestController
