@@ -144,7 +144,11 @@ links:
     url: https://leoreo.me
     avatar: https://pic.leoreo.me/img/2025/11/13/69158a2e057e4.jpg
     desc: 一个深度、自主且真实的小世界。
-
+  - name: GrunRay
+    blog: GrunRay
+    url: https://grunray.tech/
+    avatar: https://www.grunray.tech/favicon.jpg
+    desc: 找不到实习捏——代码不跑我跑！
 
 
 
