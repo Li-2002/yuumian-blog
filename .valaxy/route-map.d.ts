@@ -115,13 +115,6 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/moments/': RouteRecordInfo<
-      '/moments/',
-      '/moments',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
     '/page/[page]': RouteRecordInfo<
       '/page/[page]',
       '/page/:page',
@@ -345,7 +338,7 @@ declare module 'vue-router/auto-routes' {
    * @internal
    */
   export interface _RouteFileInfoMap {
-    'node_modules/.pnpm/valaxy-theme-yun@1.0.0-rc.3_ef2a315ab37cd12622daad85a3aa02da/node_modules/valaxy-theme-yun/pages/index.vue': {
+    'pages/index.vue': {
       routes:
         | '/'
       views:
@@ -436,14 +429,6 @@ declare module 'vue-router/auto-routes' {
     'pages/links/index.md': {
       routes:
         | '/links/'
-      views:
-        | never
-      pathParamNames:
-        | never
-    }
-    'pages/moments/index.vue': {
-      routes:
-        | '/moments/'
       views:
         | never
       pathParamNames:
