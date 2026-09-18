@@ -149,7 +149,10 @@ links:
     url: https://grunray.tech/
     avatar: https://www.grunray.tech/favicon.jpg
     desc: 找不到实习捏——代码不跑我跑！
-
+  - name: 花墨
+    logo: https://api.flowersink.com/img/logo.png
+    url: https://flowersink.com
+    content: 好耶！是再花猫猫头ฅ•ω•ฅ
 
 
 random: false
