@@ -153,7 +153,7 @@ links:
     logo: https://api.flowersink.com/img/logo.png
     avatar: https://api.flowersink.com/img/logo.png
     url: https://flowersink.com
-    content: 好耶！是再花猫猫头ฅ•ω•ฅ
+    desc: 好耶！是再花猫猫头ฅ•ω•ฅ
 
 
 random: false
