@@ -37,11 +37,6 @@ links:
     url: https://ilaozhu.com
     avatar: https://ilaozhu.com/usr/themes/WaterDrop/static/images/avatar.jpg
     desc: 用智慧打破边界，以代码书写未来
-  - name: 五岁博客代码安全审计
-    blog: 五岁博客代码安全审计
-    url: https://fiveyoboy.com
-    avatar: https://fiveyoboy.com/favicon.ico
-    desc: 旨在分享一些有价值的内容，让您少走更多弯路
   - name: 清欲の小窝
     blog: 清欲の小窝
     url: https://blog.leoo.work
@@ -150,10 +145,16 @@ links:
     avatar: https://www.grunray.tech/favicon.jpg
     desc: 找不到实习捏——代码不跑我跑！
   - name: 花墨
-    logo: https://api.flowersink.com/img/logo.png
+    blog: 花墨
     avatar: https://api.flowersink.com/img/logo.png
     url: https://flowersink.com
     desc: 好耶！是再花猫猫头ฅ•ω•ฅ
+  - name: clash节点
+    blog: clash节点
+    avatar: https://clashgithub.com/wp-content/uploads/2025/08/avatar-150x150-1.jpg
+    url: https://clashgithub.com
+    desc: 免费公益SSR/V2ray/Shadowrocket/Clash节点/小火箭订阅链接|科学上网|免费梯子
+
 
 
 random: false
