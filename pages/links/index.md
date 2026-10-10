@@ -159,6 +159,11 @@ links:
     url: https://blogscn.fun/
     avatar: https://photo.xiangming.site/img/blogscn_icon.png
     desc: 独立博客文章发现平台，一起发现好文章
+  - name: 博友圈
+    blog: 博友圈
+    url: https://www.boyouquan.com/home
+    avatar: https://www.boyouquan.com/assets/images/sites/logo/logo-small.svg
+    desc: 让我们跨越山海彼此相连，一起用文字打败时间！
 
 
 

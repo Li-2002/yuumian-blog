@@ -38,6 +38,12 @@ const links: FriendLink[] = [
     url: 'https://blogscn.fun/',
     title: 'BLOGS·CN',
   },
+  {
+    text: '博友圈',
+    img: 'https://www.boyouquan.com/assets/images/sites/logo/logo-small.svg',
+    url: 'https://www.boyouquan.com/planet-shuttle',
+    title: '博友圈-星球穿梭',
+  },
 ]
 </script>
 
