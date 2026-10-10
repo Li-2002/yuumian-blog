@@ -1,5 +1,13 @@
 <script setup lang="ts">
-const links = [
+interface FriendLink {
+  text: string
+  url: string
+  title: string
+  icon?: string
+  img?: string
+}
+
+const links: FriendLink[] = [
   {
     text: '开往',
     icon: 'i-ri-train-line',
@@ -24,6 +32,12 @@ const links = [
     url: 'https://www.blogsclub.org/',
     title: 'BlogsClub',
   },
+  {
+    text: 'BLOGS·CN',
+    img: 'https://photo.xiangming.site/img/blogscn_icon.png',
+    url: 'https://blogscn.fun/',
+    title: 'BLOGS·CN',
+  },
 ]
 </script>
 
@@ -38,7 +52,8 @@ const links = [
       target="_blank"
       rel="noopener"
     >
-      <i :class="link.icon" class="home-friend-bar-icon" />
+      <i v-if="link.icon" :class="link.icon" class="home-friend-bar-icon" />
+      <img v-else-if="link.img" :src="link.img" :alt="link.title" class="home-friend-bar-img">
       <span>{{ link.text }}</span>
     </a>
   </div>
@@ -75,5 +90,10 @@ const links = [
   font-size: 16px;
   width: 16px;
   height: 16px;
+}
+
+.home-friend-bar-img {
+  width: auto;
+  height: 15px;
 }
 </style>

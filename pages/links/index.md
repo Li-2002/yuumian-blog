@@ -154,6 +154,11 @@ links:
     avatar: https://clashgithub.com/wp-content/uploads/2025/08/avatar-150x150-1.jpg
     url: https://clashgithub.com
     desc: 免费公益SSR/V2ray/Shadowrocket/Clash节点/小火箭订阅链接|科学上网|免费梯子
+  - name: 笔墨迹
+    blog: 笔墨迹
+    url: https://blogscn.fun/
+    avatar: https://photo.xiangming.site/img/blogscn_icon.png
+    desc: 独立博客文章发现平台，一起发现好文章
 
 
 
