@@ -2,9 +2,10 @@
 import type { Post } from 'valaxy'
 import { usePostListWithCollections, useSiteConfig } from 'valaxy'
 import { computed, onMounted, ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
+const router = useRouter()
 const siteConfig = useSiteConfig()
 const postList = usePostListWithCollections()
 const selectedCategory = ref('')
@@ -57,6 +58,14 @@ function categoryTo(category: string) {
   return { path: '/', query }
 }
 
+function onCategoryClick(event: MouseEvent, category: string) {
+  // The theme's article anchor handler prevents query-only links before RouterLink runs.
+  // Recover the navigation during capture, preserving RouterLink's normal click handling.
+  if (event.defaultPrevented && event.button === 0
+    && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey)
+    router.push(categoryTo(category))
+}
+
 function pageTo(page: number) {
   return { path: page === 1 ? '/' : `/page/${page}`, query: route.query }
 }
@@ -78,6 +87,7 @@ function showPage(page: number) {
           class="home-category-item"
           :class="{ active: !selectedCategory }"
           :aria-current="!selectedCategory ? 'true' : 'false'"
+          @click.capture="onCategoryClick($event, '')"
         >
           全部
         </RouterLink>
@@ -87,6 +97,7 @@ function showPage(page: number) {
             class="home-category-item home-category-game"
             :class="{ active: selectedCategory === '游戏' }"
             :aria-current="selectedCategory === '游戏' ? 'true' : 'false'"
+            @click.capture="onCategoryClick($event, '游戏')"
           >
             游戏
           </RouterLink>
@@ -101,6 +112,7 @@ function showPage(page: number) {
           class="home-category-item"
           :class="{ active: selectedCategory === category }"
           :aria-current="selectedCategory === category ? 'true' : 'false'"
+          @click.capture="onCategoryClick($event, category)"
         >
           {{ category }}
         </RouterLink>
