@@ -10,7 +10,7 @@ export default defineThemeConfig({
   nav: [
     { text: '博客文章', link: '/posts/', icon: 'i-ri-article-line' },
     { text: '我的小伙伴们', link: '/links/', icon: 'i-ri-genderless-line' },
-    { text: '游戏人生', link: '/games/', icon: 'i-ri-game-line' },
+    { text: '游戏人生', link: '/game/', icon: 'i-ri-game-line' },
     { text: '相册', link: '/albums/', icon: 'i-ri-image-line' },
   ],
 
@@ -23,7 +23,7 @@ export default defineThemeConfig({
     },
     {
       name: '游戏人生',
-      url: '/games/',
+      url: '/game/',
       icon: 'i-ri-game-line',
       color: 'hotpink',
     },

@@ -101,6 +101,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/game/': RouteRecordInfo<
+      '/game/',
+      '/game',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/games/': RouteRecordInfo<
       '/games/',
       '/games',
@@ -132,6 +139,13 @@ declare module 'vue-router/auto-routes' {
     '/posts/2026-movie-list': RouteRecordInfo<
       '/posts/2026-movie-list',
       '/posts/2026-movie-list',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/20260923_codex_after_use': RouteRecordInfo<
+      '/posts/20260923_codex_after_use',
+      '/posts/20260923_codex_after_use',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -202,6 +216,13 @@ declare module 'vue-router/auto-routes' {
     '/posts/complete': RouteRecordInfo<
       '/posts/complete',
       '/posts/complete',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/dem-dsm-dtm-dom': RouteRecordInfo<
+      '/posts/dem-dsm-dtm-dom',
+      '/posts/dem-dsm-dtm-dom',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -418,6 +439,14 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
+    'pages/game/index.md': {
+      routes:
+        | '/game/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
     'pages/games/index.vue': {
       routes:
         | '/games/'
@@ -434,7 +463,7 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'node_modules/.pnpm/valaxy-theme-yun@1.0.0-rc.3_ef2a315ab37cd12622daad85a3aa02da/node_modules/valaxy-theme-yun/pages/page/[page].vue': {
+    'pages/page/[page].vue': {
       routes:
         | '/page/[page]'
       views:
@@ -453,6 +482,14 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/2026-movie-list.md': {
       routes:
         | '/posts/2026-movie-list'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/20260923_codex_after_use.md': {
+      routes:
+        | '/posts/20260923_codex_after_use'
       views:
         | never
       pathParamNames:
@@ -533,6 +570,14 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/complete.md': {
       routes:
         | '/posts/complete'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/dem-dsm-dtm-dom.md': {
+      routes:
+        | '/posts/dem-dsm-dtm-dom'
       views:
         | never
       pathParamNames:

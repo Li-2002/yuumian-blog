@@ -1,6 +1,6 @@
 <template>
   <HomeFriendBar />
-  <YunPostList />
+  <HomePostFeed />
 </template>
 
 <route lang="yaml">

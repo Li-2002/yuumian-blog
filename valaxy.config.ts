@@ -15,6 +15,9 @@ export default defineValaxyConfig<UserThemeConfig>({
   // theme config see theme.config.ts
 
   theme: 'yun',
+  build: {
+    ssgForPagination: true,
+  },
   themeConfig: {
     notice: {
       enable: true,
