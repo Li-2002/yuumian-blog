@@ -68,20 +68,11 @@ links:
     avatar: https://blog.xukaiyyds.cn/img/avatar.png
     desc: 一个干净整洁的个人博客
 
-  - name: 竹山一叶
-    blog: 竹山一叶
-    url: https://zsyyblog.com
-    avatar: https://img.zsyyblog.com/favicon.jpg
-    desc: 来了就不想走的小家
   - name: 云雀Lark
     blog: 云雀Lark
     url: https://cloudlark.cn
     avatar: https://cdn.cloudlark.cn/configs/logo.avif
     desc: 山不让尘，川不辞盈
-  - name: 小林の木屋
-    blog: 小林の木屋
-    url: https://www.wjlin0.com
-    avatar: https://www.wjlin0.com/upload/log.png
     desc: 一个黑客小子！
   - name: 懋和道人
     blog: 懋和道人
@@ -98,16 +89,8 @@ links:
     url: https://www.frdlink.link
     avatar: https://www.frdlink.link/favicon.ico
     desc: FRD Link——一个穿越时光的友链小站。没有花哨特效，只有朴实的链接、RSS文章和真诚的讨论。
-  - name: 冰梦
-    blog: 冰梦
-    url: https://icemyst.github.io
-    avatar: https://icemyst.github.io/img/about.webp
-    desc: 到不了的都叫远方，回不去的都叫故乡。
-  - name: Imz
-    blog: Imz
-    url: https://blog.imz.me/
-    avatar: https://blog.imz.me/img/avatar.webp
-    desc: 仰望星空，脚踏实地。
+
+
   - name: 君主阁
     blog: 君主阁
     url: https://blog.apigf.cn

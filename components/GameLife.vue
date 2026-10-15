@@ -55,7 +55,8 @@ function toggleGame(id: string) {
             <div class="game-note-footer">
               <span class="game-play-time">
                 <i class="i-ri-time-line" aria-hidden="true" />
-                游玩时间 {{ game.playTime }}
+                <span>游玩时间</span>
+                <span class="game-play-time-value">{{ game.playTime }}</span>
               </span>
               <span class="game-open-hint">
                 <span class="game-hint-closed">展开感想</span>
@@ -284,8 +285,13 @@ function toggleGame(id: string) {
   align-items: center;
   gap: 6px;
   color: var(--va-c-text-light);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.6;
+}
+
+.game-play-time-value {
+  color: var(--va-c-primary);
+  font-weight: 600;
 }
 
 .game-play-time i {
